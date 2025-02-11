@@ -34,7 +34,7 @@ export const themes = {
       correct: '#98FB98',
       incorrect: '#FF6B6B',
       // Theme-specific content
-      subtitle: '✨ unlock your magical tongue',
+      subtitle: '✨ divine new grammars',
       completeEmoji: '🔮',
       completeMessage: 'Enchantment complete',
       buttonRadius: '20px',

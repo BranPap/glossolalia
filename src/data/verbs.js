@@ -225,6 +225,156 @@ export const verbs = [
         "3pl": {pronoun: "He", form: "suutelevat"}
         }
     }
+  },
+  {
+    verb: "ottaa",
+    language: "Finnish",
+    translation: "to take",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "otan"},
+        "2sg": {pronoun: "Sinä", form: "otat"},
+        "3sg": {pronoun: "Hän", form: "ottaa"},
+        "1pl": {pronoun: "Me", form: "otamme"},
+        "2pl": {pronoun: "Te", form: "otatte"},
+        "3pl": {pronoun: "He", form: "ottavat"}
+        }
+    }
+  },
+  {
+    verb: "mitata",
+    language: "Finnish",
+    translation: "to measure, gauge",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "mittaan"},
+        "2sg": {pronoun: "Sinä", form: "mittaat"},
+        "3sg": {pronoun: "Hän", form: "mittaa"},
+        "1pl": {pronoun: "Me", form: "mittaamme"},
+        "2pl": {pronoun: "Te", form: "mittaatte"},
+        "3pl": {pronoun: "He", form: "mittaavat"}
+        }
+    }
+  },
+  {
+    verb: "syödä",
+    language: "Finnish",
+    translation: "to eat",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "syön"},
+        "2sg": {pronoun: "Sinä", form: "syöt"},
+        "3sg": {pronoun: "Hän", form: "syö"},
+        "1pl": {pronoun: "Me", form: "syömme"},
+        "2pl": {pronoun: "Te", form: "syötte"},
+        "3pl": {pronoun: "He", form: "syövät"}
+        }
+    }
+  },
+  {
+    verb: "purra",
+    language: "Finnish",
+    translation: "to bite",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "puren"},
+        "2sg": {pronoun: "Sinä", form: "puret"},
+        "3sg": {pronoun: "Hän", form: "puree"},
+        "1pl": {pronoun: "Me", form: "puremme"},
+        "2pl": {pronoun: "Te", form: "purette"},
+        "3pl": {pronoun: "He", form: "purevat"}
+        }
+    }
+  },
+  {
+    verb: "imeä",
+    language: "Finnish",
+    translation: "to suck, absorb",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "imen"},
+        "2sg": {pronoun: "Sinä", form: "imet"},
+        "3sg": {pronoun: "Hän", form: "imee"},
+        "1pl": {pronoun: "Me", form: "imemme"},
+        "2pl": {pronoun: "Te", form: "imette"},
+        "3pl": {pronoun: "He", form: "imevät"}
+        }
+    }
+  },
+  {
+    verb: "sylkeä",
+    language: "Finnish",
+    translation: "to spit",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "syljen"},
+        "2sg": {pronoun: "Sinä", form: "syljet"},
+        "3sg": {pronoun: "Hän", form: "sylkee"},
+        "1pl": {pronoun: "Me", form: "syljemme"},
+        "2pl": {pronoun: "Te", form: "syljette"},
+        "3pl": {pronoun: "He", form: "sylkevät"}
+        }
+    }
+  },
+  {
+    verb: "oksentaa",
+    language: "Finnish",
+    translation: "to vomit, regurgitate",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "oksennan"},
+        "2sg": {pronoun: "Sinä", form: "oksennat"},
+        "3sg": {pronoun: "Hän", form: "oksentaa"},
+        "1pl": {pronoun: "Me", form: "oksennamme"},
+        "2pl": {pronoun: "Te", form: "oksennatte"},
+        "3pl": {pronoun: "He", form: "oksentavat"}
+        }
+    }
+  },
+  {
+    verb: "puhaltaa",
+    language: "Finnish",
+    translation: "to blow",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "puhallan"},
+        "2sg": {pronoun: "Sinä", form: "puhallat"},
+        "3sg": {pronoun: "Hän", form: "puhaltaa"},
+        "1pl": {pronoun: "Me", form: "puhallamme"},
+        "2pl": {pronoun: "Te", form: "puhallatte"},
+        "3pl": {pronoun: "He", form: "puhaltavat"}
+        }
+    }
+  },
+  {
+    verb: "hengittää",
+    language: "Finnish",
+    translation: "to breathe",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "hengitän"},
+        "2sg": {pronoun: "Sinä", form: "hengität"},
+        "3sg": {pronoun: "Hän", form: "hengittää"},
+        "1pl": {pronoun: "Me", form: "hengitämme"},
+        "2pl": {pronoun: "Te", form: "hengitätte"},
+        "3pl": {pronoun: "He", form: "hengittävät"}
+        }
+    }
+  },
+  {
+    verb: "nauraa",
+    language: "Finnish",
+    translation: "to laugh",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "nauran"},
+        "2sg": {pronoun: "Sinä", form: "naurat"},
+        "3sg": {pronoun: "Hän", form: "nauraa"},
+        "1pl": {pronoun: "Me", form: "nauramme"},
+        "2pl": {pronoun: "Te", form: "nauratte"},
+        "3pl": {pronoun: "He", form: "nauravat"}
+        }
+    }
   }
 ];
 
