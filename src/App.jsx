@@ -388,7 +388,7 @@ const App = () => {
             ) : isGameComplete ? (
               <Box sx={{ width: '100%' }}>
                 <Typography variant="h4" sx={{ mb: 2, color: '#312e81', fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700 }}>
-                  Set Complete
+                  Practice complete 🎉
                 </Typography>
                 <Typography variant="h5" sx={{ mb: 3, color: '#4f46e5' }}>
                   {score} of {questions.length} correct
@@ -410,7 +410,7 @@ const App = () => {
                     borderRadius: 1.5
                   }}
                 >
-                  Another Set
+                  Play again
                 </Button>
               </Box>
             ) : (
