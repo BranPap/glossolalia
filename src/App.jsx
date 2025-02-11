@@ -1,164 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, Typography, TextField, Button, LinearProgress, Box, MenuItem, Select, Tooltip } from '@mui/material';
+import { verbs, shuffleArray } from './data/verbs';
+import { IconButton } from '@mui/material';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import { themes } from './themes';
+import Sparkle from './components/sparkle';
 
 const App = () => {
   const textFieldRef = useRef(null);
 
-  const verbs = [
-    {
-      verb: "olla",
-      language: "Finnish",
-      translation: "to be",
-      forms: {
-        present: {
-          "1sg": { pronoun: "Minä", form: "olen" },
-          "2sg": { pronoun: "Sinä", form: "olet" },
-          "3sg": { pronoun: "Hän", form: "on" },
-          "1pl": { pronoun: "Me", form: "olemme"},
-          "2pl": { pronoun: "Te", form: "olette"},
-          "3pl": { pronoun: "He", form: "ovat"}
-        },
-        past: {
-          "1sg": { pronoun: "Minä", form: "olin" },
-          "2sg": { pronoun: "Sinä", form: "olit" },
-          "3sg": { pronoun: "Hän", form: "oli" }
-        }
-      }
-    },
-    {
-      verb: "būti",
-      language: "Lithuanian",
-      translation: "to be",
-      forms: {
-        present: {
-          "1sg": { pronoun: "Aš", form: "esu" },
-          "2sg": { pronoun: "Tu", form: "esi" },
-          "3sg": { pronoun: "Jis/Ji", form: "yra" }
-        }
-      }
-    },
-    {
-      verb: "puhua",
-      language: "Finnish",
-      translation: "to speak",
-      forms: {
-        present: {
-          "1sg": { pronoun: "Minä", form: "puhun"},
-          "2sg": { pronoun: "Sinä", form: "puhut"},
-          "3sg": { pronoun: "Hän", form: "puhuu"},
-          "1pl": { pronoun: "Me", form: "puhumme"},
-          "2pl": { pronoun: "Te", form: "puhutte"},
-          "3pl": { pronoun: "He", form: "puhuvat"}
-        }
-      }
-    },
-    {
-      verb: "maalata",
-      language: "Finnish",
-      translation: "to paint",
-      forms: {
-        present: {
-          "1sg": { pronoun: "Minä", form: "maalaan"},
-          "2sg": { pronoun: "Sinä", form: "maalaat"},
-          "3sg": { pronoun: "Hän", form: "maalaa"},
-          "1pl": { pronoun: "Me", form: "maalaamme"},
-          "2pl": { pronoun: "Te", form: "maalaatte"},
-          "3pl": { pronoun: "He", form: "maalaavat"}
-        }
-      }
-    },
-    {
-      verb: "kirjoittaa",
-      language: "Finnish",
-      translation: "to write",
-      forms: {
-        present: {
-          "1sg": { pronoun: "Minä", form: "kirjoitan"},
-          "2sg": { pronoun: "Sinä", form: "kirjoitat"},
-          "3sg": { pronoun: "Hän", form: "kirjoittaa"},
-          "1pl": { pronoun: "Me", form: "kirjoitamme"},
-          "2pl": { pronoun: "Te", form: "kirjoitatte"},
-          "3pl": { pronoun: "He", form: "kirjoittavat"}
-        }
-      }
-    },
-    {
-      verb: "laulaa",
-      language: "Finnish",
-      translation: "to sing",
-      forms: {
-        present: {
-          "1sg": {pronoun: "Minä", form: "laulan"},
-          "2sg": {pronoun: "Sinä", form: "laulat"},
-          "3sg": {pronoun: "Hän", form: "laulaa"},
-          "1pl": {pronoun: "Me", form: "laulamme"},
-          "2pl": {pronoun: "Te", form: "laulatte"},
-          "3pl": {pronoun: "He", form: "laulavat"}
-        }
-      }
-    },
-    {
-      verb: "niiata",
-      language: "Finnish",
-      translation: "to courtesy",
-      forms: {
-        present: {
-          "1sg": {pronoun: "Minä", form: "niiaan"},
-          "2sg": {pronoun: "Sinä", form: "niiaat"},
-          "3sg": {pronoun: "Hän", form: "niiaa"},
-          "1pl": {pronoun: "Me", form: "niiaamme"},
-          "2pl": {pronoun: "Te", form: "niiaatte"},
-          "3pl": {pronoun: "He", form: "niiaavat"}
-        }
-      }
-    },
-    {
-      verb: "hyllyä",
-      language: "Finnish",
-      translation: "to shake, quake, jiggle",
-      forms: {
-        present: {
-          "1sg": {pronoun: "Minä", form: "hyllyn"},
-          "2sg": {pronoun: "Sinä", form: "hyllyt"},
-          "3sg": {pronoun: "Hän", form: "hyllyy"},
-          "1pl": {pronoun: "Me", form: "hyllymme"},
-          "2pl": {pronoun: "Te", form: "hyllytte"},
-          "3pl": {pronoun: "He", form: "hyllyvät"}
-        }
-      }
-    },
-    {
-      verb: "lukea",
-      language: "Finnish",
-      translation: "to read",
-      forms: {
-        present: {
-          "1sg": {pronoun: "Minä", form: "luen"},
-          "2sg": {pronoun: "Sinä", form: "luet"},
-          "3sg": {pronoun: "Hän", form: "lukee"},
-          "1pl": {pronoun: "Me", form: "luemme"},
-          "2pl": {pronoun: "Te", form: "luette"},
-          "3pl": {pronoun: "He", form: "lukevat"}
-        }
-      }
-    },
-    {
-      verb: "juoda",
-      language: "Finnish",
-      translation: "to drink",
-      forms: {
-        present: {
-          "1sg": {pronoun: "Minä", form: "juon"},
-          "2sg": {pronoun: "Sinä", form: "juot"},
-          "3sg": {pronoun: "Hän", form: "juo"},
-          "1pl": {pronoun: "Me", form: "juomme"},
-          "2pl": {pronoun: "Te", form: "juotte"},
-          "3pl": {pronoun: "He", form: "juovat"}
-        }
-      }
-    }
-  ];
-
+  const [currentTheme, setCurrentTheme] = useState('modern');
   const [language, setLanguage] = useState('Finnish');
   const [tense, setTense] = useState('present');
   const [questions, setQuestions] = useState([]);
@@ -166,17 +17,15 @@ const App = () => {
   const [answer, setAnswer] = useState('');
   const [feedback, setFeedback] = useState('');
   const [score, setScore] = useState(0);
-  const [enterState, setEnterState] = useState(true)
+  const [enterState, setEnterState] = useState(true);
+  const [showSparkles, setShowSparkles] = useState(false);
 
-  // Helper function to shuffle array
-  const shuffleArray = (array) => {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-  };
+  // Calculate these values before they're used in the render
+  const progress = (currentIndex / questions.length) * 100;
+  const availableTenses = Object.keys(
+    verbs.find(v => v.language === language)?.forms || {}
+  );
+  const isGameComplete = currentIndex >= questions.length;
 
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
@@ -189,7 +38,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    const filteredQuestions = shuffleArray( verbs
+    const filteredQuestions = shuffleArray(verbs
       .filter(v => v.language === language && v.forms[tense])
       .flatMap(v =>
         Object.entries(v.forms[tense]).map(([key, { pronoun, form }]) => ({
@@ -200,7 +49,7 @@ const App = () => {
         }))
       )
     ).slice(0,10);
-
+  
     // Shuffle the questions
     setQuestions(shuffleArray(filteredQuestions));
     setCurrentIndex(0);
@@ -209,21 +58,20 @@ const App = () => {
     setScore(0);
   }, [language, tense]);
 
-  useEffect(() => {
-    if (textFieldRef.current) textFieldRef.current.focus();
-  }, [currentIndex]);
-
+  // Update handleSubmit to include sparkle effect
   const handleSubmit = () => {
     if (answer.trim().toLowerCase() === questions[currentIndex].answer) {
       setScore(score + 1);
       setFeedback('Correct!');
       setEnterState(false);
+      setShowSparkles(true);
+      setTimeout(() => setShowSparkles(false), 2000);
       setTimeout(() => {
         setFeedback('');
         setAnswer('');
         setCurrentIndex(currentIndex + 1);
         setEnterState(true);
-      }, 1000);
+      }, 2000);
     } else {
       setFeedback(`Sorry, the correct answer is "${questions[currentIndex].answer}"`);
       setEnterState(false)
@@ -236,6 +84,13 @@ const App = () => {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && enterState === true) {
+      e.preventDefault();
+      handleSubmit();
+    }
+  };
+  
   const handleRestart = () => {
     setQuestions(shuffleArray([...questions])); // Reshuffle on restart
     setCurrentIndex(0);
@@ -243,19 +98,6 @@ const App = () => {
     setFeedback('');
     setScore(0);
   };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" && enterState === true) {
-      e.preventDefault();
-      handleSubmit();
-    }
-  };
-
-  const progress = (currentIndex / questions.length) * 100;
-  const availableTenses = Object.keys(
-    verbs.find(v => v.language === language)?.forms || {}
-  );
-  const isGameComplete = currentIndex >= questions.length;
 
   return (
     <Box
@@ -265,11 +107,59 @@ const App = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        // Bold, modern gradient
-        background: 'linear-gradient(135deg,rgb(79, 31, 135) 0%,rgb(107, 195, 227) 100%)',
-        padding: { xs: 2, sm: 4, md: 6 }
+        background: themes[currentTheme].background,
+        padding: { xs: 2, sm: 4, md: 6 },
+        transition: 'all 0.3s ease',
+        cursor: themes[currentTheme].cursor
       }}
     >
+  <Card
+  elevation={8}
+  sx={{
+    position: 'fixed',
+    // On mobile: bottom of screen, horizontal
+    // On desktop: left side, vertical
+    bottom: { xs: '16px', md: 'auto' },
+    left: { xs: '50%', md: '24px' },
+    top: { xs: 'auto', md: '50%' },
+    transform: { 
+      xs: 'translateX(-50%)', 
+      md: 'translateY(-50%)' 
+    },
+    borderRadius: 4,
+    background: 'rgba(255, 255, 255, 0.9)',
+    backdropFilter: 'blur(8px)',
+    p: 1,
+    display: 'flex',
+    // Row on mobile, column on desktop
+    flexDirection: { xs: 'row', md: 'column' },
+    gap: 1,
+    transition: 'all 0.3s ease',
+    '&:hover': {
+      boxShadow: 16
+    },
+    // Make sure it stays above other content
+    zIndex: 1000
+  }}
+>
+  {Object.entries(themes).map(([themeName, theme]) => (
+    <IconButton
+      key={themeName}
+      onClick={() => setCurrentTheme(themeName)}
+      sx={{
+        p: { xs: 1, md: 1.5 },
+        fontSize: { xs: '1.25rem', md: '1.5rem' },
+        backgroundColor: currentTheme === themeName ? 
+          `${themes[currentTheme].accent}20` : 'transparent',
+        '&:hover': {
+          backgroundColor: `${themes[themeName].accent}20`
+        }
+      }}
+    >
+      {theme.themeIcon}
+    </IconButton>
+  ))}
+</Card>
       <Card
         elevation={12}
         sx={{
@@ -285,7 +175,8 @@ const App = () => {
             left: 0,
             right: 0,
             height: '4px',
-            background: 'linear-gradient(90deg, #6366f1, #818cf8)'
+            background: themes[currentTheme].cardBorder,
+            transition: 'background 0.3s ease'
           }
         }}
       >
@@ -295,10 +186,11 @@ const App = () => {
               variant="h2" 
               sx={{ 
                 fontWeight: '700', 
-                color: '#312e81',
+                color: themes[currentTheme].secondary,
                 fontFamily: "'Space Grotesk', sans-serif",
                 letterSpacing: '-0.02em',
-                mb: 1
+                mb: 1,
+                fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
               }}
             >
               Glossolalia
@@ -306,58 +198,71 @@ const App = () => {
             <Typography 
               variant="subtitle1" 
               sx={{ 
-                color: '#4f46e5',
+                color: themes[currentTheme].primary,
                 fontFamily: "'Space Grotesk', sans-serif",
-                fontWeight: 500
+                fontWeight: 500,
+                fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
               }}
             >
-              ⟢ speak in new tongues
+              {themes[currentTheme].subtitle}
             </Typography>
           </Box>
 
+          {/* Language/Tense Selection Box remains mostly the same but with updated colors */}
           <Box sx={{ 
             display: 'flex', 
-            gap: 2, 
-            mb: 4
+            gap: 4,  // Increased gap to accommodate labels
+            mb: 4,
+            alignItems: 'flex-end'
           }}>
-            <Select
-              value={language}
-              onChange={(e) => handleLanguageChange(e.target.value)}
-              sx={{ 
-                minWidth: 150,
-                color: '#312e81',
-                '.MuiOutlinedInput-notchedOutline': {
-                  borderColor: '#818cf8',
-                  borderWidth: '2px'
-                },
-                '&:hover .MuiOutlinedInput-notchedOutline': {
-                  borderColor: '#6366f1'
-                }
-              }}
-            >
-              <MenuItem value="Finnish">Finnish</MenuItem>
-              <MenuItem value="Lithuanian">Lithuanian</MenuItem>
-            </Select>
-
-            <Select
-              value={tense}
-              onChange={(e) => setTense(e.target.value)}
-              sx={{ 
-                minWidth: 150,
-                color: '#312e81',
-                '.MuiOutlinedInput-notchedOutline': {
-                  borderColor: '#818cf8',
-                  borderWidth: '2px'
-                },
-                '&:hover .MuiOutlinedInput-notchedOutline': {
-                  borderColor: '#6366f1'
-                }
-              }}
-            >
-              {availableTenses.map(t => (
-                <MenuItem key={t} value={t}>{t.charAt(0).toUpperCase() + t.slice(1)}</MenuItem>
-              ))}
-            </Select>
+            <Box>
+              <Typography sx={{ mb: 1, color: themes[currentTheme].secondary, fontFamily: "'Space Grotesk', sans-serif", fontWeight: 500 }}>
+                Language
+              </Typography>
+              <Select
+                value={language}
+                onChange={(e) => handleLanguageChange(e.target.value)}
+                sx={{ 
+                  minWidth: 150,
+                  color: '#312e81',
+                  '.MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#818cf8',
+                    borderWidth: '2px'
+                  },
+                  '&:hover .MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#6366f1'
+                  }
+                }}
+              >
+                <MenuItem value="Finnish">Finnish</MenuItem>
+                <MenuItem value="Lithuanian">Lithuanian</MenuItem>
+              </Select>
+            </Box>
+          
+            <Box>
+            <Typography sx={{ mb: 1, color: themes[currentTheme].secondary, fontFamily: "'Space Grotesk', sans-serif", fontWeight: 500 }}>
+                Tense
+              </Typography>
+              <Select
+                value={tense}
+                onChange={(e) => setTense(e.target.value)}
+                sx={{ 
+                  minWidth: 150,
+                  color: '#312e81',
+                  '.MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#818cf8',
+                    borderWidth: '2px'
+                  },
+                  '&:hover .MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#6366f1'
+                  }
+                }}
+              >
+                {availableTenses.map(t => (
+                  <MenuItem key={t} value={t}>{t.charAt(0).toUpperCase() + t.slice(1)}</MenuItem>
+                ))}
+              </Select>
+            </Box>
           </Box>
 
           <LinearProgress 
@@ -367,9 +272,9 @@ const App = () => {
               height: 6, 
               borderRadius: 3, 
               mb: 4,
-              backgroundColor: '#e0e7ff',
+              backgroundColor: themes[currentTheme].progressBg,
               '& .MuiLinearProgress-bar': {
-                background: '#4f46e5'
+                background: themes[currentTheme].progressBar
               }
             }} 
           />
@@ -379,18 +284,32 @@ const App = () => {
             display: 'flex', 
             flexDirection: 'column', 
             alignItems: 'start', 
-            justifyContent: 'center'
+            justifyContent: 'center',
+            position: 'relative'
           }}>
+            {showSparkles && <Sparkle theme={currentTheme} style={{ zIndex: 1000 }} />}
+
+            
             {questions.length === 0 ? (
-              <Typography variant="h6" sx={{ color: '#312e81' }}>
+              <Typography variant="h6" sx={{ color: themes[currentTheme].secondary }}>
                 That combination isn't available yet.
               </Typography>
             ) : isGameComplete ? (
               <Box sx={{ width: '100%' }}>
-                <Typography variant="h4" sx={{ mb: 2, color: '#312e81', fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700 }}>
-                  Practice complete 🎉
+                <Typography variant="h4" sx={{ 
+                  mb: 2, 
+                  color: themes[currentTheme].secondary, 
+                  fontFamily: "'Space Grotesk', sans-serif", 
+                  fontWeight: 700,
+                  fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
+                }}>
+                  {themes[currentTheme].completeMessage} {themes[currentTheme].completeEmoji}
                 </Typography>
-                <Typography variant="h5" sx={{ mb: 3, color: '#4f46e5' }}>
+                <Typography variant="h5" sx={{ 
+                  mb: 3, 
+                  color: themes[currentTheme].primary,
+                  fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
+                }}>
                   {score} of {questions.length} correct
                 </Typography>
                 <Button
@@ -399,33 +318,34 @@ const App = () => {
                   sx={{
                     px: 4,
                     py: 1.5,
-                    background: '#4f46e5',
+                    background: themes[currentTheme].primary,
+                    borderRadius: themes[currentTheme].buttonRadius,
                     '&:hover': { 
-                      background: '#4338ca',
+                      background: themes[currentTheme].accentHover,
                     },
                     textTransform: 'none',
                     fontFamily: "'Space Grotesk', sans-serif",
                     fontWeight: 500,
-                    fontSize: '1.1rem',
-                    borderRadius: 1.5
+                    fontSize: '1.1rem'
                   }}
                 >
-                  Play again
+                  {themes[currentTheme].restartButtonText}
                 </Button>
               </Box>
             ) : (
               <>
                 <Typography variant="h5" sx={{ 
                   mb: 3, 
-                  color: '#312e81',
+                  color: themes[currentTheme].secondary,
                   fontFamily: "'Space Grotesk', sans-serif",
                   fontWeight: 500,
-                  lineHeight: 1.6
+                  lineHeight: 1.6,
+                  fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
                 }}>
                   {questions[currentIndex].pronoun}{' '}
-                  <span style={{ color: '#6366f1' }}>_</span>{' '}
+                  <span style={{ color: themes[currentTheme].accent }}>_</span>{' '}
                   <Tooltip title={`(${questions[currentIndex].verbTranslation})`} arrow>
-                    <span style={{ cursor: 'pointer', color: '#4f46e5' }}>
+                    <span style={{ cursor: 'pointer', color: themes[currentTheme].primary }}>
                       ({questions[currentIndex].verb})
                     </span>
                   </Tooltip>
@@ -441,14 +361,15 @@ const App = () => {
                     mb: 3,
                     '& .MuiOutlinedInput-root': {
                       '& fieldset': {
-                        borderColor: '#818cf8',
-                        borderWidth: '2px'
+                        borderColor: themes[currentTheme].accent,
+                        borderWidth: '2px',
+                        borderRadius: themes[currentTheme].buttonRadius
                       },
                       '&:hover fieldset': {
-                        borderColor: '#6366f1'
+                        borderColor: themes[currentTheme].accentHover
                       },
                       '&.Mui-focused fieldset': {
-                        borderColor: '#4f46e5'
+                        borderColor: themes[currentTheme].primary
                       }
                     }
                   }}
@@ -460,18 +381,18 @@ const App = () => {
                   sx={{
                     px: 4,
                     py: 1.5,
-                    background: '#4f46e5',
+                    background: themes[currentTheme].primary,
+                    borderRadius: themes[currentTheme].buttonRadius,
                     '&:hover': { 
-                      background: '#4338ca',
+                      background: themes[currentTheme].accentHover,
                     },
                     textTransform: 'none',
                     fontFamily: "'Space Grotesk', sans-serif",
                     fontWeight: 500,
-                    fontSize: '1.1rem',
-                    borderRadius: 1.5
+                    fontSize: '1.1rem'
                   }}
                 >
-                  Check
+                  {themes[currentTheme].checkButtonText}
                 </Button>
               </>
             )}
@@ -481,10 +402,11 @@ const App = () => {
             <Typography 
               sx={{ 
                 mt: 3, 
-                color: feedback === 'Correct!' ? '#09bc8a' : '#dc2626',
+                color: feedback === 'Correct!' ? themes[currentTheme].correct : themes[currentTheme].incorrect,
                 fontWeight: 500,
                 fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: '1.5rem'
+                fontSize: '1.5rem',
+                fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
               }}
             >
               {feedback}
@@ -493,10 +415,11 @@ const App = () => {
 
           <Typography sx={{ 
             mt: 3, 
-            color: '#4f46e5', 
+            color: themes[currentTheme].primary, 
             fontFamily: "'Space Grotesk', sans-serif",
             fontSize: '1rem',
-            fontWeight: 500
+            fontWeight: 500,
+            fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
           }}>
             Score: {score} / {questions.length}
           </Typography>
