@@ -13,7 +13,10 @@ const App = () => {
         present: {
           "1sg": { pronoun: "Minä", form: "olen" },
           "2sg": { pronoun: "Sinä", form: "olet" },
-          "3sg": { pronoun: "Hän", form: "on" }
+          "3sg": { pronoun: "Hän", form: "on" },
+          "1pl": { pronoun: "Me", form: "olemme"},
+          "2pl": { pronoun: "Te", form: "olette"},
+          "3pl": { pronoun: "He", form: "ovat"}
         },
         past: {
           "1sg": { pronoun: "Minä", form: "olin" },
@@ -33,6 +36,126 @@ const App = () => {
           "3sg": { pronoun: "Jis/Ji", form: "yra" }
         }
       }
+    },
+    {
+      verb: "puhua",
+      language: "Finnish",
+      translation: "to speak",
+      forms: {
+        present: {
+          "1sg": { pronoun: "Minä", form: "puhun"},
+          "2sg": { pronoun: "Sinä", form: "puhut"},
+          "3sg": { pronoun: "Hän", form: "puhuu"},
+          "1pl": { pronoun: "Me", form: "puhumme"},
+          "2pl": { pronoun: "Te", form: "puhutte"},
+          "3pl": { pronoun: "He", form: "puhuvat"}
+        }
+      }
+    },
+    {
+      verb: "maalata",
+      language: "Finnish",
+      translation: "to paint",
+      forms: {
+        present: {
+          "1sg": { pronoun: "Minä", form: "maalaan"},
+          "2sg": { pronoun: "Sinä", form: "maalaat"},
+          "3sg": { pronoun: "Hän", form: "maalaa"},
+          "1pl": { pronoun: "Me", form: "maalaamme"},
+          "2pl": { pronoun: "Te", form: "maalaatte"},
+          "3pl": { pronoun: "He", form: "maalaavat"}
+        }
+      }
+    },
+    {
+      verb: "kirjoittaa",
+      language: "Finnish",
+      translation: "to write",
+      forms: {
+        present: {
+          "1sg": { pronoun: "Minä", form: "kirjoitan"},
+          "2sg": { pronoun: "Sinä", form: "kirjoitat"},
+          "3sg": { pronoun: "Hän", form: "kirjoittaa"},
+          "1pl": { pronoun: "Me", form: "kirjoitamme"},
+          "2pl": { pronoun: "Te", form: "kirjoitatte"},
+          "3pl": { pronoun: "He", form: "kirjoittavat"}
+        }
+      }
+    },
+    {
+      verb: "laulaa",
+      language: "Finnish",
+      translation: "to sing",
+      forms: {
+        present: {
+          "1sg": {pronoun: "Minä", form: "laulan"},
+          "2sg": {pronoun: "Sinä", form: "laulat"},
+          "3sg": {pronoun: "Hän", form: "laulaa"},
+          "1pl": {pronoun: "Me", form: "laulamme"},
+          "2pl": {pronoun: "Te", form: "laulatte"},
+          "3pl": {pronoun: "He", form: "laulavat"}
+        }
+      }
+    },
+    {
+      verb: "niiata",
+      language: "Finnish",
+      translation: "to courtesy",
+      forms: {
+        present: {
+          "1sg": {pronoun: "Minä", form: "niiaan"},
+          "2sg": {pronoun: "Sinä", form: "niiaat"},
+          "3sg": {pronoun: "Hän", form: "niiaa"},
+          "1pl": {pronoun: "Me", form: "niiaamme"},
+          "2pl": {pronoun: "Te", form: "niiaatte"},
+          "3pl": {pronoun: "He", form: "niiaavat"}
+        }
+      }
+    },
+    {
+      verb: "hyllyä",
+      language: "Finnish",
+      translation: "to shake, quake, jiggle",
+      forms: {
+        present: {
+          "1sg": {pronoun: "Minä", form: "hyllyn"},
+          "2sg": {pronoun: "Sinä", form: "hyllyt"},
+          "3sg": {pronoun: "Hän", form: "hyllyy"},
+          "1pl": {pronoun: "Me", form: "hyllymme"},
+          "2pl": {pronoun: "Te", form: "hyllytte"},
+          "3pl": {pronoun: "He", form: "hyllyvät"}
+        }
+      }
+    },
+    {
+      verb: "lukea",
+      language: "Finnish",
+      translation: "to read",
+      forms: {
+        present: {
+          "1sg": {pronoun: "Minä", form: "luen"},
+          "2sg": {pronoun: "Sinä", form: "luet"},
+          "3sg": {pronoun: "Hän", form: "lukee"},
+          "1pl": {pronoun: "Me", form: "luemme"},
+          "2pl": {pronoun: "Te", form: "luette"},
+          "3pl": {pronoun: "He", form: "lukevat"}
+        }
+      }
+    },
+    {
+      verb: "juoda",
+      language: "Finnish",
+      translation: "to drink",
+      forms: {
+        present: {
+          "1sg": {pronoun: "Minä", form: "juon"},
+          "2sg": {pronoun: "Sinä", form: "juot"},
+          "3sg": {pronoun: "Hän", form: "juo"},
+          "1pl": {pronoun: "Me", form: "juomme"},
+          "2pl": {pronoun: "Te", form: "juotte"},
+          "3pl": {pronoun: "He", form: "juovat"}
+        }
+      }
     }
   ];
 
@@ -43,6 +166,7 @@ const App = () => {
   const [answer, setAnswer] = useState('');
   const [feedback, setFeedback] = useState('');
   const [score, setScore] = useState(0);
+  const [enterState, setEnterState] = useState(true)
 
   // Helper function to shuffle array
   const shuffleArray = (array) => {
@@ -65,7 +189,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    const filteredQuestions = verbs
+    const filteredQuestions = shuffleArray( verbs
       .filter(v => v.language === language && v.forms[tense])
       .flatMap(v =>
         Object.entries(v.forms[tense]).map(([key, { pronoun, form }]) => ({
@@ -74,7 +198,8 @@ const App = () => {
           verb: v.verb,
           verbTranslation: v.translation
         }))
-      );
+      )
+    ).slice(0,10);
 
     // Shuffle the questions
     setQuestions(shuffleArray(filteredQuestions));
@@ -92,17 +217,21 @@ const App = () => {
     if (answer.trim().toLowerCase() === questions[currentIndex].answer) {
       setScore(score + 1);
       setFeedback('Correct!');
+      setEnterState(false);
       setTimeout(() => {
         setFeedback('');
         setAnswer('');
         setCurrentIndex(currentIndex + 1);
+        setEnterState(true);
       }, 1000);
     } else {
       setFeedback(`Sorry, the correct answer is "${questions[currentIndex].answer}"`);
+      setEnterState(false)
       setTimeout(() => {
         setFeedback('');
         setAnswer('');
         setCurrentIndex(currentIndex + 1);
+        setEnterState(true)
       }, 3000);
     }
   };
@@ -116,7 +245,7 @@ const App = () => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && enterState === true) {
       e.preventDefault();
       handleSubmit();
     }
@@ -137,7 +266,7 @@ const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         // Bold, modern gradient
-        background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 100%)',
+        background: 'linear-gradient(135deg,rgb(79, 31, 135) 0%,rgb(107, 195, 227) 100%)',
         padding: { xs: 2, sm: 4, md: 6 }
       }}
     >
@@ -352,10 +481,10 @@ const App = () => {
             <Typography 
               sx={{ 
                 mt: 3, 
-                color: feedback === 'Correct!' ? '#4f46e5' : '#dc2626',
+                color: feedback === 'Correct!' ? '#09bc8a' : '#dc2626',
                 fontWeight: 500,
                 fontFamily: "'Space Grotesk', sans-serif",
-                fontSize: '1.1rem'
+                fontSize: '1.5rem'
               }}
             >
               {feedback}
