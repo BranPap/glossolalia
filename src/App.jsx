@@ -8,6 +8,7 @@ import Sparkle from './components/sparkle';
 
 const App = () => {
   const textFieldRef = useRef(null);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   const [currentTheme, setCurrentTheme] = useState('modern');
   const [language, setLanguage] = useState('Finnish');
@@ -38,25 +39,31 @@ const App = () => {
   };
 
   useEffect(() => {
-    const filteredQuestions = shuffleArray(verbs
-      .filter(v => v.language === language && v.forms[tense])
-      .flatMap(v =>
-        Object.entries(v.forms[tense]).map(([key, { pronoun, form }]) => ({
-          pronoun,
-          answer: form,
-          verb: v.verb,
-          verbTranslation: v.translation
-        }))
-      )
-    ).slice(0,10);
+    const checkTouchDevice = () => {
+      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    };
+    checkTouchDevice();
   
-    // Shuffle the questions
+    const filteredQuestions = shuffleArray(
+      verbs
+        .filter(v => v.language === language && v.forms[tense])
+        .flatMap(v =>
+          Object.entries(v.forms[tense]).map(([key, { pronoun, form }]) => ({
+            pronoun,
+            answer: form,
+            verb: v.verb,
+            verbTranslation: v.translation
+          }))
+        )
+    ).slice(0, 10);
+  
     setQuestions(shuffleArray(filteredQuestions));
     setCurrentIndex(0);
     setAnswer('');
     setFeedback('');
     setScore(0);
   }, [language, tense]);
+  
 
   // Update handleSubmit to include sparkle effect
   const handleSubmit = () => {
@@ -344,11 +351,18 @@ const App = () => {
                 }}>
                   {questions[currentIndex].pronoun}{' '}
                   <span style={{ color: themes[currentTheme].accent }}>_</span>{' '}
-                  <Tooltip title={`(${questions[currentIndex].verbTranslation})`} arrow>
+                  <Tooltip
+                    title={`(${questions[currentIndex].verbTranslation})`}
+                    arrow
+                    disableHoverListener={isTouchDevice}
+                    enterTouchDelay={0}
+                    leaveTouchDelay={1500}
+                  >
                     <span style={{ cursor: 'pointer', color: themes[currentTheme].primary }}>
                       ({questions[currentIndex].verb})
                     </span>
                   </Tooltip>
+
                 </Typography>
 
                 <TextField
