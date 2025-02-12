@@ -375,6 +375,194 @@ export const verbs = [
         "3pl": {pronoun: "He", form: "nauravat"}
         }
     }
+  },
+  {
+    verb: "nähdä",
+    language: "Finnish",
+    translation: "to see",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "näen"},
+        "2sg": {pronoun: "Sinä", form: "näet"},
+        "3sg": {pronoun: "Hän", form: "näkee"},
+        "1pl": {pronoun: "Me", form: "näemme"},
+        "2pl": {pronoun: "Te", form: "näette"},
+        "3pl": {pronoun: "He", form: "näkevät"}
+        }
+    }
+  },
+  {
+    verb: "kuulla",
+    language: "Finnish",
+    translation: "to hear",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "kuulen"},
+        "2sg": {pronoun: "Sinä", form: "kuulet"},
+        "3sg": {pronoun: "Hän", form: "kuulee"},
+        "1pl": {pronoun: "Me", form: "kuulemme"},
+        "2pl": {pronoun: "Te", form: "kuulette"},
+        "3pl": {pronoun: "He", form: "kuulevat"}
+        }
+    }
+  },
+  {
+    verb: "tietää",
+    language: "Finnish",
+    translation: "to know",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "tiedän"},
+        "2sg": {pronoun: "Sinä", form: "tiedät"},
+        "3sg": {pronoun: "Hän", form: "tietää"},
+        "1pl": {pronoun: "Me", form: "tiedämme"},
+        "2pl": {pronoun: "Te", form: "tiedätte"},
+        "3pl": {pronoun: "He", form: "tietävät"}
+        }
+    }
+  },
+  {
+    verb: "ajatella",
+    language: "Finnish",
+    translation: "to think",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "ajattelen"},
+        "2sg": {pronoun: "Sinä", form: "ajattelet"},
+        "3sg": {pronoun: "Hän", form: "ajattelee"},
+        "1pl": {pronoun: "Me", form: "ajattelemme"},
+        "2pl": {pronoun: "Te", form: "ajattelette"},
+        "3pl": {pronoun: "He", form: "ajattelevat"}
+        }
+    }
+  },
+  {
+    verb: "haistaa",
+    language: "Finnish",
+    translation: "to smell",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "haistan"},
+        "2sg": {pronoun: "Sinä", form: "haistat"},
+        "3sg": {pronoun: "Hän", form: "haistaa"},
+        "1pl": {pronoun: "Me", form: "haistamme"},
+        "2pl": {pronoun: "Te", form: "haistatte"},
+        "3pl": {pronoun: "He", form: "haistavat"}
+        }
+    }
+  },
+  {
+    verb: "hablar",
+    language: "Spanish",
+    translation: "to speak",
+    forms: {
+      present: {
+        "1sg": {pronoun: "Yo", form: "hablo"},
+        "2sg": {pronoun: "Tú", form: "hablas"},
+        "3sg": {pronoun: "Él", form: "habla"},
+        "1pl": {pronoun: "Nosotras", form: "hablamos"},
+        "2pl": {pronoun: "Vosotros", form: "habláis"},
+        "3pl": {pronoun: "Ellas", form: "hablan"}
+      },
+      future: {
+        "1sg": {pronoun: "Yo", form: "hablaré"},
+        "2sg": {pronoun: "Tú", form: "hablarás"},
+        "3sg": {pronoun: "Él", form: "hablará"},
+        "1pl": {pronoun: "Nosotras", form: "hablaremos"},
+        "2pl": {pronoun: "Vosotros", form: "hablaréis"},
+        "3pl": {pronoun: "Ellas", form: "hablarán"}
+      }
+    }
+  },
+  {
+    verb: "pelätä",
+    language: "Finnish",
+    translation: "to fear, be afraid of",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "pelkään"},
+        "2sg": {pronoun: "Sinä", form: "pelkäät"},
+        "3sg": {pronoun: "Hän", form: "pelkää"},
+        "1pl": {pronoun: "Me", form: "pelkäämme"},
+        "2pl": {pronoun: "Te", form: "pelkäätte"},
+        "3pl": {pronoun: "He", form: "pelkäävät"}
+        }
+    }
+  },
+  {
+    verb: "nukkua",
+    language: "Finnish",
+    translation: "to sleep",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "nukun"},
+        "2sg": {pronoun: "Sinä", form: "nukut"},
+        "3sg": {pronoun: "Hän", form: "nukuu"},
+        "1pl": {pronoun: "Me", form: "nukumme"},
+        "2pl": {pronoun: "Te", form: "nukutte"},
+        "3pl": {pronoun: "He", form: "nukkuvat"}
+        }
+    }
+  },
+  {
+    verb: "elää",
+    language: "Finnish",
+    translation: "to live",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "elän"},
+        "2sg": {pronoun: "Sinä", form: "elät"},
+        "3sg": {pronoun: "Hän", form: "elää"},
+        "1pl": {pronoun: "Me", form: "elämme"},
+        "2pl": {pronoun: "Te", form: "elätte"},
+        "3pl": {pronoun: "He", form: "elävät"}
+        }
+    }
+  },
+  {
+    verb: "kuolla",
+    language: "Finnish",
+    translation: "to die",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "kuolen"},
+        "2sg": {pronoun: "Sinä", form: "kuolet"},
+        "3sg": {pronoun: "Hän", form: "kuolee"},
+        "1pl": {pronoun: "Me", form: "kuolemme"},
+        "2pl": {pronoun: "Te", form: "kuolette"},
+        "3pl": {pronoun: "He", form: "kuolevat"}
+        }
+    }
+  },
+  {
+    verb: "tappaa",
+    language: "Finnish",
+    translation: "to kill, slay",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "tapan"},
+        "2sg": {pronoun: "Sinä", form: "tapat"},
+        "3sg": {pronoun: "Hän", form: "tappaa"},
+        "1pl": {pronoun: "Me", form: "tapamme"},
+        "2pl": {pronoun: "Te", form: "tapatte"},
+        "3pl": {pronoun: "He", form: "tappavat"}
+        }
+    }
+  },
+  {
+    verb: "metsästää",
+    language: "Finnish",
+    translation: "to hunt",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "metsästän"},
+        "2sg": {pronoun: "Sinä", form: "metsästät"},
+        "3sg": {pronoun: "Hän", form: "metsästää"},
+        "1pl": {pronoun: "Me", form: "metsästämme"},
+        "2pl": {pronoun: "Te", form: "metsästätte"},
+        "3pl": {pronoun: "He", form: "metsästävät"}
+        }
+    }
   }
 ];
 

@@ -26,7 +26,7 @@ const Sparkle = ({ theme }) => {
     console.log(newSparkles); // Log sparkles to confirm they are created
     setSparkles(newSparkles);
 
-    const timer = setTimeout(() => setSparkles([]), 1500);
+    const timer = setTimeout(() => setSparkles([]), 2500);
     return () => clearTimeout(timer);
   }, [theme]);
 
