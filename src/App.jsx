@@ -96,6 +96,7 @@ const handleSubmit = () => {
   if (isCorrect) {
     setScore(score + 1);
     let feedbackMessage = 'Correct!';
+    let timeoutTime = 1000;
     
     if (isTranslationMode) {
       const allAnswers = correctAnswer.split(',').map(ans => ans.trim().replace(/^to\s+/, ''));
@@ -103,6 +104,7 @@ const handleSubmit = () => {
       
       if (otherAnswers.length > 0) {
         feedbackMessage = `Correct! This verb can also be translated as: '${otherAnswers.join(', ')}'`;
+        timeoutTime = 3000;
       }
     }
     
@@ -115,7 +117,7 @@ const handleSubmit = () => {
       setAnswer('');
       setCurrentIndex(currentIndex + 1);
       setEnterState(true);
-    }, 3000);  // Increased time for users to read feedback
+    }, timeoutTime);  // Increased time for users to read feedback
   } else {
     setFeedback(`Sorry, the correct answer is "${questions[currentIndex].answer}"`);
     
