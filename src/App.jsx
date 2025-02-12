@@ -1,14 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Card, CardContent, Typography, TextField, Button, LinearProgress, Box, MenuItem, Select, Tooltip, Switch, ToggleButtonGroup, ToggleButton } from '@mui/material';
+import { Card, CardContent, Typography, TextField, Button, LinearProgress, Box, MenuItem, Select, Tooltip, Switch, ToggleButtonGroup, ToggleButton, Dialog, DialogTitle, DialogContent, DialogContentText } from '@mui/material';
 import { verbs, shuffleArray } from './data/verbs';
 import { IconButton } from '@mui/material';
 import { themes } from './themes';
 import Sparkle from './components/sparkle';
+import { Info } from '@mui/icons-material';
 
 const App = () => {
   const textFieldRef = useRef(null);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [isTranslationMode, setIsTranslationMode] = useState(false);
+  const [infoOpen, setInfoOpen] = useState(false);
 
   const [currentTheme, setCurrentTheme] = useState('modern');
   const [language, setLanguage] = useState('Spanish');
@@ -90,7 +92,7 @@ const handleSubmit = () => {
   const correctAnswer = questions[currentIndex].answer.toLowerCase();
   
   const isCorrect = isTranslationMode 
-    ? correctAnswer.split(',').some(ans => userAnswer.replace(/^to\s+/, '') === ans.trim().replace(/^to\s+/, ''))
+    ? correctAnswer.split(',').some(ans => userAnswer.replace(/^to\s+/, '').replace(/\s*\([^)]*\)/g, '') === ans.trim().replace(/^to\s+/, '').replace(/\s*\([^)]*\)/g, ''))
     : userAnswer === correctAnswer;
 
   if (isCorrect) {
@@ -99,8 +101,8 @@ const handleSubmit = () => {
     let timeoutTime = 1000;
     
     if (isTranslationMode) {
-      const allAnswers = correctAnswer.split(',').map(ans => ans.trim().replace(/^to\s+/, ''));
-      const otherAnswers = allAnswers.filter(ans => ans !== userAnswer.replace(/^to\s+/, ''));
+      const allAnswers = correctAnswer.split(',').map(ans => ans.trim().replace(/^to\s+/, '').replace(/\s*\([^)]*\)/g, ''));
+      const otherAnswers = allAnswers.filter(ans => ans !== userAnswer.replace(/^to\s+/, '').replace(/\s*\([^)]*\)/g, ''));
       
       if (otherAnswers.length > 0) {
         feedbackMessage = `Correct! This verb can also be translated as: '${otherAnswers.join(', ')}'`;
@@ -152,6 +154,46 @@ const handleSubmit = () => {
         cursor: themes[currentTheme].cursor
       }}
     >
+      <IconButton 
+  onClick={() => setInfoOpen(true)}
+  sx={{ 
+    position: 'absolute', 
+    top: 16, 
+    right: 16,
+    color: themes[currentTheme].secondary
+  }}
+>
+  <Info />
+</IconButton>
+
+<Dialog 
+  open={infoOpen} 
+  onClose={() => setInfoOpen(false)}
+  sx={{
+    '& .MuiDialog-paper': {
+      borderRadius: 2,
+      padding: 2,
+      background: '#fafafa'
+    }
+  }}
+>
+  <DialogTitle sx={{ 
+    fontFamily: "'Space Grotesk', sans-serif",
+    color: themes[currentTheme].secondary
+  }}>
+    About Glossolalia
+  </DialogTitle>
+  <DialogContent>
+    <DialogContentText sx={{ 
+      fontFamily: "'Space Grotesk', sans-serif",
+      color: themes[currentTheme].primary 
+    }}>
+      The verbs in this app are taken from the Swadesh 207 List, a tool in linguistics used to identify core vocabulary across languages. This list consists of concepts that are, without exception, lexicalized in all the world's languages.
+      <br></br><br></br> For example, all known languages have a verb for encoding the event of eating: in Finnish, it's <em>syödä</em>, while in Spanish it's <em>comer</em>; in Hopi, an indigenous language of the Americas spoken in Arizona, the verb is <em>nöösa</em>. 
+      <br></br><br></br>Some of these words are surprising to modern language users- for example, it has been found that every language has an encoded lexical item for "louse" (singular of lice). By contrast, not every language has a specific lexical item for the event of writing; not every language has a written form! <br></br><br></br> This app is maintained by <a href='www.branpap.com'>Brandon Papineau</a> and is under ongoing construction and optimization.
+    </DialogContentText>
+  </DialogContent>
+</Dialog>
       <Card
         elevation={8}
         sx={{

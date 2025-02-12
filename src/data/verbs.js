@@ -563,6 +563,216 @@ export const verbs = [
         "3pl": {pronoun: "He", form: "metsästävät"}
         }
     }
+  },
+  {
+    verb: "lyödä",
+    language: "Finnish",
+    translation: "to hit",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "lyön"},
+        "2sg": {pronoun: "Sinä", form: "lyöt"},
+        "3sg": {pronoun: "Hän", form: "lyö"},
+        "1pl": {pronoun: "Me", form: "lyömme"},
+        "2pl": {pronoun: "Te", form: "lyötte"},
+        "3pl": {pronoun: "He", form: "lyövät"}
+        }
+    }
+  },
+  {
+    verb: "leikata",
+    language: "Finnish",
+    translation: "to cut",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "leikkaan"},
+        "2sg": {pronoun: "Sinä", form: "leikkaat"},
+        "3sg": {pronoun: "Hän", form: "leikkaa"},
+        "1pl": {pronoun: "Me", form: "leikkaamme"},
+        "2pl": {pronoun: "Te", form: "leikkaatte"},
+        "3pl": {pronoun: "He", form: "leikkaavat"}
+        }
+    }
+  },
+  {
+    verb: "halkaista",
+    language: "Finnish",
+    translation: "to split",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "halkaisen"},
+        "2sg": {pronoun: "Sinä", form: "halkaiset"},
+        "3sg": {pronoun: "Hän", form: "halkaisee"},
+        "1pl": {pronoun: "Me", form: "halkaisemme"},
+        "2pl": {pronoun: "Te", form: "halkaisette"},
+        "3pl": {pronoun: "He", form: "halkaisevat"}
+        }
+    }
+  },
+  {
+    verb: "pistää",
+    language: "Finnish",
+    translation: "to poke, thrust, stab",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "pistän"},
+        "2sg": {pronoun: "Sinä", form: "pistät"},
+        "3sg": {pronoun: "Hän", form: "pistää"},
+        "1pl": {pronoun: "Me", form: "pistämme"},
+        "2pl": {pronoun: "Te", form: "pistätte"},
+        "3pl": {pronoun: "He", form: "pistävät"}
+        }
+    }
+  },
+  {
+    verb: "raapia",
+    language: "Finnish",
+    translation: "to scratch, scrape",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "raavin"},
+        "2sg": {pronoun: "Sinä", form: "raavit"},
+        "3sg": {pronoun: "Hän", form: "raapii"},
+        "1pl": {pronoun: "Me", form: "raavimme"},
+        "2pl": {pronoun: "Te", form: "raavitte"},
+        "3pl": {pronoun: "He", form: "raapivat"}
+        }
+    }
+  },
+  {
+    verb: "kaivaa",
+    language: "Finnish",
+    translation: "to dig, excavate",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "kaivan"},
+        "2sg": {pronoun: "Sinä", form: "kaivat"},
+        "3sg": {pronoun: "Hän", form: "kaivaa"},
+        "1pl": {pronoun: "Me", form: "kaivamme"},
+        "2pl": {pronoun: "Te", form: "kaivatte"},
+        "3pl": {pronoun: "He", form: "kaivavat"}
+        }
+    }
+  },
+  {
+    verb: "uida",
+    language: "Finnish",
+    translation: "to swim",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "uin"},
+        "2sg": {pronoun: "Sinä", form: "uit"},
+        "3sg": {pronoun: "Hän", form: "ui"},
+        "1pl": {pronoun: "Me", form: "uimme"},
+        "2pl": {pronoun: "Te", form: "uitte"},
+        "3pl": {pronoun: "He", form: "uivat"}
+        }
+    }
+  },
+  {
+    verb: "lentää",
+    language: "Finnish",
+    translation: "to fly",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "lennän"},
+        "2sg": {pronoun: "Sinä", form: "lennät"},
+        "3sg": {pronoun: "Hän", form: "lentää"},
+        "1pl": {pronoun: "Me", form: "lennämme"},
+        "2pl": {pronoun: "Te", form: "lennätte"},
+        "3pl": {pronoun: "He", form: "lentävät"}
+        }
+    }
+  },
+  {
+    verb: "kävellä",
+    language: "Finnish",
+    translation: "to walk",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "kävelen"},
+        "2sg": {pronoun: "Sinä", form: "kävelet"},
+        "3sg": {pronoun: "Hän", form: "kävelee"},
+        "1pl": {pronoun: "Me", form: "kävelemme"},
+        "2pl": {pronoun: "Te", form: "kävelette"},
+        "3pl": {pronoun: "He", form: "kävelevät"}
+        }
+    }
+  },
+  {
+    verb: "tulla",
+    language: "Finnish",
+    translation: "to come",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "tulen"},
+        "2sg": {pronoun: "Sinä", form: "tulet"},
+        "3sg": {pronoun: "Hän", form: "tulee"},
+        "1pl": {pronoun: "Me", form: "tulemme"},
+        "2pl": {pronoun: "Te", form: "tulette"},
+        "3pl": {pronoun: "He", form: "tulevat"}
+        }
+    }
+  },
+  {
+    verb: "maata",
+    language: "Finnish",
+    translation: "to lie (as in a bed)",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "makaan"},
+        "2sg": {pronoun: "Sinä", form: "makaat"},
+        "3sg": {pronoun: "Hän", form: "makaa"},
+        "1pl": {pronoun: "Me", form: "makaamme"},
+        "2pl": {pronoun: "Te", form: "makaatte"},
+        "3pl": {pronoun: "He", form: "makaavat"}
+        }
+    }
+  },
+  {
+    verb: "istua",
+    language: "Finnish",
+    translation: "to sit",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "istun"},
+        "2sg": {pronoun: "Sinä", form: "istut"},
+        "3sg": {pronoun: "Hän", form: "istuu"},
+        "1pl": {pronoun: "Me", form: "istumme"},
+        "2pl": {pronoun: "Te", form: "istutte"},
+        "3pl": {pronoun: "He", form: "istuvat"}
+        }
+    }
+  },
+  {
+    verb: "mentir",
+    language: "Spanish",
+    translation: "to lie (as in tell an untruth)",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Yo", form: "miento"},
+        "2sg": {pronoun: "Tú", form: "mientes"},
+        "3sg": {pronoun: "Ella", form: "miente"},
+        "1pl": {pronoun: "Nosotras", form: "mentimos"},
+        "2pl": {pronoun: "Vosotros", form: "mentís"},
+        "3pl": {pronoun: "Ellos", form: "mienten"}
+        }
+    }
+  },
+  {
+    verb: "kääntyä",
+    language: "Finnish",
+    translation: "to turn, change direction",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "käännyn"},
+        "2sg": {pronoun: "Sinä", form: "käännyt"},
+        "3sg": {pronoun: "Hän", form: "kääntyy"},
+        "1pl": {pronoun: "Me", form: "käännymme"},
+        "2pl": {pronoun: "Te", form: "käännytte"},
+        "3pl": {pronoun: "He", form: "kääntyvät"}
+        }
+    }
   }
 ];
 
