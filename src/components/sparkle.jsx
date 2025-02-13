@@ -8,6 +8,7 @@ const themeEmojis = {
   cyberpunk: ['⚙️', '⚡', '👾', '🖤', '🌐'],
   ocean: ['🐚', '🌊', '🐙', '🐠', '🐳'],
   cosmic: ['🌟', '🚀', '🪐', '🛸', '👽'],
+  horror: ['🩸', '💀', '🪦', '😰', '🦇']
 };
 
 const Sparkle = ({ theme }) => {

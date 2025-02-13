@@ -140,20 +140,115 @@ const handleSubmit = () => {
     }
   };
 
+  const CollapsibleThemeSelector = ({ themes, currentTheme, setCurrentTheme }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+  
+    const handleMouseEnter = () => {
+      if (window.matchMedia('(hover: hover)').matches) {
+        setIsExpanded(true);
+      }
+    };
+  
+    const handleMouseLeave = () => {
+      if (window.matchMedia('(hover: hover)').matches) {
+        setIsExpanded(false);
+      }
+    };
+  
+    const handleTouchStart = () => {
+      if (!window.matchMedia('(hover: hover)').matches) {
+        setIsExpanded(!isExpanded);
+      }
+    };
+  
+    const handleThemeClick = (themeName) => {
+      setCurrentTheme(themeName);
+      if (!window.matchMedia('(hover: hover)').matches) {
+        setIsExpanded(false);
+      }
+    };
+  
+    return (
+      <Card
+        elevation={8}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        sx={{
+          position: 'fixed',
+          bottom: { xs: '16px', md: 'auto' },
+          left: { xs: '50%', md: '24px' },
+          top: { xs: 'auto', md: '50%' },
+          transform: { 
+            xs: 'translateX(-50%)', 
+            md: 'translateY(-50%)' 
+          },
+          borderRadius: 4,
+          background: 'rgba(255, 255, 255, 0.9)',
+          backdropFilter: 'blur(8px)',
+          p: 1,
+          display: 'flex',
+          flexDirection: { xs: 'row', md: 'column' },
+          gap: 1,
+          transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+          overflow: 'hidden',
+          width: { 
+            xs: isExpanded ? 'auto' : '48px',
+            md: '48px'
+          },
+          height: {
+            xs: '48px',
+            md: isExpanded ? 'auto' : '48px'
+          },
+          '&:hover': {
+            boxShadow: 16
+          },
+          zIndex: 1000
+        }}
+      >
+        {Object.entries(themes).map(([themeName, theme], index) => (
+          <IconButton
+            key={themeName}
+            onClick={() => handleThemeClick(themeName)}
+            sx={{
+              p: { xs: 1, md: 1.5 },
+              fontSize: { xs: '1.25rem', md: '1.5rem' },
+              transform: !isExpanded && themeName !== currentTheme ? 
+                'scale(0.5) translateX(-100%)' : 'scale(1) translateX(0)',
+              opacity: !isExpanded && themeName !== currentTheme ? 0 : 1,
+              position: !isExpanded && themeName !== currentTheme ? 'absolute' : 'relative',
+              backgroundColor: currentTheme === themeName ? 
+                `${themes[currentTheme].accent}20` : 'transparent',
+              '&:hover': {
+                backgroundColor: `${themes[themeName].accent}20`
+              },
+              transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+              visibility: !isExpanded && themeName !== currentTheme ? 'hidden' : 'visible',
+              transitionDelay: isExpanded ? `${index * 50}ms` : '0ms',
+            }}
+          >
+            {theme.themeIcon}
+          </IconButton>
+        ))}
+      </Card>
+    );
+  };
+  
+
   return (
     <Box
-      sx={{
-        minHeight: '100vh',
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: themes[currentTheme].background,
-        padding: { xs: 2, sm: 4, md: 6 },
-        transition: 'all 0.3s ease',
-        cursor: themes[currentTheme].cursor
-      }}
-    >
+  sx={{
+    minHeight: '100vh',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    background: themes[currentTheme].background,
+    padding: { xs: 2, sm: 4, md: 6 },
+    transition: 'all 0.3s ease',
+    cursor: themes[currentTheme].cursor
+  }}
+>
       <IconButton 
   onClick={() => setInfoOpen(true)}
   sx={{ 
@@ -181,62 +276,25 @@ const handleSubmit = () => {
     fontFamily: "'Space Grotesk', sans-serif",
     color: themes[currentTheme].secondary
   }}>
-    About Glossolalia
+    About <em>Glossolalia</em>
   </DialogTitle>
   <DialogContent>
     <DialogContentText sx={{ 
       fontFamily: "'Space Grotesk', sans-serif",
       color: themes[currentTheme].primary 
     }}>
-      The verbs in this app are taken from the Swadesh 207 List, a tool in linguistics used to identify core vocabulary across languages. This list consists of concepts that are, without exception, lexicalized in all the world's languages.
-      <br></br><br></br> For example, all known languages have a verb for encoding the event of eating: in Finnish, it's <em>syödä</em>, while in Spanish it's <em>comer</em>; in Hopi, an indigenous language of the Americas spoken in Arizona, the verb is <em>nöösa</em>. 
-      <br></br><br></br>Some of these words are surprising to modern language users- for example, it has been found that every language has an encoded lexical item for "louse" (singular of lice). By contrast, not every language has a specific lexical item for the event of writing; not every language has a written form! <br></br><br></br> This app is maintained by <a href='www.branpap.com'>Brandon Papineau</a> and is under ongoing construction and optimization.
+      <em>Glossolalia</em> ('speaking in tongues') is a drill-based language learning app. While you certainly cannot learn a language by simply drilling verb conjugations, I found when I started learning Spanish back in 2012 that I was able to get a faster grip on verb forms by simply practicing over and over online. Unfortunately, the tools I used back then are now behind paywalls or cluttered with ads. <em>Glossolalia</em> was born as a result of my frustation with this state of affairs. It is my intention that <em>Glossolalia</em> will remain free and open-source forever.
+      <br></br><br></br>The verbs in this app are taken from the <a href='https://en.wikipedia.org/wiki/Swadesh_list'>Swadesh 207 List</a>, a tool in linguistics used to identify core vocabulary across languages. This list consists of concepts that are, without exception, lexicalized in all the world's languages. These words also often resist borrowing into other languages. 
+      <br></br><br></br> As an example, all known languages have a verb for encoding the event of eating: in Finnish, it's <em>syödä</em>, while in Spanish it's <em>comer</em>. In Hopi, an indigenous language of the Americas spoken in Arizona, the verb is <em>nöösa</em>. 
+      <br></br><br></br>Some of these words are surprising to modern language users- for example, it has been found that every language has an encoded lexical item for "louse" (singular of lice). By contrast, not every language has a specific lexical verb for the act of writing; not every language has a written form! <br></br><br></br> This app is maintained by <a href='https://branpap.com'>Brandon Papineau</a> and is under ongoing construction and optimization. Feedback can be directed to: branpap (at) my_institution (dot) edu.
     </DialogContentText>
   </DialogContent>
 </Dialog>
-      <Card
-        elevation={8}
-        sx={{
-          position: 'fixed',
-          bottom: { xs: '16px', md: 'auto' },
-          left: { xs: '50%', md: '24px' },
-          top: { xs: 'auto', md: '50%' },
-          transform: { 
-            xs: 'translateX(-50%)', 
-            md: 'translateY(-50%)' 
-          },
-          borderRadius: 4,
-          background: 'rgba(255, 255, 255, 0.9)',
-          backdropFilter: 'blur(8px)',
-          p: 1,
-          display: 'flex',
-          flexDirection: { xs: 'row', md: 'column' },
-          gap: 1,
-          transition: 'all 0.3s ease',
-          '&:hover': {
-            boxShadow: 16
-          },
-          zIndex: 1000
-        }}
-      >
-        {Object.entries(themes).map(([themeName, theme]) => (
-          <IconButton
-            key={themeName}
-            onClick={() => setCurrentTheme(themeName)}
-            sx={{
-              p: { xs: 1, md: 1.5 },
-              fontSize: { xs: '1.25rem', md: '1.5rem' },
-              backgroundColor: currentTheme === themeName ? 
-                `${themes[currentTheme].accent}20` : 'transparent',
-              '&:hover': {
-                backgroundColor: `${themes[themeName].accent}20`
-              }
-            }}
-          >
-            {theme.themeIcon}
-          </IconButton>
-        ))}
-      </Card>
+<CollapsibleThemeSelector 
+  themes={themes}
+  currentTheme={currentTheme}
+  setCurrentTheme={setCurrentTheme}
+/>
 
       <Card
         elevation={12}
@@ -509,25 +567,71 @@ const handleSubmit = () => {
                   }}
                 />
 
-                <Button
-                  variant="contained"
-                  onClick={handleSubmit}
-                  sx={{
-                    px: 4,
-                    py: 1.5,
-                    background: themes[currentTheme].primary,
-                    borderRadius: themes[currentTheme].buttonRadius,
-                    '&:hover': { 
-                      background: themes[currentTheme].accentHover,
-                    },
-                    textTransform: 'none',
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontWeight: 500,
-                    fontSize: '1.1rem'
-                  }}
-                >
-                  {themes[currentTheme].checkButtonText}
-                </Button>
+                {/* Replace the existing Button section with this new multi-button layout */}
+<Box sx={{ 
+  display: 'flex',
+  gap: 2,
+  alignItems: 'center'
+}}>
+  <Button
+    variant="contained"
+    onClick={handleSubmit}
+    sx={{
+      px: 4,
+      py: 1.5,
+      background: themes[currentTheme].primary,
+      borderRadius: themes[currentTheme].buttonRadius,
+      '&:hover': { 
+        background: themes[currentTheme].accentHover,
+      },
+      textTransform: 'none',
+      fontFamily: "'Space Grotesk', sans-serif",
+      fontWeight: 500,
+      fontSize: '1.1rem'
+    }}
+  >
+    {themes[currentTheme].checkButtonText}
+  </Button>
+
+  <Button
+    variant="outlined"
+    onClick={() => {
+      const currentQuestion = questions[currentIndex];
+      const showAnswerMessage = isTranslationMode
+        ? `No worries, "${currentQuestion.verb}" means "${currentQuestion.answer}"`
+        : `No worries, the correct form is "${currentQuestion.answer}"`;
+      setFeedback(showAnswerMessage);
+      
+      // Clear feedback after a delay and move to next question
+      setTimeout(() => {
+        setFeedback('');
+        setAnswer('');
+        setCurrentIndex(currentIndex + 1);
+        setEnterState(true);
+      }, 4000);
+    }}
+    sx={{
+      px: 4,
+      py: 1.5,
+      color: themes[currentTheme].primary,
+      borderColor: themes[currentTheme].accent,
+      borderWidth: '2px',
+      borderRadius: themes[currentTheme].buttonRadius,
+      '&:hover': { 
+        borderColor: themes[currentTheme].accentHover,
+        borderWidth: '2px',
+        background: `${themes[currentTheme].accent}10`
+      },
+      textTransform: 'none',
+      fontFamily: "'Space Grotesk', sans-serif",
+      fontWeight: 500,
+      fontSize: '1.1rem'
+    }}
+  >
+    {themes[currentTheme].showAnswerButtonText || "Show Answer"}
+  </Button>
+</Box>
+                
               </>
             )}
           </Box>

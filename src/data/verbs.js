@@ -773,6 +773,96 @@ export const verbs = [
         "3pl": {pronoun: "He", form: "kääntyvät"}
         }
     }
+  },
+  {
+    verb: "pudota",
+    language: "Finnish",
+    translation: "to fall (down or off)",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "putoan"},
+        "2sg": {pronoun: "Sinä", form: "putoat"},
+        "3sg": {pronoun: "Hän", form: "putoaa"},
+        "1pl": {pronoun: "Me", form: "putoamme"},
+        "2pl": {pronoun: "Te", form: "putoatte"},
+        "3pl": {pronoun: "He", form: "putoavat"}
+        }
+    }
+  },
+  {
+    verb: "antaa",
+    language: "Finnish",
+    translation: "to give",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "annan"},
+        "2sg": {pronoun: "Sinä", form: "annat"},
+        "3sg": {pronoun: "Hän", form: "antaa"},
+        "1pl": {pronoun: "Me", form: "annamme"},
+        "2pl": {pronoun: "Te", form: "annatte"},
+        "3pl": {pronoun: "He", form: "antavat"}
+        }
+    }
+  },
+  {
+    verb: "pitää",
+    language: "Finnish",
+    translation: "to hold, grasp, grip",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "pidän"},
+        "2sg": {pronoun: "Sinä", form: "pidät"},
+        "3sg": {pronoun: "Hän", form: "pitää"},
+        "1pl": {pronoun: "Me", form: "pidämme"},
+        "2pl": {pronoun: "Te", form: "pidätte"},
+        "3pl": {pronoun: "He", form: "pitävät"}
+        }
+    }
+  },
+  {
+    verb: "puristaa",
+    language: "Finnish",
+    translation: "to press, squeeze, grasp",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "puristan"},
+        "2sg": {pronoun: "Sinä", form: "puristat"},
+        "3sg": {pronoun: "Hän", form: "puristaa"},
+        "1pl": {pronoun: "Me", form: "puristamme"},
+        "2pl": {pronoun: "Te", form: "puristatte"},
+        "3pl": {pronoun: "He", form: "puristavat"}
+        }
+    }
+  },
+  {
+    verb: "hieroa",
+    language: "Finnish",
+    translation: "to rub",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "hieron"},
+        "2sg": {pronoun: "Sinä", form: "hierot"},
+        "3sg": {pronoun: "Hän", form: "hieroo"},
+        "1pl": {pronoun: "Me", form: "hieromme"},
+        "2pl": {pronoun: "Te", form: "hierotte"},
+        "3pl": {pronoun: "He", form: "hierovat"}
+        }
+    }
+  },
+  {
+    verb: "pestä",
+    language: "Finnish",
+    translation: "to rub",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "pesen"},
+        "2sg": {pronoun: "Sinä", form: "peset"},
+        "3sg": {pronoun: "Hän", form: "pesee"},
+        "1pl": {pronoun: "Me", form: "pesemme"},
+        "2pl": {pronoun: "Te", form: "pesette"},
+        "3pl": {pronoun: "He", form: "pesevät"}
+        }
+    }
   }
 ];
 

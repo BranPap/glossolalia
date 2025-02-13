@@ -1,8 +1,8 @@
 // themes.js
 export const themes = {
     modern: {
-      background: 'linear-gradient(135deg, rgb(79, 31, 135) 0%, rgb(107, 195, 227) 100%)',
-      cardBorder: 'linear-gradient(90deg, #6366f1, #818cf8)',
+      background: 'linear-gradient(135deg, rgb(101, 8, 207) 0%, rgb(79, 200, 244) 100%)',
+      cardBorder: 'linear-gradient(90deg, #6366f1,rgb(112, 189, 194))',
       primary: '#4f46e5',
       secondary: '#312e81',
       accent: '#818cf8',
@@ -19,7 +19,7 @@ export const themes = {
       checkButtonText: 'Check',
       restartButtonText: 'Go again',
       // Icons
-      themeIcon: '🧪',
+      themeIcon: '📍',
       cursor: 'default'
     },
     witchy: {
@@ -40,13 +40,14 @@ export const themes = {
       buttonRadius: '20px',
       checkButtonText: 'Cast spell',
       restartButtonText: 'Cast again',
+      showAnswerButtonText: 'Reveal',
       // Icons
       themeIcon: '🌙',
-      cursor: 'default'
+      cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>🪄</text></svg>") 16 0, auto'
     },
     cyberpunk: {
         background: 'linear-gradient(135deg, #000000 0%, #2c0946 100%)',
-        cardBorder: 'linear-gradient(90deg, #00f6ff, #ff00ea)',
+        cardBorder: 'linear-gradient(90deg,rgb(47, 246, 233),rgb(244, 255, 149))',
         primary: '#00f6ff',
         secondary: '#ff00ea',
         accent: '#39ff14',
@@ -60,9 +61,10 @@ export const themes = {
         completeMessage: 'System upgraded',
         buttonRadius: '0px',
         checkButtonText: 'console.log(answer)',
+        showAnswerButtonText: 'help()',
         restartButtonText: 'Reboot',
         themeIcon: '👾',
-        cursor: 'default'
+        cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>⚡️</text></svg>") 16 0, auto'
       },
       forest: {
         background: 'linear-gradient(135deg, #2d5a27 0%, #8fbc8f 100%)',
@@ -81,8 +83,9 @@ export const themes = {
         buttonRadius: '8px',
         checkButtonText: 'Plant seed',
         restartButtonText: 'Sow again',
+        showAnswerButtonText: 'Show answer',
         themeIcon: '🌱',
-        cursor: 'default'
+        cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>🌲</text></svg>") 16 0, auto'
       },
       ocean: {
         background: 'linear-gradient(135deg, #000080 0%, #00ffff 100%)',
@@ -99,10 +102,11 @@ export const themes = {
         completeEmoji: '🐋',
         completeMessage: 'Deep knowledge achieved',
         buttonRadius: '12px',
-        checkButtonText: 'Dive in!',
+        checkButtonText: 'Dive in',
         restartButtonText: 'New wave',
+        showAnswerButtonText: 'Lure answer',
         themeIcon: '🐠',
-        cursor: 'default'
+        cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>🦑</text></svg>") 16 0, auto'
       },
       cosmic: {
         background: 'linear-gradient(135deg, #2A0845 0%, #6441A5 100%)',
@@ -119,10 +123,31 @@ export const themes = {
         completeEmoji: '🚀',
         completeMessage: 'Blast off!',
         buttonRadius: '20px',
-        checkButtonText: 'Launch!',
+        checkButtonText: 'Launch',
         restartButtonText: 'Explore a new galaxy',
+        showAnswerButtonText: 'Send distress signal',
         themeIcon: '🪐',
-        cursor: 'crosshair'
+        cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>🛸</text></svg>") 16 0, auto'
+      },
+      horror: {
+        background: 'linear-gradient(135deg, #1a0f0f 0%,rgb(151, 3, 3) 100%)',
+        cardBorder: 'linear-gradient(90deg, #8B0000 0%, #FF0000 100%)',
+        primary: '#c41e3a',
+        secondary: '#8B0000',
+        accent: '#FF0000',
+        accentHover: '#DC143C',
+        progressBg: 'rgba(139, 0, 0, 0.2)',
+        progressBar: '#FF0000',
+        correct: '#39FF14',
+        incorrect: '#FF0000',
+        subtitle: '🩸 learn or die trying',
+        completeEmoji: '🧟',
+        completeMessage: 'You Survived... For Now',
+        buttonRadius: '0px', // Sharp edges for a more aggressive look
+        checkButtonText: 'Face Your Fate',
+        restartButtonText: 'Tempt Death Again',
+        showAnswerButtonText: 'Succumb',
+        themeIcon: '💀',
+        cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>🔪</text></svg>") 16 0, auto'
       }
-      
   };
