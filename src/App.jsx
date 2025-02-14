@@ -143,40 +143,32 @@ const handleSubmit = () => {
   const CollapsibleThemeSelector = ({ themes, currentTheme, setCurrentTheme }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     
-    // Add debugging if needed
-    const debug = false;
-    const log = (message) => {
-      if (debug) console.log(`ThemeSelector: ${message}`);
-    };
-  
     useEffect(() => {
-      // Reset expanded state when theme changes
       setIsExpanded(false);
     }, [currentTheme]);
   
-    const handleIconClick = (event, themeName) => {
-      event.stopPropagation(); // Prevent event bubbling
-      log(`Icon clicked: ${themeName}`);
-      setCurrentTheme(themeName);
-      setIsExpanded(false);
-    };
-  
-    const handleContainerClick = () => {
-      log(`Container clicked, current expanded: ${isExpanded}`);
-      setIsExpanded(!isExpanded);
+    const handleThemeChange = (themeName, event) => {
+      event.stopPropagation(); // Stop event from bubbling
+      
+      if (themeName === currentTheme && !isExpanded) {
+        // If clicking the current theme icon while collapsed, expand
+        setIsExpanded(true);
+      } else {
+        // Change theme and collapse
+        setCurrentTheme(themeName);
+        setIsExpanded(false);
+      }
     };
   
     // Separate desktop hover handlers
     const handleMouseEnter = () => {
       if (window.matchMedia('(hover: hover)').matches) {
-        log('Mouse enter detected on desktop');
         setIsExpanded(true);
       }
     };
   
     const handleMouseLeave = () => {
       if (window.matchMedia('(hover: hover)').matches) {
-        log('Mouse leave detected on desktop');
         setIsExpanded(false);
       }
     };
@@ -184,7 +176,6 @@ const handleSubmit = () => {
     return (
       <Card
         elevation={8}
-        onClick={handleContainerClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         sx={{
@@ -217,13 +208,13 @@ const handleSubmit = () => {
             boxShadow: 16
           },
           zIndex: 1000,
-          touchAction: 'none' // Prevent default touch behaviors
+          touchAction: 'none'
         }}
       >
         {Object.entries(themes).map(([themeName, theme], index) => (
           <IconButton
             key={themeName}
-            onClick={(e) => handleIconClick(e, themeName)}
+            onClick={(e) => handleThemeChange(themeName, e)}
             sx={{
               p: { xs: 1, md: 1.5 },
               fontSize: { xs: '1.25rem', md: '1.5rem' },

@@ -94,7 +94,7 @@ export const verbs = [
   {
     verb: "niiata",
     language: "Finnish",
-    translation: "to courtesy",
+    translation: "to curtsy",
     forms: {
       present: {
         "1sg": {pronoun: "Minä", form: "niiaan"},
@@ -850,17 +850,212 @@ export const verbs = [
     }
   },
   {
-    verb: "pestä",
+    verb: "pyyhkiä",
     language: "Finnish",
-    translation: "to rub",
+    translation: "to wipe, sweep",
     forms: {
         present: {
-        "1sg": {pronoun: "Minä", form: "pesen"},
-        "2sg": {pronoun: "Sinä", form: "peset"},
-        "3sg": {pronoun: "Hän", form: "pesee"},
-        "1pl": {pronoun: "Me", form: "pesemme"},
-        "2pl": {pronoun: "Te", form: "pesette"},
-        "3pl": {pronoun: "He", form: "pesevät"}
+        "1sg": {pronoun: "Minä", form: "pyyhin"},
+        "2sg": {pronoun: "Sinä", form: "pyyhit"},
+        "3sg": {pronoun: "Hän", form: "pyyhkii"},
+        "1pl": {pronoun: "Me", form: "pyyhimme"},
+        "2pl": {pronoun: "Te", form: "pyyhitte"},
+        "3pl": {pronoun: "He", form: "pyyhkivat"}
+        }
+    }
+  },
+  {
+    verb: "vetää",
+    language: "Finnish",
+    translation: "to pull, drag",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "vedän"},
+        "2sg": {pronoun: "Sinä", form: "vedät"},
+        "3sg": {pronoun: "Hän", form: "vetää"},
+        "1pl": {pronoun: "Me", form: "vedämme"},
+        "2pl": {pronoun: "Te", form: "vedätte"},
+        "3pl": {pronoun: "He", form: "vetävät"}
+        }
+    }
+  },
+  {
+    verb: "työntää",
+    language: "Finnish",
+    translation: "to push",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "työnnän"},
+        "2sg": {pronoun: "Sinä", form: "työnnät"},
+        "3sg": {pronoun: "Hän", form: "työntää"},
+        "1pl": {pronoun: "Me", form: "työnnämme"},
+        "2pl": {pronoun: "Te", form: "työnnatte"},
+        "3pl": {pronoun: "He", form: "työntävät"}
+        }
+    }
+  },
+  {
+    verb: "heittää",
+    language: "Finnish",
+    translation: "to throw",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "heitän"},
+        "2sg": {pronoun: "Sinä", form: "heität"},
+        "3sg": {pronoun: "Hän", form: "heittää"},
+        "1pl": {pronoun: "Me", form: "heitämme"},
+        "2pl": {pronoun: "Te", form: "heitätte"},
+        "3pl": {pronoun: "He", form: "heittävät"}
+        }
+    }
+  },
+  {
+    verb: "sitoa",
+    language: "Finnish",
+    translation: "to tie, fasten",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "sidon"},
+        "2sg": {pronoun: "Sinä", form: "sidot"},
+        "3sg": {pronoun: "Hän", form: "sitoo"},
+        "1pl": {pronoun: "Me", form: "sidomme"},
+        "2pl": {pronoun: "Te", form: "sidotte"},
+        "3pl": {pronoun: "He", form: "sitovat"}
+        }
+    }
+  },
+  {
+    verb: "ommella",
+    language: "Finnish",
+    translation: "to sew",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "ompelen"},
+        "2sg": {pronoun: "Sinä", form: "ompelet"},
+        "3sg": {pronoun: "Hän", form: "ompelee"},
+        "1pl": {pronoun: "Me", form: "ompelemme"},
+        "2pl": {pronoun: "Te", form: "ompelette"},
+        "3pl": {pronoun: "He", form: "ompelevat"}
+        }
+    }
+  },
+  {
+    verb: "laskea",
+    language: "Finnish",
+    translation: "to lower, move down, drop",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "lasken"},
+        "2sg": {pronoun: "Sinä", form: "lasket"},
+        "3sg": {pronoun: "Hän", form: "laskee"},
+        "1pl": {pronoun: "Me", form: "laskemme"},
+        "2pl": {pronoun: "Te", form: "laskette"},
+        "3pl": {pronoun: "He", form: "laskevat"}
+        }
+    }
+  },
+  {
+    verb: "sanoa",
+    language: "Finnish",
+    translation: "to say, tell",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "sanon"},
+        "2sg": {pronoun: "Sinä", form: "sanot"},
+        "3sg": {pronoun: "Hän", form: "sanoo"},
+        "1pl": {pronoun: "Me", form: "sanomme"},
+        "2pl": {pronoun: "Te", form: "sanotte"},
+        "3pl": {pronoun: "He", form: "sanovat"}
+        }
+    }
+  },
+  {
+    verb: "laulaa",
+    language: "Finnish",
+    translation: "to say, tell",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "laulan"},
+        "2sg": {pronoun: "Sinä", form: "laulat"},
+        "3sg": {pronoun: "Hän", form: "laulaa"},
+        "1pl": {pronoun: "Me", form: "laulamme"},
+        "2pl": {pronoun: "Te", form: "laulatte"},
+        "3pl": {pronoun: "He", form: "laulavat"}
+        }
+    }
+  },
+  {
+    verb: "leikkiä",
+    language: "Finnish",
+    translation: "to play (have fun), pretend",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "leikin"},
+        "2sg": {pronoun: "Sinä", form: "leikit"},
+        "3sg": {pronoun: "Hän", form: "leikkii"},
+        "1pl": {pronoun: "Me", form: "leikimme"},
+        "2pl": {pronoun: "Te", form: "leikitte"},
+        "3pl": {pronoun: "He", form: "leikkivät"}
+        }
+    }
+  },
+  {
+    verb: "kellua",
+    language: "Finnish",
+    translation: "to float",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "kellun"},
+        "2sg": {pronoun: "Sinä", form: "kellut"},
+        "3sg": {pronoun: "Hän", form: "kelluu"},
+        "1pl": {pronoun: "Me", form: "kellumme"},
+        "2pl": {pronoun: "Te", form: "kellutte"},
+        "3pl": {pronoun: "He", form: "kelluvat"}
+        }
+    }
+  },
+  {
+    verb: "virrata",
+    language: "Finnish",
+    translation: "to flow",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "virtaan"},
+        "2sg": {pronoun: "Sinä", form: "virtaat"},
+        "3sg": {pronoun: "Hän", form: "virtaa"},
+        "1pl": {pronoun: "Me", form: "virtaamme"},
+        "2pl": {pronoun: "Te", form: "virtaatte"},
+        "3pl": {pronoun: "He", form: "virtaavat"}
+        }
+    }
+  },
+  {
+    verb: "jäätyä",
+    language: "Finnish",
+    translation: "to freeze",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "jäädyn"},
+        "2sg": {pronoun: "Sinä", form: "jäädyt"},
+        "3sg": {pronoun: "Hän", form: "jäätyy"},
+        "1pl": {pronoun: "Me", form: "jäädymme"},
+        "2pl": {pronoun: "Te", form: "jäädytte"},
+        "3pl": {pronoun: "He", form: "jäätyvät"}
+        }
+    }
+  },
+  {
+    verb: "paisua",
+    language: "Finnish",
+    translation: "to swell, expand",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Minä", form: "paisun"},
+        "2sg": {pronoun: "Sinä", form: "paisut"},
+        "3sg": {pronoun: "Hän", form: "paisuu"},
+        "1pl": {pronoun: "Me", form: "paisumme"},
+        "2pl": {pronoun: "Te", form: "paisutte"},
+        "3pl": {pronoun: "He", form: "paisuvat"}
         }
     }
   }
