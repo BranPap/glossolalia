@@ -1057,8 +1057,69 @@ export const verbs = [
         "2pl": {pronoun: "Te", form: "paisutte"},
         "3pl": {pronoun: "He", form: "paisuvat"}
         }
-    }
+    },
+  },
+  {
+    verb: "decir",
+    language: "Spanish",
+    translation: "to say, tell",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Yo", form: "digo"},
+        "2sg": {pronoun: "Tú", form: "dices"},
+        "3sg": {pronoun: "Ella", form: "dice"},
+        "1pl": {pronoun: "Nosotros", form: "decimos"},
+        "2pl": {pronoun: "Vosotros", form: "decís"}, // I need to check this lol
+        "3pl": {pronoun: "Ellas", form: "dicen"}
+        }
+    },
+  },
+  {
+    verb: "jugar",
+    language: "Spanish",
+    translation: "to play (game)",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Yo", form: "juego"},
+        "2sg": {pronoun: "Tú", form: "juegas"},
+        "3sg": {pronoun: "Él", form: "juega"},
+        "1pl": {pronoun: "Nosotros", form: "jugamos"},
+        "2pl": {pronoun: "Vosotros", form: "jugáis"}, // I need to check this lol
+        "3pl": {pronoun: "Ellas", form: "juegan"}
+        }
+    },
+  },
+  {
+    verb: "venir",
+    language: "Spanish",
+    translation: "to come",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Yo", form: "vengo"},
+        "2sg": {pronoun: "Tú", form: "vienes"},
+        "3sg": {pronoun: "Él", form: "viene"},
+        "1pl": {pronoun: "Nosotras", form: "venimos"},
+        "2pl": {pronoun: "Vosotras", form: "venís"}, // I need to check this lol
+        "3pl": {pronoun: "Ellos", form: "vienen"}
+        }
+    },
+  },
+  {
+    verb: "matar",
+    language: "Spanish",
+    translation: "to kill, slay",
+    forms: {
+        present: {
+        "1sg": {pronoun: "Yo", form: "mato"},
+        "2sg": {pronoun: "Tú", form: "matas"},
+        "3sg": {pronoun: "Ella", form: "mata"},
+        "1pl": {pronoun: "Nosotros", form: "matamos"},
+        "2pl": {pronoun: "Vosotros", form: "matáis"}, 
+        "3pl": {pronoun: "Ellas", form: "matan"}
+        }
+    },
   }
+  
 ];
 
 export const shuffleArray = (array) => {

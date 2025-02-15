@@ -1,3 +1,5 @@
+//Maintained by Brandon Papineau, last updated Feb 14th 2025. Comments refer to code line the PRECEDE
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, Typography, TextField, Button, LinearProgress, Box, MenuItem, Select, Tooltip, Switch, ToggleButtonGroup, ToggleButton, Dialog, DialogTitle, DialogContent, DialogContentText } from '@mui/material';
 import { verbs, shuffleArray } from './data/verbs';
@@ -7,29 +9,48 @@ import Sparkle from './components/sparkle';
 import { Info } from '@mui/icons-material';
 
 const App = () => {
-  const textFieldRef = useRef(null);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-  const [isTranslationMode, setIsTranslationMode] = useState(false);
-  const [infoOpen, setInfoOpen] = useState(false);
+  // Define states/refs
 
-  const [currentTheme, setCurrentTheme] = useState('modern');
-  const [language, setLanguage] = useState('Spanish');
-  const [tense, setTense] = useState('present');
-  const [questions, setQuestions] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [answer, setAnswer] = useState('');
+  //helps point to input bar for auto-focus
+  const textFieldRef = useRef(null); 
+  //used to determine if the user is on a touchscreen (like mobile) or not (like pc)
+  const [isTouchDevice, setIsTouchDevice] = useState(false); 
+  //sets the mode to translation mode (off is conjugation mode)
+  const [isTranslationMode, setIsTranslationMode] = useState(false); 
+  //Sets whether or not the info pop-up should be displayed
+  const [infoOpen, setInfoOpen] = useState(false); 
+  //Sets current theme for the app
+  const [currentTheme, setCurrentTheme] = useState('modern'); 
+  //Sets current target language
+  const [language, setLanguage] = useState('Spanish'); 
+  //sets current target tense NOTE: this is likely to change to "grammar" or similar when I add noun declension
+  const [tense, setTense] = useState('present'); 
+  //Array containing the questions for the current game state
+  const [questions, setQuestions] = useState([]); 
+  //Index into array of questions in order to identify current stimulus, answer, etc.
+  const [currentIndex, setCurrentIndex] = useState(0); 
+  //Answer for current stimulus
+  const [answer, setAnswer] = useState(''); 
+  //Dynamic feedback text
   const [feedback, setFeedback] = useState('');
-  const [score, setScore] = useState(0);
-  const [enterState, setEnterState] = useState(true);
-  const [showSparkles, setShowSparkles] = useState(false);
+  //Tracks number of correct answers
+  const [score, setScore] = useState(0); 
+  //Defines whether or not the user can press submit or not: used to ensure participants can't hit "submit" multiple times while the setTimeout is still going
+  const [enterState, setEnterState] = useState(true); 
+  //Defines whether or not to show sparkles
+  const [showSparkles, setShowSparkles] = useState(false); 
 
   // Calculate these values before they're used in the render
-  const progress = (currentIndex / questions.length) * 100;
-  const availableTenses = Object.keys(
+  //Value for progress bar
+  const progress = (currentIndex / questions.length) * 100; 
+  //filters in order to select only the tenses and language that are licit combination
+  const availableTenses = Object.keys( 
     verbs.find(v => v.language === language)?.forms || {}
   );
+  // Const for evaluating if the user has finished  10 questions or not
   const isGameComplete = currentIndex >= questions.length;
 
+  // Function for handling the event of changing languages; determined by the first drop-down menu
   const handleLanguageChange = (newLanguage) => {
     setLanguage(newLanguage);
     const availableTenses = Object.keys(
@@ -40,11 +61,11 @@ const App = () => {
     }
   };
 
-// Extract question generation logic into a separate function
+// Function for taking user selections for language and tense and ensuring and generating a practice list based on these inputs
 const generateQuestions = () => {
   return shuffleArray(
     verbs
-      .filter(v => v.language === language)
+      .filter(v => v.language === language) //select only verbs in the right language
       .map(v => {
         if (isTranslationMode) {
           return {
@@ -63,15 +84,33 @@ const generateQuestions = () => {
         }
       })
       .flat()
-  ).slice(0, 10);
+  ).slice(0, 10); //pick only 10 of these generated questions
 };
 
+const generateScoreEval = (score) => {
+  var scoreEval = '';
+  if (score === 10) {
+    scoreEval = themes[currentTheme].perfectEvalMessage
+  } else if (score > 5 && score < 10) {
+    scoreEval = themes[currentTheme].goodEvalMessage
+  } else if (score > 0 && score <= 5) {
+    scoreEval = themes[currentTheme].okayEvalMessage
+  } else if (score === 0) {
+    scoreEval = themes[currentTheme].failEvalMessage
+  }
+  return scoreEval
+}
+
+// On start and continuously 
+
 useEffect(() => {
+  // check if user is on touch device
   const checkTouchDevice = () => {
     setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
   };
   checkTouchDevice();
 
+  //initialize gameplay
   setQuestions(generateQuestions());
   setCurrentIndex(0);
   setAnswer('');
@@ -79,14 +118,16 @@ useEffect(() => {
   setScore(0);
 }, [language, tense, isTranslationMode]);
 
+//function for handling the end of the game, allowing players to refresh and reshuffle questions while also resetting gamestate
 const handleRestart = () => {
   setQuestions(generateQuestions()); // Generate fresh set of questions
-  setCurrentIndex(0);
+  setCurrentIndex(0); 
   setAnswer('');
   setFeedback('');
   setScore(0);
 };
 
+//function for handling the answer input from the user
 const handleSubmit = () => {
   const userAnswer = answer.trim().toLowerCase();
   const correctAnswer = questions[currentIndex].answer.toLowerCase();
@@ -289,9 +330,11 @@ const handleSubmit = () => {
       color: themes[currentTheme].primary 
     }}>
       <em>Glossolalia</em> ('speaking in tongues') is a drill-based language learning app. While you certainly cannot learn a language by simply drilling verb conjugations, I found when I started learning Spanish back in 2012 that I was able to get a faster grip on verb forms by simply practicing over and over online. Unfortunately, the tools I used back then are now behind paywalls or cluttered with ads. <em>Glossolalia</em> was born as a result of my frustation with this state of affairs. It is my intention that <em>Glossolalia</em> will remain free and open-source forever.
-      <br></br><br></br>The verbs in this app are taken from the <a href='https://en.wikipedia.org/wiki/Swadesh_list'>Swadesh 207 List</a>, a tool in linguistics used to identify core vocabulary across languages. This list consists of concepts that are, without exception, lexicalized in all the world's languages. These words also often resist borrowing into other languages. 
+      <br></br><br></br>The verbs in this app are taken from the <a href='https://en.wikipedia.org/wiki/Swadesh_list'>Swadesh 207 List</a>, a tool in linguistics used to identify core vocabulary across languages. This list consists of concepts that are, without exception, lexicalized in all the world's languages (including dead ones). These words also often resist borrowing into other languages. Note that this does <em>not</em> mean that these verbs are necessarily the most common. Rather, they are taken to be representative of the general grammatical patterns of the language.
       <br></br><br></br> As an example, all known languages have a verb for encoding the event of eating: in Finnish, it's <em>syödä</em>, while in Spanish it's <em>comer</em>. In Hopi, an indigenous language of the Americas spoken in Arizona, the verb is <em>nöösa</em>. 
-      <br></br><br></br>Some of these words are surprising to modern language users- for example, it has been found that every language has an encoded lexical item for "louse" (singular of lice). By contrast, not every language has a specific lexical verb for the act of writing; not every language has a written form! <br></br><br></br> This app is maintained by <a href='https://branpap.com'>Brandon Papineau</a> and is under ongoing construction and optimization. Feedback can be directed to: branpap (at) my_institution (dot) edu.
+      <br></br><br></br>On the other hand, some of these words are surprising to modern language users- for example, it has been found that every language has an explicit noun for "louse" (singular of lice). By contrast, not every language has a specific lexical verb for the act of reading! Consider <a href='https://en.wikipedia.org/wiki/Proto-Indo-European_language'>Proto-Indo-European</a>, which was spoken thousands of years ago, long before the advent of writing. <br></br><br></br> 
+      <br></br><br></br>
+      This app is maintained by <a href='https://branpap.com'>Brandon Papineau</a> and is under ongoing construction and optimization. Feedback can be directed to: branpap (at) my_institution (dot) edu.
     </DialogContentText>
   </DialogContent>
 </Dialog>
@@ -307,7 +350,7 @@ const handleSubmit = () => {
           width: '100%',
           maxWidth: '800px',
           borderRadius: 2,
-          background: '#fafafa',
+          background: currentTheme === 'cyberpunk' ? '#000000' : '#fafafa',
           position: 'relative',
           '&::before': {
             content: '""',
@@ -349,7 +392,7 @@ const handleSubmit = () => {
             </Typography>
           </Box>
 
-          {/* Add mode toggle before language selection */}
+
           <Box sx={{ mb: 4 }}>
   <ToggleButtonGroup
     value={isTranslationMode ? 'translation' : 'conjugation'}
@@ -406,13 +449,13 @@ const handleSubmit = () => {
                 onChange={(e) => handleLanguageChange(e.target.value)}
                 sx={{ 
                   minWidth: 150,
-                  color: '#312e81',
+                  color: themes[currentTheme].secondary,
                   '.MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#818cf8',
+                    borderColor: themes[currentTheme].secondary,
                     borderWidth: '2px'
                   },
                   '&:hover .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#6366f1'
+                    borderColor: themes[currentTheme].primary
                   }
                 }}
               >
@@ -432,13 +475,13 @@ const handleSubmit = () => {
                   onChange={(e) => setTense(e.target.value)}
                   sx={{ 
                     minWidth: 150,
-                    color: '#312e81',
+                    color: themes[currentTheme].secondary,
                     '.MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#818cf8',
+                      borderColor: themes[currentTheme].secondary,
                       borderWidth: '2px'
                     },
                     '&:hover .MuiOutlinedInput-notchedOutline': {
-                      borderColor: '#6366f1'
+                      borderColor: themes[currentTheme].primary
                     }
                   }}
                 >
@@ -487,7 +530,13 @@ const handleSubmit = () => {
                   fontWeight: 700,
                   fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
                 }}>
-                  {themes[currentTheme].completeMessage} {themes[currentTheme].completeEmoji}
+                  {score > 0 ? (
+                  <>
+                    {generateScoreEval(score)} {themes[currentTheme].completeEmoji}
+                    </>
+                  ) : (
+                    generateScoreEval(score)
+                  )}
                 </Typography>
                 <Typography variant="h5" sx={{ 
                   mb: 3, 
@@ -560,7 +609,11 @@ const handleSubmit = () => {
                       '& fieldset': {
                         borderColor: themes[currentTheme].accent,
                         borderWidth: '2px',
-                        borderRadius: themes[currentTheme].buttonRadius
+                        borderRadius: themes[currentTheme].buttonRadius,
+                        color: '#fafafa'
+                      },
+                      '& input': {
+                        color: themes[currentTheme].accent
                       },
                       '&:hover fieldset': {
                         borderColor: themes[currentTheme].accentHover
@@ -571,8 +624,6 @@ const handleSubmit = () => {
                     }
                   }}
                 />
-
-                {/* Replace the existing Button section with this new multi-button layout */}
 <Box sx={{ 
   display: 'flex',
   gap: 2,
@@ -590,7 +641,7 @@ const handleSubmit = () => {
         background: themes[currentTheme].accentHover,
       },
       textTransform: 'none',
-      fontFamily: "'Space Grotesk', sans-serif",
+      fontFamily: "sans-serif",
       fontWeight: 500,
       fontSize: '1.1rem'
     }}
@@ -603,8 +654,8 @@ const handleSubmit = () => {
     onClick={() => {
       const currentQuestion = questions[currentIndex];
       const showAnswerMessage = isTranslationMode
-        ? `No worries, "${currentQuestion.verb}" means "${currentQuestion.answer}"`
-        : `No worries, the correct form is "${currentQuestion.answer}"`;
+        ? themes[currentTheme].revealMessageTranslation + `"${currentQuestion.answer}"`
+        : themes[currentTheme].revealMessageInflectional + `"${currentQuestion.answer}"`;
       setFeedback(showAnswerMessage);
       
       // Clear feedback after a delay and move to next question
@@ -659,7 +710,7 @@ const handleSubmit = () => {
           <Typography sx={{ 
             mt: 3, 
             color: themes[currentTheme].primary, 
-            fontFamily: "'Space Grotesk', sans-serif",
+            // fontFamily: "'Space Grotesk', sans-serif",
             fontSize: '1rem',
             fontWeight: 500,
             fontStyle: currentTheme === 'witchy' ? 'italic' : 'normal'
