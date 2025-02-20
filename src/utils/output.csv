@@ -1,0 +1,493 @@
+verb,language,translation,mood,tense,person,pronoun,form
+olla,Finnish,to be,indicative,present,1sg,Minä,olen
+olla,Finnish,to be,indicative,present,2sg,Sinä,olet
+olla,Finnish,to be,indicative,present,3sg,Hän,on
+olla,Finnish,to be,indicative,present,1pl,Me,olemme
+olla,Finnish,to be,indicative,present,2pl,Te,olette
+olla,Finnish,to be,indicative,present,3pl,He,ovat
+olla,Finnish,to be,indicative,past,1sg,Minä,olin
+olla,Finnish,to be,indicative,past,2sg,Sinä,olit
+olla,Finnish,to be,indicative,past,3sg,Hän,oli
+būti,Lithuanian,to be,indicative,present,1sg,Aš,esu
+būti,Lithuanian,to be,indicative,present,2sg,Tu,esi
+būti,Lithuanian,to be,indicative,present,3sg,Jis/Ji,yra
+puhua,Finnish,to speak,indicative,present,1sg,Minä,puhun
+puhua,Finnish,to speak,indicative,present,2sg,Sinä,puhut
+puhua,Finnish,to speak,indicative,present,3sg,Hän,puhuu
+puhua,Finnish,to speak,indicative,present,1pl,Me,puhumme
+puhua,Finnish,to speak,indicative,present,2pl,Te,puhutte
+puhua,Finnish,to speak,indicative,present,3pl,He,puhuvat
+maalata,Finnish,to paint,indicative,present,1sg,Minä,maalaan
+maalata,Finnish,to paint,indicative,present,2sg,Sinä,maalaat
+maalata,Finnish,to paint,indicative,present,3sg,Hän,maalaa
+maalata,Finnish,to paint,indicative,present,1pl,Me,maalaamme
+maalata,Finnish,to paint,indicative,present,2pl,Te,maalaatte
+maalata,Finnish,to paint,indicative,present,3pl,He,maalaavat
+kirjoittaa,Finnish,to write,indicative,present,1sg,Minä,kirjoitan
+kirjoittaa,Finnish,to write,indicative,present,2sg,Sinä,kirjoitat
+kirjoittaa,Finnish,to write,indicative,present,3sg,Hän,kirjoittaa
+kirjoittaa,Finnish,to write,indicative,present,1pl,Me,kirjoitamme
+kirjoittaa,Finnish,to write,indicative,present,2pl,Te,kirjoitatte
+kirjoittaa,Finnish,to write,indicative,present,3pl,He,kirjoittavat
+laulaa,Finnish,to sing,indicative,present,1sg,Minä,laulan
+laulaa,Finnish,to sing,indicative,present,2sg,Sinä,laulat
+laulaa,Finnish,to sing,indicative,present,3sg,Hän,laulaa
+laulaa,Finnish,to sing,indicative,present,1pl,Me,laulamme
+laulaa,Finnish,to sing,indicative,present,2pl,Te,laulatte
+laulaa,Finnish,to sing,indicative,present,3pl,He,laulavat
+niiata,Finnish,to curtsy,indicative,present,1sg,Minä,niiaan
+niiata,Finnish,to curtsy,indicative,present,2sg,Sinä,niiaat
+niiata,Finnish,to curtsy,indicative,present,3sg,Hän,niiaa
+niiata,Finnish,to curtsy,indicative,present,1pl,Me,niiaamme
+niiata,Finnish,to curtsy,indicative,present,2pl,Te,niiaatte
+niiata,Finnish,to curtsy,indicative,present,3pl,He,niiaavat
+hyllyä,Finnish,"to shake, quake, jiggle",indicative,present,1sg,Minä,hyllyn
+hyllyä,Finnish,"to shake, quake, jiggle",indicative,present,2sg,Sinä,hyllyt
+hyllyä,Finnish,"to shake, quake, jiggle",indicative,present,3sg,Hän,hyllyy
+hyllyä,Finnish,"to shake, quake, jiggle",indicative,present,1pl,Me,hyllymme
+hyllyä,Finnish,"to shake, quake, jiggle",indicative,present,2pl,Te,hyllytte
+hyllyä,Finnish,"to shake, quake, jiggle",indicative,present,3pl,He,hyllyvät
+lukea,Finnish,to read,indicative,present,1sg,Minä,luen
+lukea,Finnish,to read,indicative,present,2sg,Sinä,luet
+lukea,Finnish,to read,indicative,present,3sg,Hän,lukee
+lukea,Finnish,to read,indicative,present,1pl,Me,luemme
+lukea,Finnish,to read,indicative,present,2pl,Te,luette
+lukea,Finnish,to read,indicative,present,3pl,He,lukevat
+juoda,Finnish,to drink,indicative,present,1sg,Minä,juon
+juoda,Finnish,to drink,indicative,present,2sg,Sinä,juot
+juoda,Finnish,to drink,indicative,present,3sg,Hän,juo
+juoda,Finnish,to drink,indicative,present,1pl,Me,juomme
+juoda,Finnish,to drink,indicative,present,2pl,Te,juotte
+juoda,Finnish,to drink,indicative,present,3pl,He,juovat
+tutkia,Finnish,"to examine, research",indicative,present,1sg,Minä,tutkin
+tutkia,Finnish,"to examine, research",indicative,present,2sg,Sinä,tutkit
+tutkia,Finnish,"to examine, research",indicative,present,3sg,Hän,tutkii
+tutkia,Finnish,"to examine, research",indicative,present,1pl,Me,tutkimme
+tutkia,Finnish,"to examine, research",indicative,present,2pl,Te,tutkitte
+tutkia,Finnish,"to examine, research",indicative,present,3pl,He,tutkivat
+myydä,Finnish,to sell,indicative,present,1sg,Minä,myyn
+myydä,Finnish,to sell,indicative,present,2sg,Sinä,myyt
+myydä,Finnish,to sell,indicative,present,3sg,Hän,myy
+myydä,Finnish,to sell,indicative,present,1pl,Me,myymme
+myydä,Finnish,to sell,indicative,present,2pl,Te,myytte
+myydä,Finnish,to sell,indicative,present,3pl,He,myyvät
+haukkua,Finnish,to bark,indicative,present,1sg,Minä,haukun
+haukkua,Finnish,to bark,indicative,present,2sg,Sinä,haukut
+haukkua,Finnish,to bark,indicative,present,3sg,Hän,haukkuu
+haukkua,Finnish,to bark,indicative,present,1pl,Me,haukumme
+haukkua,Finnish,to bark,indicative,present,2pl,Te,haukutte
+haukkua,Finnish,to bark,indicative,present,3pl,He,haukkuvat
+ampua,Finnish,to shoot,indicative,present,1sg,Minä,ammun
+ampua,Finnish,to shoot,indicative,present,2sg,Sinä,ammut
+ampua,Finnish,to shoot,indicative,present,3sg,Hän,ammuu
+ampua,Finnish,to shoot,indicative,present,1pl,Me,ammumme
+ampua,Finnish,to shoot,indicative,present,2pl,Te,ammutte
+ampua,Finnish,to shoot,indicative,present,3pl,He,ampuvat
+suudella,Finnish,to kiss,indicative,present,1sg,Minä,suutelen
+suudella,Finnish,to kiss,indicative,present,2sg,Sinä,suutelet
+suudella,Finnish,to kiss,indicative,present,3sg,Hän,suutelee
+suudella,Finnish,to kiss,indicative,present,1pl,Me,suutelemme
+suudella,Finnish,to kiss,indicative,present,2pl,Te,suutelette
+suudella,Finnish,to kiss,indicative,present,3pl,He,suutelevat
+ottaa,Finnish,to take,indicative,present,1sg,Minä,otan
+ottaa,Finnish,to take,indicative,present,2sg,Sinä,otat
+ottaa,Finnish,to take,indicative,present,3sg,Hän,ottaa
+ottaa,Finnish,to take,indicative,present,1pl,Me,otamme
+ottaa,Finnish,to take,indicative,present,2pl,Te,otatte
+ottaa,Finnish,to take,indicative,present,3pl,He,ottavat
+mitata,Finnish,"to measure, gauge",indicative,present,1sg,Minä,mittaan
+mitata,Finnish,"to measure, gauge",indicative,present,2sg,Sinä,mittaat
+mitata,Finnish,"to measure, gauge",indicative,present,3sg,Hän,mittaa
+mitata,Finnish,"to measure, gauge",indicative,present,1pl,Me,mittaamme
+mitata,Finnish,"to measure, gauge",indicative,present,2pl,Te,mittaatte
+mitata,Finnish,"to measure, gauge",indicative,present,3pl,He,mittaavat
+syödä,Finnish,to eat,indicative,present,1sg,Minä,syön
+syödä,Finnish,to eat,indicative,present,2sg,Sinä,syöt
+syödä,Finnish,to eat,indicative,present,3sg,Hän,syö
+syödä,Finnish,to eat,indicative,present,1pl,Me,syömme
+syödä,Finnish,to eat,indicative,present,2pl,Te,syötte
+syödä,Finnish,to eat,indicative,present,3pl,He,syövät
+purra,Finnish,to bite,indicative,present,1sg,Minä,puren
+purra,Finnish,to bite,indicative,present,2sg,Sinä,puret
+purra,Finnish,to bite,indicative,present,3sg,Hän,puree
+purra,Finnish,to bite,indicative,present,1pl,Me,puremme
+purra,Finnish,to bite,indicative,present,2pl,Te,purette
+purra,Finnish,to bite,indicative,present,3pl,He,purevat
+imeä,Finnish,"to suck, absorb",indicative,present,1sg,Minä,imen
+imeä,Finnish,"to suck, absorb",indicative,present,2sg,Sinä,imet
+imeä,Finnish,"to suck, absorb",indicative,present,3sg,Hän,imee
+imeä,Finnish,"to suck, absorb",indicative,present,1pl,Me,imemme
+imeä,Finnish,"to suck, absorb",indicative,present,2pl,Te,imette
+imeä,Finnish,"to suck, absorb",indicative,present,3pl,He,imevät
+sylkeä,Finnish,to spit,indicative,present,1sg,Minä,syljen
+sylkeä,Finnish,to spit,indicative,present,2sg,Sinä,syljet
+sylkeä,Finnish,to spit,indicative,present,3sg,Hän,sylkee
+sylkeä,Finnish,to spit,indicative,present,1pl,Me,syljemme
+sylkeä,Finnish,to spit,indicative,present,2pl,Te,syljette
+sylkeä,Finnish,to spit,indicative,present,3pl,He,sylkevät
+oksentaa,Finnish,"to vomit, regurgitate",indicative,present,1sg,Minä,oksennan
+oksentaa,Finnish,"to vomit, regurgitate",indicative,present,2sg,Sinä,oksennat
+oksentaa,Finnish,"to vomit, regurgitate",indicative,present,3sg,Hän,oksentaa
+oksentaa,Finnish,"to vomit, regurgitate",indicative,present,1pl,Me,oksennamme
+oksentaa,Finnish,"to vomit, regurgitate",indicative,present,2pl,Te,oksennatte
+oksentaa,Finnish,"to vomit, regurgitate",indicative,present,3pl,He,oksentavat
+puhaltaa,Finnish,to blow,indicative,present,1sg,Minä,puhallan
+puhaltaa,Finnish,to blow,indicative,present,2sg,Sinä,puhallat
+puhaltaa,Finnish,to blow,indicative,present,3sg,Hän,puhaltaa
+puhaltaa,Finnish,to blow,indicative,present,1pl,Me,puhallamme
+puhaltaa,Finnish,to blow,indicative,present,2pl,Te,puhallatte
+puhaltaa,Finnish,to blow,indicative,present,3pl,He,puhaltavat
+hengittää,Finnish,to breathe,indicative,present,1sg,Minä,hengitän
+hengittää,Finnish,to breathe,indicative,present,2sg,Sinä,hengität
+hengittää,Finnish,to breathe,indicative,present,3sg,Hän,hengittää
+hengittää,Finnish,to breathe,indicative,present,1pl,Me,hengitämme
+hengittää,Finnish,to breathe,indicative,present,2pl,Te,hengitätte
+hengittää,Finnish,to breathe,indicative,present,3pl,He,hengittävät
+nauraa,Finnish,to laugh,indicative,present,1sg,Minä,nauran
+nauraa,Finnish,to laugh,indicative,present,2sg,Sinä,naurat
+nauraa,Finnish,to laugh,indicative,present,3sg,Hän,nauraa
+nauraa,Finnish,to laugh,indicative,present,1pl,Me,nauramme
+nauraa,Finnish,to laugh,indicative,present,2pl,Te,nauratte
+nauraa,Finnish,to laugh,indicative,present,3pl,He,nauravat
+nähdä,Finnish,to see,indicative,present,1sg,Minä,näen
+nähdä,Finnish,to see,indicative,present,2sg,Sinä,näet
+nähdä,Finnish,to see,indicative,present,3sg,Hän,näkee
+nähdä,Finnish,to see,indicative,present,1pl,Me,näemme
+nähdä,Finnish,to see,indicative,present,2pl,Te,näette
+nähdä,Finnish,to see,indicative,present,3pl,He,näkevät
+kuulla,Finnish,to hear,indicative,present,1sg,Minä,kuulen
+kuulla,Finnish,to hear,indicative,present,2sg,Sinä,kuulet
+kuulla,Finnish,to hear,indicative,present,3sg,Hän,kuulee
+kuulla,Finnish,to hear,indicative,present,1pl,Me,kuulemme
+kuulla,Finnish,to hear,indicative,present,2pl,Te,kuulette
+kuulla,Finnish,to hear,indicative,present,3pl,He,kuulevat
+tietää,Finnish,to know,indicative,present,1sg,Minä,tiedän
+tietää,Finnish,to know,indicative,present,2sg,Sinä,tiedät
+tietää,Finnish,to know,indicative,present,3sg,Hän,tietää
+tietää,Finnish,to know,indicative,present,1pl,Me,tiedämme
+tietää,Finnish,to know,indicative,present,2pl,Te,tiedätte
+tietää,Finnish,to know,indicative,present,3pl,He,tietävät
+ajatella,Finnish,to think,indicative,present,1sg,Minä,ajattelen
+ajatella,Finnish,to think,indicative,present,2sg,Sinä,ajattelet
+ajatella,Finnish,to think,indicative,present,3sg,Hän,ajattelee
+ajatella,Finnish,to think,indicative,present,1pl,Me,ajattelemme
+ajatella,Finnish,to think,indicative,present,2pl,Te,ajattelette
+ajatella,Finnish,to think,indicative,present,3pl,He,ajattelevat
+haistaa,Finnish,to smell,indicative,present,1sg,Minä,haistan
+haistaa,Finnish,to smell,indicative,present,2sg,Sinä,haistat
+haistaa,Finnish,to smell,indicative,present,3sg,Hän,haistaa
+haistaa,Finnish,to smell,indicative,present,1pl,Me,haistamme
+haistaa,Finnish,to smell,indicative,present,2pl,Te,haistatte
+haistaa,Finnish,to smell,indicative,present,3pl,He,haistavat
+hablar,Spanish,to speak,indicative,present,1sg,Yo,hablo
+hablar,Spanish,to speak,indicative,present,2sg,Tú,hablas
+hablar,Spanish,to speak,indicative,present,3sg,Él,habla
+hablar,Spanish,to speak,indicative,present,1pl,Nosotras,hablamos
+hablar,Spanish,to speak,indicative,present,2pl,Vosotros,habláis
+hablar,Spanish,to speak,indicative,present,3pl,Ellas,hablan
+hablar,Spanish,to speak,indicative,future,1sg,Yo,hablaré
+hablar,Spanish,to speak,indicative,future,2sg,Tú,hablarás
+hablar,Spanish,to speak,indicative,future,3sg,Él,hablará
+hablar,Spanish,to speak,indicative,future,1pl,Nosotras,hablaremos
+hablar,Spanish,to speak,indicative,future,2pl,Vosotros,hablaréis
+hablar,Spanish,to speak,indicative,future,3pl,Ellas,hablarán
+pelätä,Finnish,"to fear, be afraid of",indicative,present,1sg,Minä,pelkään
+pelätä,Finnish,"to fear, be afraid of",indicative,present,2sg,Sinä,pelkäät
+pelätä,Finnish,"to fear, be afraid of",indicative,present,3sg,Hän,pelkää
+pelätä,Finnish,"to fear, be afraid of",indicative,present,1pl,Me,pelkäämme
+pelätä,Finnish,"to fear, be afraid of",indicative,present,2pl,Te,pelkäätte
+pelätä,Finnish,"to fear, be afraid of",indicative,present,3pl,He,pelkäävät
+nukkua,Finnish,to sleep,indicative,present,1sg,Minä,nukun
+nukkua,Finnish,to sleep,indicative,present,2sg,Sinä,nukut
+nukkua,Finnish,to sleep,indicative,present,3sg,Hän,nukuu
+nukkua,Finnish,to sleep,indicative,present,1pl,Me,nukumme
+nukkua,Finnish,to sleep,indicative,present,2pl,Te,nukutte
+nukkua,Finnish,to sleep,indicative,present,3pl,He,nukkuvat
+elää,Finnish,to live,indicative,present,1sg,Minä,elän
+elää,Finnish,to live,indicative,present,2sg,Sinä,elät
+elää,Finnish,to live,indicative,present,3sg,Hän,elää
+elää,Finnish,to live,indicative,present,1pl,Me,elämme
+elää,Finnish,to live,indicative,present,2pl,Te,elätte
+elää,Finnish,to live,indicative,present,3pl,He,elävät
+kuolla,Finnish,to die,indicative,present,1sg,Minä,kuolen
+kuolla,Finnish,to die,indicative,present,2sg,Sinä,kuolet
+kuolla,Finnish,to die,indicative,present,3sg,Hän,kuolee
+kuolla,Finnish,to die,indicative,present,1pl,Me,kuolemme
+kuolla,Finnish,to die,indicative,present,2pl,Te,kuolette
+kuolla,Finnish,to die,indicative,present,3pl,He,kuolevat
+tappaa,Finnish,"to kill, slay",indicative,present,1sg,Minä,tapan
+tappaa,Finnish,"to kill, slay",indicative,present,2sg,Sinä,tapat
+tappaa,Finnish,"to kill, slay",indicative,present,3sg,Hän,tappaa
+tappaa,Finnish,"to kill, slay",indicative,present,1pl,Me,tapamme
+tappaa,Finnish,"to kill, slay",indicative,present,2pl,Te,tapatte
+tappaa,Finnish,"to kill, slay",indicative,present,3pl,He,tappavat
+metsästää,Finnish,to hunt,indicative,present,1sg,Minä,metsästän
+metsästää,Finnish,to hunt,indicative,present,2sg,Sinä,metsästät
+metsästää,Finnish,to hunt,indicative,present,3sg,Hän,metsästää
+metsästää,Finnish,to hunt,indicative,present,1pl,Me,metsästämme
+metsästää,Finnish,to hunt,indicative,present,2pl,Te,metsästätte
+metsästää,Finnish,to hunt,indicative,present,3pl,He,metsästävät
+lyödä,Finnish,to hit,indicative,present,1sg,Minä,lyön
+lyödä,Finnish,to hit,indicative,present,2sg,Sinä,lyöt
+lyödä,Finnish,to hit,indicative,present,3sg,Hän,lyö
+lyödä,Finnish,to hit,indicative,present,1pl,Me,lyömme
+lyödä,Finnish,to hit,indicative,present,2pl,Te,lyötte
+lyödä,Finnish,to hit,indicative,present,3pl,He,lyövät
+leikata,Finnish,to cut,indicative,present,1sg,Minä,leikkaan
+leikata,Finnish,to cut,indicative,present,2sg,Sinä,leikkaat
+leikata,Finnish,to cut,indicative,present,3sg,Hän,leikkaa
+leikata,Finnish,to cut,indicative,present,1pl,Me,leikkaamme
+leikata,Finnish,to cut,indicative,present,2pl,Te,leikkaatte
+leikata,Finnish,to cut,indicative,present,3pl,He,leikkaavat
+halkaista,Finnish,to split,indicative,present,1sg,Minä,halkaisen
+halkaista,Finnish,to split,indicative,present,2sg,Sinä,halkaiset
+halkaista,Finnish,to split,indicative,present,3sg,Hän,halkaisee
+halkaista,Finnish,to split,indicative,present,1pl,Me,halkaisemme
+halkaista,Finnish,to split,indicative,present,2pl,Te,halkaisette
+halkaista,Finnish,to split,indicative,present,3pl,He,halkaisevat
+pistää,Finnish,"to poke, thrust, stab",indicative,present,1sg,Minä,pistän
+pistää,Finnish,"to poke, thrust, stab",indicative,present,2sg,Sinä,pistät
+pistää,Finnish,"to poke, thrust, stab",indicative,present,3sg,Hän,pistää
+pistää,Finnish,"to poke, thrust, stab",indicative,present,1pl,Me,pistämme
+pistää,Finnish,"to poke, thrust, stab",indicative,present,2pl,Te,pistätte
+pistää,Finnish,"to poke, thrust, stab",indicative,present,3pl,He,pistävät
+raapia,Finnish,"to scratch, scrape",indicative,present,1sg,Minä,raavin
+raapia,Finnish,"to scratch, scrape",indicative,present,2sg,Sinä,raavit
+raapia,Finnish,"to scratch, scrape",indicative,present,3sg,Hän,raapii
+raapia,Finnish,"to scratch, scrape",indicative,present,1pl,Me,raavimme
+raapia,Finnish,"to scratch, scrape",indicative,present,2pl,Te,raavitte
+raapia,Finnish,"to scratch, scrape",indicative,present,3pl,He,raapivat
+kaivaa,Finnish,"to dig, excavate",indicative,present,1sg,Minä,kaivan
+kaivaa,Finnish,"to dig, excavate",indicative,present,2sg,Sinä,kaivat
+kaivaa,Finnish,"to dig, excavate",indicative,present,3sg,Hän,kaivaa
+kaivaa,Finnish,"to dig, excavate",indicative,present,1pl,Me,kaivamme
+kaivaa,Finnish,"to dig, excavate",indicative,present,2pl,Te,kaivatte
+kaivaa,Finnish,"to dig, excavate",indicative,present,3pl,He,kaivavat
+uida,Finnish,to swim,indicative,present,1sg,Minä,uin
+uida,Finnish,to swim,indicative,present,2sg,Sinä,uit
+uida,Finnish,to swim,indicative,present,3sg,Hän,ui
+uida,Finnish,to swim,indicative,present,1pl,Me,uimme
+uida,Finnish,to swim,indicative,present,2pl,Te,uitte
+uida,Finnish,to swim,indicative,present,3pl,He,uivat
+lentää,Finnish,to fly,indicative,present,1sg,Minä,lennän
+lentää,Finnish,to fly,indicative,present,2sg,Sinä,lennät
+lentää,Finnish,to fly,indicative,present,3sg,Hän,lentää
+lentää,Finnish,to fly,indicative,present,1pl,Me,lennämme
+lentää,Finnish,to fly,indicative,present,2pl,Te,lennätte
+lentää,Finnish,to fly,indicative,present,3pl,He,lentävät
+kävellä,Finnish,to walk,indicative,present,1sg,Minä,kävelen
+kävellä,Finnish,to walk,indicative,present,2sg,Sinä,kävelet
+kävellä,Finnish,to walk,indicative,present,3sg,Hän,kävelee
+kävellä,Finnish,to walk,indicative,present,1pl,Me,kävelemme
+kävellä,Finnish,to walk,indicative,present,2pl,Te,kävelette
+kävellä,Finnish,to walk,indicative,present,3pl,He,kävelevät
+tulla,Finnish,to come,indicative,present,1sg,Minä,tulen
+tulla,Finnish,to come,indicative,present,2sg,Sinä,tulet
+tulla,Finnish,to come,indicative,present,3sg,Hän,tulee
+tulla,Finnish,to come,indicative,present,1pl,Me,tulemme
+tulla,Finnish,to come,indicative,present,2pl,Te,tulette
+tulla,Finnish,to come,indicative,present,3pl,He,tulevat
+maata,Finnish,to lie (as in a bed),indicative,present,1sg,Minä,makaan
+maata,Finnish,to lie (as in a bed),indicative,present,2sg,Sinä,makaat
+maata,Finnish,to lie (as in a bed),indicative,present,3sg,Hän,makaa
+maata,Finnish,to lie (as in a bed),indicative,present,1pl,Me,makaamme
+maata,Finnish,to lie (as in a bed),indicative,present,2pl,Te,makaatte
+maata,Finnish,to lie (as in a bed),indicative,present,3pl,He,makaavat
+istua,Finnish,to sit,indicative,present,1sg,Minä,istun
+istua,Finnish,to sit,indicative,present,2sg,Sinä,istut
+istua,Finnish,to sit,indicative,present,3sg,Hän,istuu
+istua,Finnish,to sit,indicative,present,1pl,Me,istumme
+istua,Finnish,to sit,indicative,present,2pl,Te,istutte
+istua,Finnish,to sit,indicative,present,3pl,He,istuvat
+mentir,Spanish,to lie (as in tell an untruth),indicative,present,1sg,Yo,miento
+mentir,Spanish,to lie (as in tell an untruth),indicative,present,2sg,Tú,mientes
+mentir,Spanish,to lie (as in tell an untruth),indicative,present,3sg,Ella,miente
+mentir,Spanish,to lie (as in tell an untruth),indicative,present,1pl,Nosotras,mentimos
+mentir,Spanish,to lie (as in tell an untruth),indicative,present,2pl,Vosotros,mentís
+mentir,Spanish,to lie (as in tell an untruth),indicative,present,3pl,Ellos,mienten
+kääntyä,Finnish,"to turn, change direction",indicative,present,1sg,Minä,käännyn
+kääntyä,Finnish,"to turn, change direction",indicative,present,2sg,Sinä,käännyt
+kääntyä,Finnish,"to turn, change direction",indicative,present,3sg,Hän,kääntyy
+kääntyä,Finnish,"to turn, change direction",indicative,present,1pl,Me,käännymme
+kääntyä,Finnish,"to turn, change direction",indicative,present,2pl,Te,käännytte
+kääntyä,Finnish,"to turn, change direction",indicative,present,3pl,He,kääntyvät
+pudota,Finnish,to fall (down or off),indicative,present,1sg,Minä,putoan
+pudota,Finnish,to fall (down or off),indicative,present,2sg,Sinä,putoat
+pudota,Finnish,to fall (down or off),indicative,present,3sg,Hän,putoaa
+pudota,Finnish,to fall (down or off),indicative,present,1pl,Me,putoamme
+pudota,Finnish,to fall (down or off),indicative,present,2pl,Te,putoatte
+pudota,Finnish,to fall (down or off),indicative,present,3pl,He,putoavat
+antaa,Finnish,to give,indicative,present,1sg,Minä,annan
+antaa,Finnish,to give,indicative,present,2sg,Sinä,annat
+antaa,Finnish,to give,indicative,present,3sg,Hän,antaa
+antaa,Finnish,to give,indicative,present,1pl,Me,annamme
+antaa,Finnish,to give,indicative,present,2pl,Te,annatte
+antaa,Finnish,to give,indicative,present,3pl,He,antavat
+pitää,Finnish,"to hold, grasp, grip",indicative,present,1sg,Minä,pidän
+pitää,Finnish,"to hold, grasp, grip",indicative,present,2sg,Sinä,pidät
+pitää,Finnish,"to hold, grasp, grip",indicative,present,3sg,Hän,pitää
+pitää,Finnish,"to hold, grasp, grip",indicative,present,1pl,Me,pidämme
+pitää,Finnish,"to hold, grasp, grip",indicative,present,2pl,Te,pidätte
+pitää,Finnish,"to hold, grasp, grip",indicative,present,3pl,He,pitävät
+puristaa,Finnish,"to press, squeeze, grasp",indicative,present,1sg,Minä,puristan
+puristaa,Finnish,"to press, squeeze, grasp",indicative,present,2sg,Sinä,puristat
+puristaa,Finnish,"to press, squeeze, grasp",indicative,present,3sg,Hän,puristaa
+puristaa,Finnish,"to press, squeeze, grasp",indicative,present,1pl,Me,puristamme
+puristaa,Finnish,"to press, squeeze, grasp",indicative,present,2pl,Te,puristatte
+puristaa,Finnish,"to press, squeeze, grasp",indicative,present,3pl,He,puristavat
+hieroa,Finnish,to rub,indicative,present,1sg,Minä,hieron
+hieroa,Finnish,to rub,indicative,present,2sg,Sinä,hierot
+hieroa,Finnish,to rub,indicative,present,3sg,Hän,hieroo
+hieroa,Finnish,to rub,indicative,present,1pl,Me,hieromme
+hieroa,Finnish,to rub,indicative,present,2pl,Te,hierotte
+hieroa,Finnish,to rub,indicative,present,3pl,He,hierovat
+pyyhkiä,Finnish,"to wipe, sweep",indicative,present,1sg,Minä,pyyhin
+pyyhkiä,Finnish,"to wipe, sweep",indicative,present,2sg,Sinä,pyyhit
+pyyhkiä,Finnish,"to wipe, sweep",indicative,present,3sg,Hän,pyyhkii
+pyyhkiä,Finnish,"to wipe, sweep",indicative,present,1pl,Me,pyyhimme
+pyyhkiä,Finnish,"to wipe, sweep",indicative,present,2pl,Te,pyyhitte
+pyyhkiä,Finnish,"to wipe, sweep",indicative,present,3pl,He,pyyhkivat
+vetää,Finnish,"to pull, drag",indicative,present,1sg,Minä,vedän
+vetää,Finnish,"to pull, drag",indicative,present,2sg,Sinä,vedät
+vetää,Finnish,"to pull, drag",indicative,present,3sg,Hän,vetää
+vetää,Finnish,"to pull, drag",indicative,present,1pl,Me,vedämme
+vetää,Finnish,"to pull, drag",indicative,present,2pl,Te,vedätte
+vetää,Finnish,"to pull, drag",indicative,present,3pl,He,vetävät
+työntää,Finnish,to push,indicative,present,1sg,Minä,työnnän
+työntää,Finnish,to push,indicative,present,2sg,Sinä,työnnät
+työntää,Finnish,to push,indicative,present,3sg,Hän,työntää
+työntää,Finnish,to push,indicative,present,1pl,Me,työnnämme
+työntää,Finnish,to push,indicative,present,2pl,Te,työnnatte
+työntää,Finnish,to push,indicative,present,3pl,He,työntävät
+heittää,Finnish,to throw,indicative,present,1sg,Minä,heitän
+heittää,Finnish,to throw,indicative,present,2sg,Sinä,heität
+heittää,Finnish,to throw,indicative,present,3sg,Hän,heittää
+heittää,Finnish,to throw,indicative,present,1pl,Me,heitämme
+heittää,Finnish,to throw,indicative,present,2pl,Te,heitätte
+heittää,Finnish,to throw,indicative,present,3pl,He,heittävät
+sitoa,Finnish,"to tie, fasten",indicative,present,1sg,Minä,sidon
+sitoa,Finnish,"to tie, fasten",indicative,present,2sg,Sinä,sidot
+sitoa,Finnish,"to tie, fasten",indicative,present,3sg,Hän,sitoo
+sitoa,Finnish,"to tie, fasten",indicative,present,1pl,Me,sidomme
+sitoa,Finnish,"to tie, fasten",indicative,present,2pl,Te,sidotte
+sitoa,Finnish,"to tie, fasten",indicative,present,3pl,He,sitovat
+ommella,Finnish,to sew,indicative,present,1sg,Minä,ompelen
+ommella,Finnish,to sew,indicative,present,2sg,Sinä,ompelet
+ommella,Finnish,to sew,indicative,present,3sg,Hän,ompelee
+ommella,Finnish,to sew,indicative,present,1pl,Me,ompelemme
+ommella,Finnish,to sew,indicative,present,2pl,Te,ompelette
+ommella,Finnish,to sew,indicative,present,3pl,He,ompelevat
+laskea,Finnish,"to lower, move down, drop",indicative,present,1sg,Minä,lasken
+laskea,Finnish,"to lower, move down, drop",indicative,present,2sg,Sinä,lasket
+laskea,Finnish,"to lower, move down, drop",indicative,present,3sg,Hän,laskee
+laskea,Finnish,"to lower, move down, drop",indicative,present,1pl,Me,laskemme
+laskea,Finnish,"to lower, move down, drop",indicative,present,2pl,Te,laskette
+laskea,Finnish,"to lower, move down, drop",indicative,present,3pl,He,laskevat
+sanoa,Finnish,"to say, tell",indicative,present,1sg,Minä,sanon
+sanoa,Finnish,"to say, tell",indicative,present,2sg,Sinä,sanot
+sanoa,Finnish,"to say, tell",indicative,present,3sg,Hän,sanoo
+sanoa,Finnish,"to say, tell",indicative,present,1pl,Me,sanomme
+sanoa,Finnish,"to say, tell",indicative,present,2pl,Te,sanotte
+sanoa,Finnish,"to say, tell",indicative,present,3pl,He,sanovat
+laulaa,Finnish,"to say, tell",indicative,present,1sg,Minä,laulan
+laulaa,Finnish,"to say, tell",indicative,present,2sg,Sinä,laulat
+laulaa,Finnish,"to say, tell",indicative,present,3sg,Hän,laulaa
+laulaa,Finnish,"to say, tell",indicative,present,1pl,Me,laulamme
+laulaa,Finnish,"to say, tell",indicative,present,2pl,Te,laulatte
+laulaa,Finnish,"to say, tell",indicative,present,3pl,He,laulavat
+leikkiä,Finnish,"to play (have fun), pretend",indicative,present,1sg,Minä,leikin
+leikkiä,Finnish,"to play (have fun), pretend",indicative,present,2sg,Sinä,leikit
+leikkiä,Finnish,"to play (have fun), pretend",indicative,present,3sg,Hän,leikkii
+leikkiä,Finnish,"to play (have fun), pretend",indicative,present,1pl,Me,leikimme
+leikkiä,Finnish,"to play (have fun), pretend",indicative,present,2pl,Te,leikitte
+leikkiä,Finnish,"to play (have fun), pretend",indicative,present,3pl,He,leikkivät
+kellua,Finnish,to float,indicative,present,1sg,Minä,kellun
+kellua,Finnish,to float,indicative,present,2sg,Sinä,kellut
+kellua,Finnish,to float,indicative,present,3sg,Hän,kelluu
+kellua,Finnish,to float,indicative,present,1pl,Me,kellumme
+kellua,Finnish,to float,indicative,present,2pl,Te,kellutte
+kellua,Finnish,to float,indicative,present,3pl,He,kelluvat
+virrata,Finnish,to flow,indicative,present,1sg,Minä,virtaan
+virrata,Finnish,to flow,indicative,present,2sg,Sinä,virtaat
+virrata,Finnish,to flow,indicative,present,3sg,Hän,virtaa
+virrata,Finnish,to flow,indicative,present,1pl,Me,virtaamme
+virrata,Finnish,to flow,indicative,present,2pl,Te,virtaatte
+virrata,Finnish,to flow,indicative,present,3pl,He,virtaavat
+jäätyä,Finnish,to freeze,indicative,present,1sg,Minä,jäädyn
+jäätyä,Finnish,to freeze,indicative,present,2sg,Sinä,jäädyt
+jäätyä,Finnish,to freeze,indicative,present,3sg,Hän,jäätyy
+jäätyä,Finnish,to freeze,indicative,present,1pl,Me,jäädymme
+jäätyä,Finnish,to freeze,indicative,present,2pl,Te,jäädytte
+jäätyä,Finnish,to freeze,indicative,present,3pl,He,jäätyvät
+paisua,Finnish,"to swell, expand",indicative,present,1sg,Minä,paisun
+paisua,Finnish,"to swell, expand",indicative,present,2sg,Sinä,paisut
+paisua,Finnish,"to swell, expand",indicative,present,3sg,Hän,paisuu
+paisua,Finnish,"to swell, expand",indicative,present,1pl,Me,paisumme
+paisua,Finnish,"to swell, expand",indicative,present,2pl,Te,paisutte
+paisua,Finnish,"to swell, expand",indicative,present,3pl,He,paisuvat
+decir,Spanish,"to say, tell",indicative,present,1sg,Yo,digo
+decir,Spanish,"to say, tell",indicative,present,2sg,Tú,dices
+decir,Spanish,"to say, tell",indicative,present,3sg,Ella,dice
+decir,Spanish,"to say, tell",indicative,present,1pl,Nosotros,decimos
+decir,Spanish,"to say, tell",indicative,present,2pl,Vosotros,decís
+decir,Spanish,"to say, tell",indicative,present,3pl,Ellas,dicen
+jugar,Spanish,to play (game),indicative,present,1sg,Yo,juego
+jugar,Spanish,to play (game),indicative,present,2sg,Tú,juegas
+jugar,Spanish,to play (game),indicative,present,3sg,Él,juega
+jugar,Spanish,to play (game),indicative,present,1pl,Nosotros,jugamos
+jugar,Spanish,to play (game),indicative,present,2pl,Vosotros,jugáis
+jugar,Spanish,to play (game),indicative,present,3pl,Ellas,juegan
+venir,Spanish,to come,indicative,present,1sg,Yo,vengo
+venir,Spanish,to come,indicative,present,2sg,Tú,vienes
+venir,Spanish,to come,indicative,present,3sg,Él,viene
+venir,Spanish,to come,indicative,present,1pl,Nosotras,venimos
+venir,Spanish,to come,indicative,present,2pl,Vosotras,venís
+venir,Spanish,to come,indicative,present,3pl,Ellos,vienen
+matar,Spanish,"to kill, slay",indicative,present,1sg,Yo,mato
+matar,Spanish,"to kill, slay",indicative,present,2sg,Tú,matas
+matar,Spanish,"to kill, slay",indicative,present,3sg,Ella,mata
+matar,Spanish,"to kill, slay",indicative,present,1pl,Nosotros,matamos
+matar,Spanish,"to kill, slay",indicative,present,2pl,Vosotros,matáis
+matar,Spanish,"to kill, slay",indicative,present,3pl,Ellas,matan
+cantar,Spanish,to sing,indicative,present,1sg,Yo,canto
+cantar,Spanish,to sing,indicative,present,2sg,Tú,cantas
+cantar,Spanish,to sing,indicative,present,3sg,Él/Ella,canta
+cantar,Spanish,to sing,indicative,present,1pl,Nosotros,cantamos
+cantar,Spanish,to sing,indicative,present,2pl,Vosotros,cantáis
+cantar,Spanish,to sing,indicative,present,3pl,Ellos/Ellas,cantan
+odottaa,Finnish,to wait,indicative,present,1sg,Minä,odotan
+odottaa,Finnish,to wait,indicative,present,2sg,Sinä,odotat
+odottaa,Finnish,to wait,indicative,present,3sg,Hän,odottaa
+odottaa,Finnish,to wait,indicative,present,1pl,Me,odotamme
+odottaa,Finnish,to wait,indicative,present,2pl,Te,odotatte
+odottaa,Finnish,to wait,indicative,present,3pl,He,odottavat
+muistaa,Finnish,to remember,indicative,present,1sg,Minä,muistan
+muistaa,Finnish,to remember,indicative,present,2sg,Sinä,muistat
+muistaa,Finnish,to remember,indicative,present,3sg,Hän,muistaa
+muistaa,Finnish,to remember,indicative,present,1pl,Me,muistamme
+muistaa,Finnish,to remember,indicative,present,2pl,Te,muistatte
+muistaa,Finnish,to remember,indicative,present,3pl,He,muistavat
+opiskella,Finnish,to study,indicative,present,1sg,Minä,opiskelen
+opiskella,Finnish,to study,indicative,present,2sg,Sinä,opiskelet
+opiskella,Finnish,to study,indicative,present,3sg,Minä,opiskelee
+opiskella,Finnish,to study,indicative,present,1pl,Me,opiskelemme
+opiskella,Finnish,to study,indicative,present,2pl,Te,opiskelette
+opiskella,Finnish,to study,indicative,present,3pl,He,opiskelevat
+oppia,Finnish,to learn,indicative,present,1sg,Minä,opin
+oppia,Finnish,to learn,indicative,present,2sg,Sinä,opit
+oppia,Finnish,to learn,indicative,present,3sg,Hän,oppii
+oppia,Finnish,to learn,indicative,present,1pl,Me,opimme
+oppia,Finnish,to learn,indicative,present,2pl,Te,opitte
+oppia,Finnish,to learn,indicative,present,3pl,He,oppivat
+vastata,Finnish,"to reply, respond, answer",indicative,present,1sg,Minä,vastaan
+vastata,Finnish,"to reply, respond, answer",indicative,present,2sg,Sinä,vastaat
+vastata,Finnish,"to reply, respond, answer",indicative,present,3sg,Hän,vastaa
+vastata,Finnish,"to reply, respond, answer",indicative,present,1pl,Me,vastaamme
+vastata,Finnish,"to reply, respond, answer",indicative,present,2pl,Te,vastaatte
+vastata,Finnish,"to reply, respond, answer",indicative,present,2pl,Te,vastaavat
+herätä,Finnish,"to wake up, awaken",indicative,present,1sg,Minä,herään
+herätä,Finnish,"to wake up, awaken",indicative,present,2sg,Sinä,heräät
+herätä,Finnish,"to wake up, awaken",indicative,present,3sg,Hän,herään
+herätä,Finnish,"to wake up, awaken",indicative,present,1pl,Me,heräämme
+herätä,Finnish,"to wake up, awaken",indicative,present,2pl,Te,heräätte
+herätä,Finnish,"to wake up, awaken",indicative,present,3pl,He,heräävät
