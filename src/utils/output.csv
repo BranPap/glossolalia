@@ -484,10 +484,52 @@ vastata,Finnish,"to reply, respond, answer",indicative,present,2sg,Sinä,vastaat
 vastata,Finnish,"to reply, respond, answer",indicative,present,3sg,Hän,vastaa
 vastata,Finnish,"to reply, respond, answer",indicative,present,1pl,Me,vastaamme
 vastata,Finnish,"to reply, respond, answer",indicative,present,2pl,Te,vastaatte
-vastata,Finnish,"to reply, respond, answer",indicative,present,2pl,Te,vastaavat
+vastata,Finnish,"to reply, respond, answer",indicative,present,2pl,He,vastaavat
 herätä,Finnish,"to wake up, awaken",indicative,present,1sg,Minä,herään
 herätä,Finnish,"to wake up, awaken",indicative,present,2sg,Sinä,heräät
 herätä,Finnish,"to wake up, awaken",indicative,present,3sg,Hän,herään
 herätä,Finnish,"to wake up, awaken",indicative,present,1pl,Me,heräämme
 herätä,Finnish,"to wake up, awaken",indicative,present,2pl,Te,heräätte
 herätä,Finnish,"to wake up, awaken",indicative,present,3pl,He,heräävät
+saada,Finnish,"to get, receive, be allowed to",indicative,present,1sg,Minä,saan
+saada,Finnish,"to get, receiv, be allowed to",indicative,present,2sg,Sinä,saat
+saada,Finnish,"to get, receive, be allowed to",indicative,present,3sg,Hän,saa
+saada,Finnish,"to get, receive, be allowed to",indicative,present,1pl,Me,saamme
+saada,Finnish,"to get, receive, be allowed to",indicative,present,2pl,Te,saatte
+saada,Finnish,"to get, receive, be allowed to",indicative,present,3pl,He,saavat
+tehdä,Finnish,"to make, do",indicative,present,1sg,Minä,teen
+tehdä,Finnish,"to make, do",indicative,present,2sg,Sinä,teet
+tehdä,Finnish,"to make, do",indicative,present,3sg,Hän,tekee
+tehdä,Finnish,"to make, do",indicative,present,1pl,Me,teemme
+tehdä,Finnish,"to make, do",indicative,present,2pl,Te,teette
+tehdä,Finnish,"to make, do",indicative,present,3pl,He,tekevät
+kertoa,Finnish,"to tell",indicative,present,1sg,Minä,kerron
+kertoa,Finnish,"to tell",indicative,present,2sg,Sinä,kerrot
+kertoa,Finnish,"to tell",indicative,present,3sg,Hän,kertoo
+kertoa,Finnish,"to tell",indicative,present,1pl,Me,kerromme
+kertoa,Finnish,"to tell",indicative,present,2pl,Te,kerrotte
+kertoa,Finnish,"to tell",indicative,present,3pl,He,kertovat
+haluta,Finnish,"to want, wish, desire, crave",indicative,present,1sg,Minä,haluan
+haluta,Finnish,"to want, wish, desire, crave",indicative,present,2sg,Sinä,haluat
+haluta,Finnish,"to want, wish, desire, crave",indicative,present,3sg,Hän,haluaa
+haluta,Finnish,"to want, wish, desire, crave",indicative,present,1pl,Me,haluamme
+haluta,Finnish,"to want, wish, desire, crave",indicative,present,2pl,Te,haluatte
+haluta,Finnish,"to want, wish, desire, crave",indicative,present,3pl,He,haluavat
+alkaa,Finnish,"to begin, start",indicative,present,1sg,Minä,alan
+alkaa,Finnish,"to begin, start",indicative,present,2sg,Sinä,alat
+alkaa,Finnish,"to begin, start",indicative,present,3sg,Hän,alkaa
+alkaa,Finnish,"to begin, start",indicative,present,1pl,Me,alamme
+alkaa,Finnish,"to begin, start",indicative,present,2pl,Te,alatte
+alkaa,Finnish,"to begin, start",indicative,present,3pl,He,alkavat
+käydä,Finnish,"to visit",indicative,present,1sg,Minä,käyn
+käydä,Finnish,"to visit",indicative,present,2sg,Sinä,käyt
+käydä,Finnish,"to visit",indicative,present,3sg,Hän,käy
+käydä,Finnish,"to visit",indicative,present,1pl,Me,käymme
+käydä,Finnish,"to visit",indicative,present,2pl,Te,käytte
+käydä,Finnish,"to visit",indicative,present,3pl,He,käyvät
+toimia,Finnish,"to work, function",indicative,present,1sg,Minä,toimin
+toimia,Finnish,"to work, function",indicative,present,2sg,Sinä,toimit
+toimia,Finnish,"to work, function",indicative,present,3sg,Hän,toimii
+toimia,Finnish,"to work, function",indicative,present,1pl,Me,toimimme
+toimia,Finnish,"to work, function",indicative,present,2pl,Te,toimitte
+toimia,Finnish,"to work, function",indicative,present,3pl,He,toimivat

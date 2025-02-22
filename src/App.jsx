@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Box, Card, CardContent, Typography, LinearProgress, IconButton } from '@mui/material';
-import { Info } from '@mui/icons-material';
+import { Info, Assessment } from '@mui/icons-material';
 import { themes } from './themes';
 import { verbs } from './data/verbs';
 import { useGame } from './hooks/useGame';
@@ -9,9 +9,11 @@ import GameQuestion from './components/gameQuestion';
 import ThemeSelector from './components/ThemeSelector';
 import InfoDialog from './components/InfoDialog';
 import Sparkle from './components/Sparkle';
+import StatsDialog from './components/stats';
 
 const App = () => {
   // Theme and UI states
+  const [statsOpen, setStatsOpen] = useState(false);
   const [currentTheme, setCurrentTheme] = useState('modern');
   const [language, setLanguage] = useState('Spanish');
   const [tense, setTense] = useState('present');
@@ -97,10 +99,30 @@ const App = () => {
         <Info />
       </IconButton>
 
+      <IconButton 
+        onClick={() => setStatsOpen(true)}
+        sx={{ 
+          position: 'absolute', 
+          top: 16, 
+          right: 64,  
+          color: themes[currentTheme].secondary
+        }}
+      >
+        <Assessment />  
+      </IconButton>
+
       <InfoDialog 
         open={infoOpen} 
         onClose={() => setInfoOpen(false)} 
         theme={themes[currentTheme]}
+      />
+
+      <StatsDialog 
+        open={statsOpen} 
+        onClose={() => setStatsOpen(false)} 
+        verbs={verbs}
+        theme={themes[currentTheme]}
+        currentTheme={currentTheme}
       />
 
       <ThemeSelector 

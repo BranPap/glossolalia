@@ -2468,5 +2468,265 @@ export const verbs = [
         }
       }
     }
+  },
+  {
+    "verb": "odottaa",
+    "language": "Finnish",
+    "translation": "to wait",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "odotan"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "odotat"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "odottaa"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "odotamme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "odotatte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "odottavat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "muistaa",
+    "language": "Finnish",
+    "translation": "to remember",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "muistan"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "muistat"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "muistaa"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "muistamme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "muistatte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "muistavat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "opiskella",
+    "language": "Finnish",
+    "translation": "to study",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "opiskelen"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "opiskelet"
+        },
+        "3sg": {
+          "pronoun": "Min\u00e4",
+          "form": "opiskelee"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "opiskelemme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "opiskelette"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "opiskelevat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "oppia",
+    "language": "Finnish",
+    "translation": "to learn",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "opin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "opit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "oppii"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "opimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "opitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "oppivat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "vastata",
+    "language": "Finnish",
+    "translation": "to reply, respond, answer",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "vastaan"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "vastaat"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "vastaa"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "vastaamme"
+        },
+        "2pl": {
+          "pronoun": "He",
+          "form": "vastaavat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "her\u00e4t\u00e4",
+    "language": "Finnish",
+    "translation": "to wake up, awaken",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "her\u00e4\u00e4n"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "her\u00e4\u00e4t"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "her\u00e4\u00e4n"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "her\u00e4\u00e4mme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "her\u00e4\u00e4tte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "her\u00e4\u00e4v\u00e4t"
+        }
+      }
+    }
+  },
+  {
+    "verb": "saada",
+    "language": "Finnish",
+    "translation": "to get, receive, be allowed to",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "saan"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "saat"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "saa"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "saamme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "saatte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "saavat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "tehd\u00e4",
+    "language": "Finnish",
+    "translation": "to make, do",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "teen"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "teet"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "tekee"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "teemme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "teette"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "tekev\u00e4t"
+        }
+      }
+    }
   }
 ];
