@@ -2,15 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Box, Card, CardContent, Typography, LinearProgress, IconButton } from '@mui/material';
 import { Info, Assessment, MenuBook } from '@mui/icons-material';
 import HistoryIcon from '@mui/icons-material/History';
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import { themes } from './themes';
 import { verbs } from './data/verbs';
 import { useGame } from './hooks/useGame';
-import GameControls from './components/gameControls'
-import GameQuestion from './components/gameQuestion';
+import GameControls from './components/GameControls'
+import GameQuestion from './components/GameQuestion';
 import ThemeSelector from './components/ThemeSelector';
 import InfoDialog from './components/InfoDialog';
-import Sparkle from './components/Sparkle';
+import Sparkle from './components/sparkle';
 import StatsDialog from './components/stats';
 import ScoreHistory from './components/ScoreHistory';
 import DictionaryDialog from './components/DictionaryDialog';
