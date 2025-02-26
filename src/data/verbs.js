@@ -2550,7 +2550,7 @@ export const verbs = [
           "form": "opiskelet"
         },
         "3sg": {
-          "pronoun": "Min\u00e4",
+          "pronoun": "H\u00e4n",
           "form": "opiskelee"
         },
         "1pl": {
@@ -2646,7 +2646,7 @@ export const verbs = [
         },
         "3sg": {
           "pronoun": "H\u00e4n",
-          "form": "her\u00e4\u00e4n"
+          "form": "her\u00e4\u00e4"
         },
         "1pl": {
           "pronoun": "Me",
@@ -2725,6 +2725,336 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "tekev\u00e4t"
+        }
+      }
+    }
+  },
+  {
+    "verb": "kertoa",
+    "language": "Finnish",
+    "translation": "to tell",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "kerron"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "kerrot"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "kertoo"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "kerromme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "kerrotte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "kertovat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "haluta",
+    "language": "Finnish",
+    "translation": "to want, wish, desire, crave",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "haluan"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "haluat"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "haluaa"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "haluamme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "haluatte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "haluavat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "alkaa",
+    "language": "Finnish",
+    "translation": "to begin, start",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "alan"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "alat"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "alkaa"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "alamme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "alatte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "alkavat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "k\u00e4yd\u00e4",
+    "language": "Finnish",
+    "translation": "to visit",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "k\u00e4yn"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "k\u00e4yt"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "k\u00e4y"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "k\u00e4ymme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "k\u00e4ytte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "k\u00e4yv\u00e4t"
+        }
+      }
+    }
+  },
+  {
+    "verb": "toimia",
+    "language": "Finnish",
+    "translation": "to work, function",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "toimin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "toimit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "toimii"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "toimimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "toimitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "toimivat"
+        }
+      }
+    }
+  },
+  {
+    "verb": "menn\u00e4",
+    "language": "Finnish",
+    "translation": "to go",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "menen"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "menet"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "menee"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "melemme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "melette"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "menev\u00e4t"
+        }
+      }
+    }
+  },
+  {
+    "verb": "k\u00e4ytt\u00e4\u00e4",
+    "language": "Finnish",
+    "translation": "to use",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "k\u00e4yt\u00e4n"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "k\u00e4yt\u00e4t"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "k\u00e4ytt\u00e4\u00e4"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "k\u00e4yt\u00e4mme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "k\u00e4yt\u00e4tte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "k\u00e4ytt\u00e4v\u00e4t"
+        }
+      }
+    }
+  },
+  {
+    "verb": "beber",
+    "language": "Spanish",
+    "translation": "to drink",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Yo",
+          "form": "bebo"
+        },
+        "2sg": {
+          "pronoun": "T\u00fa",
+          "form": "bebes"
+        },
+        "3sg": {
+          "pronoun": "\u00c9l/Ella",
+          "form": "bebe"
+        },
+        "1pl": {
+          "pronoun": "Nosotros/Nosotras",
+          "form": "bebemos"
+        },
+        "2pl": {
+          "pronoun": "Vosotros",
+          "form": "beb\u00e9is"
+        },
+        "3pl": {
+          "pronoun": "Ellos/Ellas",
+          "form": "beben"
+        }
+      }
+    }
+  },
+  {
+    "verb": "comer",
+    "language": "Spanish",
+    "translation": "to eat",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Yo",
+          "form": "como"
+        },
+        "2sg": {
+          "pronoun": "T\u00fa",
+          "form": "comes"
+        },
+        "3sg": {
+          "pronoun": "\u00c9l/Ella",
+          "form": "come"
+        },
+        "1pl": {
+          "pronoun": "Nosotros/Nosotras",
+          "form": "comemos"
+        },
+        "2pl": {
+          "pronoun": "Vosotros/Vosotras",
+          "form": "com\u00e9is"
+        },
+        "3pl": {
+          "pronoun": "Ellos/Ellas",
+          "form": "comen"
+        }
+      }
+    }
+  },
+  {
+    "verb": "morder",
+    "language": "Spanish",
+    "translation": "to bite",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Yo",
+          "form": "muerdo"
+        },
+        "2sg": {
+          "pronoun": "T\u00fa",
+          "form": "muerdes"
+        },
+        "3sg": {
+          "pronoun": "\u00c9l/Ella",
+          "form": "muerde"
+        },
+        "1pl": {
+          "pronoun": "Nosotros/Nosotras",
+          "form": "mordemos"
+        },
+        "2pl": {
+          "pronoun": "Vosotros/Vosotras",
+          "form": "mord\u00e9is"
+        },
+        "3pl": {
+          "pronoun": "Ellos/Ellas",
+          "form": "muerden"
         }
       }
     }
