@@ -533,3 +533,35 @@ toimia,Finnish,"to work, function",indicative,present,3sg,Hän,toimii
 toimia,Finnish,"to work, function",indicative,present,1pl,Me,toimimme
 toimia,Finnish,"to work, function",indicative,present,2pl,Te,toimitte
 toimia,Finnish,"to work, function",indicative,present,3pl,He,toimivat
+mennä,Finnish,"to go",indicative,present,1sg,Minä,menen
+mennä,Finnish,"to go",indicative,present,2sg,Sinä,menet
+mennä,Finnish,"to go",indicative,present,3sg,Hän,menee
+mennä,Finnish,"to go",indicative,present,1pl,Me,melemme
+mennä,Finnish,"to go",indicative,present,2pl,Te,melette
+mennä,Finnish,"to go",indicative,present,3pl,He,menevät
+käyttää,Finnish,"to use",indicative,present,1sg,Minä,käytän
+käyttää,Finnish,"to use",indicative,present,2sg,Sinä,käytät
+käyttää,Finnish,"to use",indicative,present,3sg,Hän,käyttää
+käyttää,Finnish,"to use",indicative,present,1pl,Me,käytämme
+käyttää,Finnish,"to use",indicative,present,2pl,Te,käytätte
+käyttää,Finnish,"to use",indicative,present,3pl,He,käyttävät
+beber,Spanish,"to drink",indicative,present,1sg,Yo,bebo
+beber,Spanish,"to drink",indicative,present,2sg,Tú,bebes
+beber,Spanish,"to drink",indicative,present,3sg,Él/Ella,bebe
+beber,Spanish,"to drink",indicative,present,1pl,Nosotros/Nosotras,bebemos
+beber,Spanish,to drink,indicative,present,2pl,Vosotros,bebéis
+beber,Spanish,to drink,indicative,present,3pl,Ellos/Ellas,beben
+comer,Spanish,to eat,indicative,present,1sg,Yo,como
+comer,Spanish,to eat,indicative,present,2sg,Tú,comes
+comer,Spanish,to eat,indicative,present,3sg,Él/Ella,come
+comer,Spanish,to eat,indicative,present,1pl,Nosotros/Nosotras,comemos
+comer,Spanish,to eat,indicative,present,2pl,Vosotros/Vosotras,coméis
+comer,Spanish,to eat,indicative,present,3pl,Ellos/Ellas,comen
+morder,Spanish,to bite,indicative,present,1sg,Yo,muerdo
+morder,Spanish,to bite,indicative,present,2sg,Tú,muerdes
+morder,Spanish,to bite,indicative,present,3sg,Él/Ella,muerde
+morder,Spanish,to bite,indicative,present,1pl,Nosotros/Nosotras,mordemos
+morder,Spanish,to bite,indicative,present,2pl,Vosotros/Vosotras,mordéis
+morder,Spanish,to bite,indicative,present,3pl,Ellos/Ellas,muerden
+,,,,,,,
+,,,,,,,
