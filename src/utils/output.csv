@@ -469,7 +469,7 @@ muistaa,Finnish,to remember,indicative,present,2pl,Te,muistatte
 muistaa,Finnish,to remember,indicative,present,3pl,He,muistavat
 opiskella,Finnish,to study,indicative,present,1sg,Minä,opiskelen
 opiskella,Finnish,to study,indicative,present,2sg,Sinä,opiskelet
-opiskella,Finnish,to study,indicative,present,3sg,Minä,opiskelee
+opiskella,Finnish,to study,indicative,present,3sg,Hän,opiskelee
 opiskella,Finnish,to study,indicative,present,1pl,Me,opiskelemme
 opiskella,Finnish,to study,indicative,present,2pl,Te,opiskelette
 opiskella,Finnish,to study,indicative,present,3pl,He,opiskelevat
@@ -487,7 +487,7 @@ vastata,Finnish,"to reply, respond, answer",indicative,present,2pl,Te,vastaatte
 vastata,Finnish,"to reply, respond, answer",indicative,present,2pl,He,vastaavat
 herätä,Finnish,"to wake up, awaken",indicative,present,1sg,Minä,herään
 herätä,Finnish,"to wake up, awaken",indicative,present,2sg,Sinä,heräät
-herätä,Finnish,"to wake up, awaken",indicative,present,3sg,Hän,herään
+herätä,Finnish,"to wake up, awaken",indicative,present,3sg,Hän,herää
 herätä,Finnish,"to wake up, awaken",indicative,present,1pl,Me,heräämme
 herätä,Finnish,"to wake up, awaken",indicative,present,2pl,Te,heräätte
 herätä,Finnish,"to wake up, awaken",indicative,present,3pl,He,heräävät

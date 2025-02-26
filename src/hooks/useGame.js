@@ -1,8 +1,8 @@
 // File: /src/hooks/useGame.js
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { shuffleArray } from '../utils/arrayUtils';
 
-export const useGame = (verbs, language, tense, isTranslationMode, isReverseTranslation, theme) => {
+export const useGame = (verbs, language, tense, isTranslationMode, isReverseTranslation, theme, onGameComplete) => {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -36,7 +36,41 @@ export const useGame = (verbs, language, tense, isTranslationMode, isReverseTran
     ).slice(0, 10);
   };
 
+  const saveScore = () => {
+    if (currentIndex >= questions.length && questions.length > 0) {
+      try {
+        // Get existing scores from localStorage
+        const storedScores = localStorage.getItem('glossolaliaScores');
+        const scoreHistory = storedScores ? JSON.parse(storedScores) : [];
+        
+        // Create a new score entry
+        const newScoreEntry = {
+          date: new Date().toISOString(),
+          score: score,
+          total: questions.length,
+          language,
+          tense,
+          mode: isTranslationMode 
+            ? (isReverseTranslation ? 'translationReverse' : 'translation') 
+            : 'conjugation'
+        };
+        
+        // Add new score to history and save back to localStorage
+        const updatedScores = [newScoreEntry, ...scoreHistory].slice(0, 50); // Keep last 50 scores
+        localStorage.setItem('glossolaliaScores', JSON.stringify(updatedScores));
+        
+        // Call the callback to notify that a game was completed and score saved
+        if (onGameComplete) {
+          onGameComplete();
+        }
+      } catch (error) {
+        console.error('Failed to save score:', error);
+      }
+    }
+  };
+
   const handleRestart = () => {
+    saveScore();
     setQuestions(generateQuestions()); // Generate fresh set of questions
     setCurrentIndex(0); 
     setAnswer('');
@@ -133,7 +167,7 @@ export const useGame = (verbs, language, tense, isTranslationMode, isReverseTran
     setFeedback('');
     setScore(0);
   }, [language, tense, isTranslationMode, isReverseTranslation]);
-
+  
   return {
     questions,
     currentIndex,
@@ -142,6 +176,7 @@ export const useGame = (verbs, language, tense, isTranslationMode, isReverseTran
     feedback,
     showSparkles,
     enterState,
+    saveScore,
     setAnswer,
     setCurrentIndex,
     setScore,
@@ -151,6 +186,6 @@ export const useGame = (verbs, language, tense, isTranslationMode, isReverseTran
     handleSubmit,
     handleShowAnswer,
     generateQuestions,
-    handleRestart
+    handleRestart,
   };
 };

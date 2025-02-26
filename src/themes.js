@@ -57,33 +57,6 @@ export const themes = {
       themeIcon: '🌙',
       cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>🪄</text></svg>") 16 0, auto'
     },
-    cyberpunk: {
-        background: 'linear-gradient(135deg, #000000 0%,rgb(3, 75, 18) 100%)',
-        cardBorder: 'linear-gradient(90deg,rgb(0, 255, 72),rgb(0, 255, 115))',
-        primary: 'rgb(19, 202, 71)',
-        secondary: '#fafafa',
-        accent: '#fafafa',
-        accentHover: '#ff00ea',
-        progressBg: '#fafafa',
-        progressBar: 'rgb(16, 215, 73)',
-        correct: '#39ff14',
-        incorrect: '#ff0000',
-        subtitle: '⚡ hack the language matrix',
-        completeEmoji: '🤖',
-        completeMessage: 'System upgraded',
-        buttonRadius: '0px',
-        checkButtonText: 'return(answer)',
-        showAnswerButtonText: 'console.log(help)',
-        revealMessageInflectional: `const correctForm = `,
-        revealMessageTranslation: `const correctTranslation = `,
-        perfectEvalMessage: 'Total knowledge base access granted!',
-        goodEvalMessage: 'Almost past the firewall!',
-        okayEvalMessage: 'On your way to the mainframe!',
-        failEvalMessage: 'Abort program... want to try again?',
-        restartButtonText: 'Reboot',
-        themeIcon: '💻',
-        cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>⚡️</text></svg>") 16 0, auto'
-      },
       forest: {
         background: 'linear-gradient(135deg, #2d5a27 0%, #8fbc8f 100%)',
         cardBorder: 'linear-gradient(90deg, #556b2f, #8fbc8f)',
@@ -193,3 +166,31 @@ export const themes = {
         cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>🔪</text></svg>") 16 0, auto'
       }
   };
+
+  /* cyberpunk: {
+    background: 'linear-gradient(135deg, #000000 0%,rgb(3, 75, 18) 100%)',
+    cardBorder: 'linear-gradient(90deg,rgb(0, 255, 72),rgb(0, 255, 115))',
+    primary: 'rgb(19, 202, 71)',
+    secondary: '#fafafa',
+    accent: '#fafafa',
+    accentHover: '#ff00ea',
+    progressBg: '#fafafa',
+    progressBar: 'rgb(16, 215, 73)',
+    correct: '#39ff14',
+    incorrect: '#ff0000',
+    subtitle: '⚡ hack the language matrix',
+    completeEmoji: '🤖',
+    completeMessage: 'System upgraded',
+    buttonRadius: '0px',
+    checkButtonText: 'return(answer)',
+    showAnswerButtonText: 'console.log(help)',
+    revealMessageInflectional: `const correctForm = `,
+    revealMessageTranslation: `const correctTranslation = `,
+    perfectEvalMessage: 'Total knowledge base access granted!',
+    goodEvalMessage: 'Almost past the firewall!',
+    okayEvalMessage: 'On your way to the mainframe!',
+    failEvalMessage: 'Abort program... want to try again?',
+    restartButtonText: 'Reboot',
+    themeIcon: '💻',
+    cursor: 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'48\' viewport=\'0 0 100 100\' style=\'fill:black;font-size:24px;\'><text y=\'50%\'>⚡️</text></svg>") 16 0, auto'
+  } */

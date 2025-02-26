@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Box, Card, CardContent, Typography, LinearProgress, IconButton } from '@mui/material';
-import { Info, Assessment } from '@mui/icons-material';
+import { Info, Assessment, MenuBook } from '@mui/icons-material';
+import HistoryIcon from '@mui/icons-material/History';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import { themes } from './themes';
 import { verbs } from './data/verbs';
 import { useGame } from './hooks/useGame';
@@ -10,6 +12,9 @@ import ThemeSelector from './components/ThemeSelector';
 import InfoDialog from './components/InfoDialog';
 import Sparkle from './components/Sparkle';
 import StatsDialog from './components/stats';
+import ScoreHistory from './components/ScoreHistory';
+import DictionaryDialog from './components/DictionaryDialog';
+import './components/HistoryPulse.css';
 
 const App = () => {
   // Theme and UI states
@@ -21,8 +26,20 @@ const App = () => {
   const [isReverseTranslation, setIsReverseTranslation] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
+  const [scoreHistoryOpen, setScoreHistoryOpen] = useState(false);
+  const [dictionaryOpen, setDictionaryOpen] = useState(false);
+  const [showHistoryPulse, setShowHistoryPulse] = useState(false);
+  
   
   const textFieldRef = useRef(null);
+
+  const handleGameComplete = () => {
+    setShowHistoryPulse(true);
+    setTimeout(() => {
+      setShowHistoryPulse(false);
+    }, 4000); // 3 pulses of 1s each + some extra time
+  };
+  
 
   // Get game state and handlers from custom hook
   const {
@@ -33,11 +50,20 @@ const App = () => {
     feedback,
     showSparkles,
     enterState,
+    saveScore,
     setAnswer,
     handleSubmit,
     handleShowAnswer,
     handleRestart
-  } = useGame(verbs, language, tense, isTranslationMode, isReverseTranslation, themes[currentTheme]);
+  } = useGame(
+    verbs, 
+    language, 
+    tense, 
+    isTranslationMode, 
+    isReverseTranslation, 
+    themes[currentTheme],
+    handleGameComplete  // New callback parameter
+  );
 
   // Calculate derived values
   const progress = (currentIndex / questions.length) * 100;
@@ -65,9 +91,8 @@ const App = () => {
     }
   };
 
-  // Handle keyboard input
   const handleKeyDown = (e) => {
-    if (e.key === "Enter" && enterState) {
+    if (e.key === "Enter" && !isGameComplete) {
       e.preventDefault();
       handleSubmit();
     }
@@ -87,33 +112,50 @@ const App = () => {
         cursor: themes[currentTheme].cursor
       }}
     >
+      <Box sx={{ position: 'absolute', top: 16, right: 16, display: 'flex', gap: 1 }}>
       <IconButton 
-        onClick={() => setInfoOpen(true)}
-        sx={{ 
-          position: 'absolute', 
-          top: 16, 
-          right: 16,
-          color: themes[currentTheme].secondary
-        }}
+        onClick={() => setScoreHistoryOpen(true)}
+        sx={{ color: themes[currentTheme].secondary }}
+        className={showHistoryPulse ? 'history-icon-pulse' : ''}
       >
-        <Info />
+        <HistoryIcon />
       </IconButton>
-
-      <IconButton 
-        onClick={() => setStatsOpen(true)}
-        sx={{ 
-          position: 'absolute', 
-          top: 16, 
-          right: 64,  
-          color: themes[currentTheme].secondary
-        }}
-      >
-        <Assessment />  
-      </IconButton>
+        <IconButton
+          onClick={() => setDictionaryOpen(true)}
+          sx={{ color: themes[currentTheme].secondary }}
+        >
+          <MenuBook />
+        </IconButton>
+        <IconButton
+          onClick={() => setStatsOpen(true)}
+          sx={{ color: themes[currentTheme].secondary}}
+        >
+          <Assessment />
+        </IconButton>
+        <IconButton 
+          onClick={() => setInfoOpen(true)}
+          sx={{ color: themes[currentTheme].secondary }}
+        >
+          <Info />
+        </IconButton>
+      </Box>
 
       <InfoDialog 
         open={infoOpen} 
         onClose={() => setInfoOpen(false)} 
+        theme={themes[currentTheme]}
+      />
+
+      <DictionaryDialog
+        open={dictionaryOpen}
+        onClose={() => setDictionaryOpen(false)}
+        verbs={verbs}
+        theme={themes[currentTheme]}
+      />
+
+      <ScoreHistory 
+        open={scoreHistoryOpen} 
+        onClose={() => setScoreHistoryOpen(false)} 
         theme={themes[currentTheme]}
       />
 

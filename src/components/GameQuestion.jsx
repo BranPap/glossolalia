@@ -1,5 +1,5 @@
 // File: /src/components/GameQuestion.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Tooltip, TextField, Box, Button } from '@mui/material';
 
 const GameQuestion = ({
@@ -15,6 +15,28 @@ const GameQuestion = ({
   isTranslationMode,
   isReverseTranslation
 }) => {
+  // Add effect to listen for Tab key
+  useEffect(() => {
+    const handleGlobalKeyDown = (e) => {
+      // Tab key for showing answer
+      if (e.key === 'Tab') {
+        e.preventDefault(); // Prevent default tab behavior
+        handleShowAnswer();
+      }
+    };
+
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, [handleShowAnswer]);
+
+  // Enhanced key handler that now handles both Enter and Tab
+  const handleTextFieldKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSubmit();
+    }
+  };
+
   const getPrompt = () => {
     if (!isTranslationMode) {
       return (
@@ -64,7 +86,7 @@ const GameQuestion = ({
         fullWidth
         value={answer}
         onChange={(e) => setAnswer(e.target.value)}
-        onKeyDown={handleKeyDown}
+        onKeyDown={handleTextFieldKeyDown}
         inputRef={textFieldRef}
         sx={{ 
           mb: 3,
@@ -109,7 +131,7 @@ const GameQuestion = ({
             fontSize: '1.1rem'
           }}
         >
-          {theme.checkButtonText}
+          {theme.checkButtonText} 
         </Button>
 
         <Button
@@ -133,9 +155,18 @@ const GameQuestion = ({
             fontSize: '1.1rem'
           }}
         >
-          {theme.showAnswerButtonText || "Show Answer"}
+          {theme.showAnswerButtonText || "Show Answer"} 
         </Button>
       </Box>
+
+      <Typography variant="body2" sx={{ 
+        mt: 2, 
+        color: theme.secondary, 
+        opacity: 0.7,
+        fontStyle: 'italic'
+      }}>
+        Keyboard shortcuts: Press Enter to check answer, Tab to show answer
+      </Typography>
     </>
   );
 };

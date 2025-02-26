@@ -24,7 +24,6 @@ const Sparkle = ({ theme }) => {
       size: 16 + Math.random() * 32,
       duration: 1 + Math.random(),
     }));
-    console.log(newSparkles); // Log sparkles to confirm they are created
     setSparkles(newSparkles);
 
     const timer = setTimeout(() => setSparkles([]), 2500);
