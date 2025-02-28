@@ -328,6 +328,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "juovat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "join"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "joit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "joi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "joimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "joitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "joivat"
+        }
       }
     }
   },
@@ -592,6 +618,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "sy\u00f6v\u00e4t"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "s\u00f6in"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "s\u00f6it"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "s\u00f6i"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "s\u00f6imme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "s\u00f6itte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "s\u00f6iv\u00e4t"
+        }
       }
     }
   },
@@ -625,6 +677,28 @@ export const verbs = [
           "pronoun": "He",
           "form": "purevat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "purin"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "puri"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "purimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "puritte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "purivat"
+        }
       }
     }
   },
@@ -657,6 +731,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "imev\u00e4t"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "imin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "imit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "imi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "imimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "imitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "imiv\u00e4t"
         }
       }
     }
@@ -3055,6 +3155,19 @@ export const verbs = [
         "3pl": {
           "pronoun": "Ellos/Ellas",
           "form": "muerden"
+        }
+      }
+    }
+  },
+  {
+    "verb": "",
+    "language": "",
+    "translation": "",
+    "forms": {
+      "_": {
+        "": {
+          "pronoun": "",
+          "form": ""
         }
       }
     }

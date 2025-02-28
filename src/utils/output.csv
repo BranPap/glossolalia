@@ -563,5 +563,27 @@ morder,Spanish,to bite,indicative,present,3sg,Él/Ella,muerde
 morder,Spanish,to bite,indicative,present,1pl,Nosotros/Nosotras,mordemos
 morder,Spanish,to bite,indicative,present,2pl,Vosotros/Vosotras,mordéis
 morder,Spanish,to bite,indicative,present,3pl,Ellos/Ellas,muerden
-,,,,,,,
+juoda,Finnish,to drink,indicative,past,1sg,Minä,join
+juoda,Finnish,to drink,indicative,past,2sg,Sinä,joit
+juoda,Finnish,to drink,indicative,past,3sg,Hän,joi
+juoda,Finnish,to drink,indicative,past,1pl,Me,joimme
+juoda,Finnish,to drink,indicative,past,2pl,Te,joitte
+juoda,Finnish,to drink,indicative,past,3pl,He,joivat
+syödä,Finnish,to eat,indicative,past,1sg,Minä,söin
+syödä,Finnish,to eat,indicative,past,2sg,Sinä,söit
+syödä,Finnish,to eat,indicative,past,3sg,Hän,söi
+syödä,Finnish,to eat,indicative,past,1pl,Me,söimme
+syödä,Finnish,to eat,indicative,past,2pl,Te,söitte
+syödä,Finnish,to eat,indicative,past,3pl,He,söivät
+purra,Finnish,to bite,indicative,past,1sg,Minä,purin
+purra,Finnish,to bite,indicative,past,3sg,Hän,puri
+purra,Finnish,to bite,indicative,past,1pl,Me,purimme
+purra,Finnish,to bite,indicative,past,2pl,Te,puritte
+purra,Finnish,to bite,indicative,past,3pl,He,purivat
+imeä,Finnish,"to suck, absorb",indicative,past,1sg,Minä,imin
+imeä,Finnish,"to suck, absorb",indicative,past,2sg,Sinä,imit
+imeä,Finnish,"to suck, absorb",indicative,past,3sg,Hän,imi
+imeä,Finnish,"to suck, absorb",indicative,past,1pl,Me,imimme
+imeä,Finnish,"to suck, absorb",indicative,past,2pl,Te,imitte
+imeä,Finnish,"to suck, absorb",indicative,past,3pl,He,imivät
 ,,,,,,,
