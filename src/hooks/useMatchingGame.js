@@ -48,7 +48,7 @@ export const useMatchingGame = (verbs, language, tense, theme, onGameComplete) =
           total: totalVerbs,
           language,
           tense,
-          mode: 'matching' // This is the key used for display
+          mode: 'training' // This is the key used for display
         };
         
         // Add new score to history and save back to localStorage

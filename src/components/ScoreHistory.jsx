@@ -120,8 +120,8 @@ const ScoreHistory = ({ open, onClose, theme }) => {
                               ? 'Translation' 
                               : (item.mode === 'translationReverse' 
                                 ? 'Reverse Translation' 
-                                : (item.mode === 'matching' 
-                                  ? `Matching (${item.tense})` 
+                                : (item.mode === 'training' 
+                                  ? `Training (${item.tense})` 
                                   : item.mode)))}
                         </Typography>
                       }

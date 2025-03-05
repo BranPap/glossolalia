@@ -59,7 +59,7 @@ const GameControls = ({
             Translation Mode
           </ToggleButton>
           <ToggleButton value="matching">
-            Matching Mode
+            Training Mode
           </ToggleButton>
         </ToggleButtonGroup>
       </Box>
