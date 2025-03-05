@@ -37,6 +37,11 @@ const GameQuestion = ({
     }
   };
 
+  // Check if currentQuestion exists before rendering content
+  if (!currentQuestion) {
+    return null; // Return null or a loading state when no question is available
+  }
+
   const getPrompt = () => {
     if (!isTranslationMode) {
       return (

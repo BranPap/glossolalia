@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Select, MenuItem, Typography, Switch, FormControlLabel, ToggleButtonGroup, ToggleButton } from '@mui/material';
 
 const GameControls = ({ 
+  gameMode,
+  setGameMode,
   isTranslationMode, 
   setIsTranslationMode, 
   language, 
@@ -13,17 +15,21 @@ const GameControls = ({
   setIsReverseTranslation,
   theme 
 }) => {
+  // Handler for game mode changes
+  const handleGameModeChange = (e, newMode) => {
+    if (newMode !== null) {
+      setGameMode(newMode);
+    }
+  };
+
   return (
     <>
+      {/* Game Mode Selection */}
       <Box sx={{ mb: 4 }}>
         <ToggleButtonGroup
-          value={isTranslationMode ? 'translation' : 'conjugation'}
+          value={gameMode}
           exclusive
-          onChange={(e, newMode) => {
-            if (newMode !== null) {
-              setIsTranslationMode(newMode === 'translation');
-            }
-          }}
+          onChange={handleGameModeChange}
           sx={{
             '& .MuiToggleButton-root': {
               textTransform: 'none',
@@ -51,6 +57,9 @@ const GameControls = ({
           </ToggleButton>
           <ToggleButton value="translation">
             Translation Mode
+          </ToggleButton>
+          <ToggleButton value="matching">
+            Matching Mode
           </ToggleButton>
         </ToggleButtonGroup>
       </Box>
@@ -91,7 +100,7 @@ const GameControls = ({
           </Select>
         </Box>
       
-        {!isTranslationMode && (
+        {gameMode !== 'matching' && gameMode !== 'translation' && (
           <Box>
             <Typography sx={{ 
               mb: 1, 
@@ -125,7 +134,41 @@ const GameControls = ({
           </Box>
         )}
 
-        {isTranslationMode && (
+        {gameMode === 'matching' && (
+          <Box>
+            <Typography sx={{ 
+              mb: 1, 
+              color: theme.secondary, 
+              fontFamily: "'Space Grotesk', sans-serif", 
+              fontWeight: 500 
+            }}>
+              Tense
+            </Typography>
+            <Select
+              value={tense}
+              onChange={(e) => setTense(e.target.value)}
+              sx={{ 
+                minWidth: 150,
+                color: theme.secondary,
+                '.MuiOutlinedInput-notchedOutline': {
+                  borderColor: theme.secondary,
+                  borderWidth: '2px'
+                },
+                '&:hover .MuiOutlinedInput-notchedOutline': {
+                  borderColor: theme.primary
+                }
+              }}
+            >
+              {availableTenses.map(t => (
+                <MenuItem key={t} value={t}>
+                  {t.charAt(0).toUpperCase() + t.slice(1)}
+                </MenuItem>
+              ))}
+            </Select>
+          </Box>
+        )}
+
+        {gameMode === 'translation' && (
           <FormControlLabel
             control={
               <Switch

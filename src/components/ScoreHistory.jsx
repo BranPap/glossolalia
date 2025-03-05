@@ -116,7 +116,13 @@ const ScoreHistory = ({ open, onClose, theme }) => {
                         <Typography sx={{ fontFamily: "'Space Grotesk', sans-serif", color: theme.primary }}>
                           {item.language} • {item.mode === 'conjugation' 
                             ? `Conjugation (${item.tense})` 
-                            : (item.mode === 'translation' ? 'Translation' : 'Reverse Translation')}
+                            : (item.mode === 'translation' 
+                              ? 'Translation' 
+                              : (item.mode === 'translationReverse' 
+                                ? 'Reverse Translation' 
+                                : (item.mode === 'matching' 
+                                  ? `Matching (${item.tense})` 
+                                  : item.mode)))}
                         </Typography>
                       }
                       secondary={

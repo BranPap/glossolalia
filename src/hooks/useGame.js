@@ -37,7 +37,7 @@ export const useGame = (verbs, language, tense, isTranslationMode, isReverseTran
   };
 
   const saveScore = () => {
-    if (currentIndex >= questions.length && questions.length > 0) {
+    if (currentIndex === questions.length && questions.length > 0) {
       try {
         // Get existing scores from localStorage
         const storedScores = localStorage.getItem('glossolaliaScores');
