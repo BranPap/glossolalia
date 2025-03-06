@@ -791,6 +791,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "sylkev\u00e4t"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "syljin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "syljit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "sylki"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "syljimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "syljitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "sylkiv\u00e4t"
+        }
       }
     }
   },
@@ -823,6 +849,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "oksentavat"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "oksensin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "oksensit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "oksensi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "oksensimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "oksensitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "oksensivat"
         }
       }
     }
@@ -857,6 +909,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "puhaltavat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "puhalsin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "puhalsit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "puhalsi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "puhalsimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "puhalsitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "puhalsivat"
+        }
       }
     }
   },
@@ -889,6 +967,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "hengitt\u00e4v\u00e4t"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "hengitin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "hengitit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "hengitti"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "hengitimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "hengititte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "hengittiv\u00e4t"
         }
       }
     }
@@ -923,6 +1027,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "nauravat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "nauroin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "nauroit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "nauroi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "nauroimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "nauroitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "nauroivat"
+        }
       }
     }
   },
@@ -955,6 +1085,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "n\u00e4kev\u00e4t"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "n\u00e4in"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "n\u00e4it"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "n\u00e4ki"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "n\u00e4imme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "n\u00e4itte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "n\u00e4kiv\u00e4t"
         }
       }
     }
@@ -989,6 +1145,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "kuulevat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "kuulin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "kuulit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "kuuli"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "kuulimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "kuulitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "kuulivat"
+        }
       }
     }
   },
@@ -1021,6 +1203,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "tiet\u00e4v\u00e4t"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "tiesin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "tiesit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "tiesi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "tiesimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "tiesitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "tiesiv\u00e4t"
         }
       }
     }
@@ -1055,6 +1263,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "ajattelevat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "ajattelin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "ajattelit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "ajatteli"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "ajattelimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "ajattelitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "ajattelivat"
+        }
       }
     }
   },
@@ -1087,6 +1321,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "haistavat"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "haistoin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "haistoit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "haistoi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "haistoimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "haistoitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "haistoivat"
         }
       }
     }
@@ -1147,6 +1407,32 @@ export const verbs = [
           "pronoun": "Ellas",
           "form": "hablar\u00e1n"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Yo",
+          "form": "habl\u00e9"
+        },
+        "2sg": {
+          "pronoun": "T\u00fa",
+          "form": "hablaste"
+        },
+        "3sg": {
+          "pronoun": "\u00c9l/Ella",
+          "form": "habl\u00f3"
+        },
+        "1pl": {
+          "pronoun": "Nosotros/Nosotras",
+          "form": "hablamos"
+        },
+        "2pl": {
+          "pronoun": "Vosotros/Vosotras",
+          "form": "hablasteis"
+        },
+        "3pl": {
+          "pronoun": "Ellos/Ellas",
+          "form": "hablaron"
+        }
       }
     }
   },
@@ -1179,6 +1465,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "pelk\u00e4\u00e4v\u00e4t"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "pelk\u00e4sin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "pelk\u00e4sit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "pelk\u00e4si"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "pelk\u00e4simme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "pelk\u00e4sitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "pelk\u00e4siv\u00e4t"
         }
       }
     }
@@ -1213,6 +1525,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "nukkuvat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "nukuin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "nukuit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "nukkui"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "nukuimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "nukuitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "nukkuivat"
+        }
       }
     }
   },
@@ -1245,6 +1583,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "el\u00e4v\u00e4t"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "elin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "elit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "eli"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "elimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "elitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "eliv\u00e4t"
         }
       }
     }
@@ -1279,6 +1643,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "kuolevat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "kuolin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "kuolit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "kuoli"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "kuolimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "kuolitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "kuolivat"
+        }
       }
     }
   },
@@ -1311,6 +1701,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "tappavat"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "tapoin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "tapoit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "tappoi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "tapoimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "tapoitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "tappoivat"
         }
       }
     }
@@ -3155,19 +3571,6 @@ export const verbs = [
         "3pl": {
           "pronoun": "Ellos/Ellas",
           "form": "muerden"
-        }
-      }
-    }
-  },
-  {
-    "verb": "",
-    "language": "",
-    "translation": "",
-    "forms": {
-      "_": {
-        "": {
-          "pronoun": "",
-          "form": ""
         }
       }
     }
