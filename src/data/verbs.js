@@ -1761,6 +1761,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "mets\u00e4st\u00e4v\u00e4t"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "mets\u00e4stin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "mets\u00e4stit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "mets\u00e4sti"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "mets\u00e4stimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "mets\u00e4stitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "mets\u00e4stiv\u00e4t"
+        }
       }
     }
   },
@@ -1793,6 +1819,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "ly\u00f6v\u00e4t"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "l\u00f6in"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "l\u00f6it"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "l\u00f6i"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "l\u00f6imme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "l\u00f6itte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "l\u00f6iv\u00e4t"
         }
       }
     }
@@ -1827,6 +1879,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "leikkaavat"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "leikkasin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "leikkasit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "leikkasi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "leikkasimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "leikkasitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "leikkasivat"
+        }
       }
     }
   },
@@ -1859,6 +1937,32 @@ export const verbs = [
         "3pl": {
           "pronoun": "He",
           "form": "halkaisevat"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "halkaisin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "halkaisit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "halkaisi"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "halkaisimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "halkaisitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "halkaisivat"
         }
       }
     }
@@ -1893,6 +1997,32 @@ export const verbs = [
           "pronoun": "He",
           "form": "pist\u00e4v\u00e4t"
         }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "pistin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "pistit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "pisti"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "pistimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "pistitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "pistiv\u00e4t"
+        }
       }
     }
   },
@@ -1902,6 +2032,32 @@ export const verbs = [
     "translation": "to scratch, scrape",
     "forms": {
       "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "raavin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "raavit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "raapii"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "raavimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "raavitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "raapivat"
+        }
+      },
+      "past": {
         "1sg": {
           "pronoun": "Min\u00e4",
           "form": "raavin"

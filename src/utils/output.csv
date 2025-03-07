@@ -682,3 +682,39 @@ tappaa,Finnish,"to kill, slay",indicative,past,3sg,Hän,tappoi
 tappaa,Finnish,"to kill, slay",indicative,past,1pl,Me,tapoimme
 tappaa,Finnish,"to kill, slay",indicative,past,2pl,Te,tapoitte
 tappaa,Finnish,"to kill, slay",indicative,past,3pl,He,tappoivat
+metsästää,Finnish,to hunt,indicative,past,1sg,Minä,metsästin
+metsästää,Finnish,to hunt,indicative,past,2sg,Sinä,metsästit
+metsästää,Finnish,to hunt,indicative,past,3sg,Hän,metsästi
+metsästää,Finnish,to hunt,indicative,past,1pl,Me,metsästimme
+metsästää,Finnish,to hunt,indicative,past,2pl,Te,metsästitte
+metsästää,Finnish,to hunt,indicative,past,3pl,He,metsästivät
+lyödä,Finnish,to hit,indicative,past,1sg,Minä,löin
+lyödä,Finnish,to hit,indicative,past,2sg,Sinä,löit
+lyödä,Finnish,to hit,indicative,past,3sg,Hän,löi
+lyödä,Finnish,to hit,indicative,past,1pl,Me,löimme
+lyödä,Finnish,to hit,indicative,past,2pl,Te,löitte
+lyödä,Finnish,to hit,indicative,past,3pl,He,löivät
+leikata,Finnish,to cut,indicative,past,1sg,Minä,leikkasin
+leikata,Finnish,to cut,indicative,past,2sg,Sinä,leikkasit
+leikata,Finnish,to cut,indicative,past,3sg,Hän,leikkasi
+leikata,Finnish,to cut,indicative,past,1pl,Me,leikkasimme
+leikata,Finnish,to cut,indicative,past,2pl,Te,leikkasitte
+leikata,Finnish,to cut,indicative,past,3pl,He,leikkasivat
+halkaista,Finnish,to split,indicative,past,1sg,Minä,halkaisin
+halkaista,Finnish,to split,indicative,past,2sg,Sinä,halkaisit
+halkaista,Finnish,to split,indicative,past,3sg,Hän,halkaisi
+halkaista,Finnish,to split,indicative,past,1pl,Me,halkaisimme
+halkaista,Finnish,to split,indicative,past,2pl,Te,halkaisitte
+halkaista,Finnish,to split,indicative,past,3pl,He,halkaisivat
+pistää,Finnish,"to poke, thrust, stab",indicative,past,1sg,Minä,pistin
+pistää,Finnish,"to poke, thrust, stab",indicative,past,2sg,Sinä,pistit
+pistää,Finnish,"to poke, thrust, stab",indicative,past,3sg,Hän,pisti
+pistää,Finnish,"to poke, thrust, stab",indicative,past,1pl,Me,pistimme
+pistää,Finnish,"to poke, thrust, stab",indicative,past,2pl,Te,pistitte
+pistää,Finnish,"to poke, thrust, stab",indicative,past,3pl,He,pistivät
+raapia,Finnish,"to scratch, scrape",indicative,past,1sg,Minä,raavin
+raapia,Finnish,"to scratch, scrape",indicative,past,2sg,Sinä,raavit
+raapia,Finnish,"to scratch, scrape",indicative,past,3sg,Hän,raapii
+raapia,Finnish,"to scratch, scrape",indicative,past,1pl,Me,raavimme
+raapia,Finnish,"to scratch, scrape",indicative,past,2pl,Te,raavitte
+raapia,Finnish,"to scratch, scrape",indicative,past,3pl,He,raapivat
