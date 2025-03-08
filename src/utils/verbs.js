@@ -3730,5 +3730,64 @@ export const verbs = [
         }
       }
     }
+  },
+  {
+    "verb": "nuolla",
+    "language": "Finnish",
+    "translation": "to lick",
+    "forms": {
+      "present": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "nuolen"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "nuolet"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "nuolee"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "nuolemme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "nuolette"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "nuolevat"
+        }
+      },
+      "past": {
+        "1sg": {
+          "pronoun": "Min\u00e4",
+          "form": "nuolin"
+        },
+        "2sg": {
+          "pronoun": "Sin\u00e4",
+          "form": "nuolit"
+        },
+        "3sg": {
+          "pronoun": "H\u00e4n",
+          "form": "nuoli"
+        },
+        "1pl": {
+          "pronoun": "Me",
+          "form": "nuolimme"
+        },
+        "2pl": {
+          "pronoun": "Te",
+          "form": "nuolitte"
+        },
+        "3pl": {
+          "pronoun": "He",
+          "form": "nuolivat"
+        }
+      }
+    }
   }
 ];

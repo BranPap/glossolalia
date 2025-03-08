@@ -1,9 +1,3 @@
-# Glossolalia: A Language Learning Tool
-
-Welcome to the GitHub page for Glossolalia! I developed this tool in response to frustration over the lack of grammar drill sites that aren't littered with ads or hidden behind paywalls. This is a labor of love and a work in progress!
-
-# Release Notes (Most Recent)
-
 ## 7th March 2025: v0.1 | Initial Release 
 (or at least the beginning of better documentation)
 
