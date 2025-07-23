@@ -62,11 +62,26 @@ function generatePracticeBlock(tense, language = "Finnish", numTrials = 10) {
       const distractors = jsPsych.randomization
         .sampleWithoutReplacement(allForms.filter(f => f !== correct), 3);
       const choices = jsPsych.randomization.shuffle([correct, ...distractors]);
+
+      const totalTrials = 10;
+
   
       const trial = {
         type: jsPsychHtmlButtonResponse,
-        prompt: `Select the correct form of the verb:`,
-        stimulus: `<p><strong>${person.label}</strong> _ (${verb.infinitive})</p>`,
+        prompt: function() {
+          return `  <div class="gloss-progress">
+    <div class="gloss-progress-bar" style="width: ${(gameState.totalQuestions / 10) * 100}%"></div>
+  </div>`
+        },
+        stimulus: function() {
+          console.log("Game state:", gameState);
+          console.log(gameState.totalQuestions, gameState.correctAnswers);
+          return`
+  <p><strong>${person.label}</strong> _ (<span title="${verb.translation}">${verb.infinitive}</span>)</p>
+  <p style="color:gray; font-size:1rem;">Select the correct form of the verb</p>
+`;
+        }
+        ,
         choices: choices,
         data: {
           correct_answer: correct,
@@ -118,13 +133,16 @@ function generatePracticeBlock(tense, language = "Finnish", numTrials = 10) {
               <p>You got ${gameState.correctAnswers} out of ${gameState.totalQuestions} correct.</p>
               <p>Would you like to practice again?</p>`;
     },
-    choices: ['Practice Again', 'Main Menu'],
+    choices: ['Practice Again', 'Back to Home'],
     on_finish: function(data) {
       if (data.response === 0) {
         gameState.correctAnswers = 0;
         gameState.totalQuestions = 0;
         const newBlock = generatePracticeBlock(tense, language, numTrials);
         jsPsych.addNodeToEndOfTimeline({ timeline: newBlock });
+      } else {
+        console.log("Redirecting to home page");
+        window.location.href = "https://branpap.github.io/glossolalia";
       }
     }
   };

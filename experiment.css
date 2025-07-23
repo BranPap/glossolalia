@@ -1,0 +1,55 @@
+/* -- Glossolalia Retro Vibe Styles -- */  
+  h1, h2 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  button.jspsych-btn {
+    font-family: 'VT323', monospace;
+    background-color: #74B3CE;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.4rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button.jspsych-btn:hover {
+    background-color: #8D6A9F;
+  }
+  
+  .correct {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .incorrect {
+    color: red;
+    font-weight: bold;
+  }
+
+  body, .jspsych-display-element {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+  }
+
+  .gloss-progress {
+    width: 100%;
+    background-color: #ddd;
+    height: 14px;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+  }
+  
+  .gloss-progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #8D6A9F, #74B3CE);
+    transition: width 0.4s ease;
+  }
+  
+  

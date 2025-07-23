@@ -1,6 +1,7 @@
 const finnishVerbs = [
   {
     "infinitive": "olla",
+    "translation": "to be",
     "present": {
       "singular": {
         "first": "olen",
@@ -28,6 +29,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "puhua",
+    "translation": "to speak",
     "present": {
       "singular": {
         "first": "puhun",
@@ -47,6 +49,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "maalata",
+    "translation": "to paint",
     "present": {
       "singular": {
         "first": "maalaan",
@@ -66,6 +69,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kirjoittaa",
+    "translation": "to write",
     "present": {
       "singular": {
         "first": "kirjoitan",
@@ -85,6 +89,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "laulaa",
+    "translation": "to sing",
     "present": {
       "singular": {
         "first": "laulan",
@@ -104,6 +109,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "niiata",
+    "translation": "to bow",
     "present": {
       "singular": {
         "first": "niiaan",
@@ -123,6 +129,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "hyllyä",
+    "translation": "to shake, jiggle",
     "present": {
       "singular": {
         "first": "hyllyn",
@@ -142,6 +149,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "lukea",
+    "translation": "to read",
     "present": {
       "singular": {
         "first": "luen",
@@ -161,6 +169,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "juoda",
+    "translation": "to drink",
     "present": {
       "singular": {
         "first": "juon",
@@ -188,6 +197,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "tutkia",
+    "translation": "to study, examine",
     "present": {
       "singular": {
         "first": "tutkin",
@@ -207,6 +217,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "myydä",
+    "translation": "to sell",
     "present": {
       "singular": {
         "first": "myyn",
@@ -226,6 +237,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "haukkua",
+    "translation": "to bark",
     "present": {
       "singular": {
         "first": "haukun",
@@ -245,6 +257,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "ampua",
+    "translation": "to shoot",
     "present": {
       "singular": {
         "first": "ammun",
@@ -264,6 +277,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "suudella",
+    "translation": "to kiss",
     "present": {
       "singular": {
         "first": "suutelen",
@@ -283,6 +297,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "ottaa",
+    "translation": "to take",
     "present": {
       "singular": {
         "first": "otan",
@@ -302,6 +317,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "mitata",
+    "translation": "to measure",
     "present": {
       "singular": {
         "first": "mittaan",
@@ -321,6 +337,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "syödä",
+    "translation": "to eat",
     "present": {
       "singular": {
         "first": "syön",
@@ -348,6 +365,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "purra",
+    "translation": "to bite",
     "present": {
       "singular": {
         "first": "puren",
@@ -363,6 +381,7 @@ const finnishVerbs = [
     "past": {
       "singular": {
         "first": "purin",
+        "second": "purit",
         "third": "puri"
       },
       "plural": {
@@ -374,6 +393,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "imeä",
+    "translation": "to suck, absorb",
     "present": {
       "singular": {
         "first": "imen",
@@ -401,6 +421,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "sylkeä",
+    "translation": "to spit",
     "present": {
       "singular": {
         "first": "syljen",
@@ -428,6 +449,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "oksentaa",
+    "translation": "to vomit",
     "present": {
       "singular": {
         "first": "oksennan",
@@ -455,6 +477,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "puhaltaa",
+    "translation": "to blow",
     "present": {
       "singular": {
         "first": "puhallan",
@@ -482,6 +505,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "hengittää",
+    "translation": "to breathe",
     "present": {
       "singular": {
         "first": "hengitän",
@@ -509,6 +533,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "nauraa",
+    "translation": "to laugh",
     "present": {
       "singular": {
         "first": "nauran",
@@ -536,6 +561,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "nähdä",
+    "translation": "to see",
     "present": {
       "singular": {
         "first": "näen",
@@ -563,6 +589,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kuulla",
+    "translation": "to hear",
     "present": {
       "singular": {
         "first": "kuulen",
@@ -590,6 +617,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "tietää",
+    "translation": "to know",
     "present": {
       "singular": {
         "first": "tiedän",
@@ -617,6 +645,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "ajatella",
+    "translation": "to think",
     "present": {
       "singular": {
         "first": "ajattelen",
@@ -644,6 +673,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "haistaa",
+    "translation": "to smell",
     "present": {
       "singular": {
         "first": "haistan",
@@ -671,6 +701,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "pelätä",
+    "translation": "to fear",
     "present": {
       "singular": {
         "first": "pelkään",
@@ -698,6 +729,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "nukkua",
+    "translation": "to sleep",
     "present": {
       "singular": {
         "first": "nukun",
@@ -725,6 +757,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "elää",
+    "translation": "to live",
     "present": {
       "singular": {
         "first": "elän",
@@ -752,6 +785,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kuolla",
+    "translation": "to die",
     "present": {
       "singular": {
         "first": "kuolen",
@@ -779,6 +813,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "tappaa",
+    "translation": "to kill",
     "present": {
       "singular": {
         "first": "tapan",
@@ -806,6 +841,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "metsästää",
+    "translation": "to hunt",
     "present": {
       "singular": {
         "first": "metsästän",
@@ -833,6 +869,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "lyödä",
+    "translation": "to hit, strike",
     "present": {
       "singular": {
         "first": "lyön",
@@ -860,6 +897,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "leikata",
+    "translation": "to cut",
     "present": {
       "singular": {
         "first": "leikkaan",
@@ -887,6 +925,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "halkaista",
+    "translation": "to split",
     "present": {
       "singular": {
         "first": "halkaisen",
@@ -914,6 +953,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "pistää",
+    "translation": "to poke, thrust",
     "present": {
       "singular": {
         "first": "pistän",
@@ -941,6 +981,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "raapia",
+    "translation": "to scratch",
     "present": {
       "singular": {
         "first": "raavin",
@@ -968,6 +1009,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kaivaa",
+    "translation": "to dig",
     "present": {
       "singular": {
         "first": "kaivan",
@@ -987,6 +1029,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "uida",
+    "translation": "to swim",
     "present": {
       "singular": {
         "first": "uin",
@@ -1006,6 +1049,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "lentää",
+    "translation": "to fly",
     "present": {
       "singular": {
         "first": "lennän",
@@ -1025,6 +1069,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kävellä",
+    "translation": "to walk",
     "present": {
       "singular": {
         "first": "kävelen",
@@ -1044,6 +1089,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "tulla",
+    "translation": "to come",
     "present": {
       "singular": {
         "first": "tulen",
@@ -1063,6 +1109,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "maata",
+    "translation": "to lie down",
     "present": {
       "singular": {
         "first": "makaan",
@@ -1082,6 +1129,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "istua",
+    "translation": "to sit",
     "present": {
       "singular": {
         "first": "istun",
@@ -1101,6 +1149,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kääntyä",
+    "translation": "to turn, bend",
     "present": {
       "singular": {
         "first": "käännyn",
@@ -1120,6 +1169,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "pudota",
+    "translation": "to drop, fall down",
     "present": {
       "singular": {
         "first": "putoan",
@@ -1139,6 +1189,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "antaa",
+    "translation": "to give",
     "present": {
       "singular": {
         "first": "annan",
@@ -1158,6 +1209,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "pitää",
+    "translation": "to hold, keep",
     "present": {
       "singular": {
         "first": "pidän",
@@ -1177,6 +1229,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "puristaa",
+    "translation": "to press, squeeze",
     "present": {
       "singular": {
         "first": "puristan",
@@ -1196,6 +1249,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "hieroa",
+    "translation": "to massage, rub",
     "present": {
       "singular": {
         "first": "hieron",
@@ -1215,6 +1269,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "pyyhkiä",
+    "translation": "to wipe, clean",
     "present": {
       "singular": {
         "first": "pyyhin",
@@ -1234,6 +1289,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "vetää",
+    "translation": "to pull, drag",
     "present": {
       "singular": {
         "first": "vedän",
@@ -1253,6 +1309,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "työntää",
+    "translation": "to push",
     "present": {
       "singular": {
         "first": "työnnän",
@@ -1272,6 +1329,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "heittää",
+    "translation": "to throw",
     "present": {
       "singular": {
         "first": "heitän",
@@ -1291,6 +1349,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "sitoa",
+    "translation": "to bind, fasten, tie",
     "present": {
       "singular": {
         "first": "sidon",
@@ -1310,6 +1369,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "ommella",
+    "translation": "to sew",
     "present": {
       "singular": {
         "first": "ompelen",
@@ -1329,6 +1389,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "laskea",
+    "translation": "to lower, move down/count, calculate",
     "present": {
       "singular": {
         "first": "lasken",
@@ -1348,6 +1409,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "sanoa",
+    "translation": "to say",
     "present": {
       "singular": {
         "first": "sanon",
@@ -1367,6 +1429,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "leikkiä",
+    "translation": "to play",
     "present": {
       "singular": {
         "first": "leikin",
@@ -1386,6 +1449,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kellua",
+    "translation": "to float",
     "present": {
       "singular": {
         "first": "kellun",
@@ -1405,6 +1469,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "virrata",
+    "translation": "to flow",
     "present": {
       "singular": {
         "first": "virtaan",
@@ -1424,6 +1489,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "jäätyä",
+    "translation": "to freeze",
     "present": {
       "singular": {
         "first": "jäädyn",
@@ -1443,6 +1509,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "paisua",
+    "translation": "to swell",
     "present": {
       "singular": {
         "first": "paisun",
@@ -1462,6 +1529,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "odottaa",
+    "translation": "to wait",
     "present": {
       "singular": {
         "first": "odotan",
@@ -1481,6 +1549,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "muistaa",
+    "translation": "to remember",
     "present": {
       "singular": {
         "first": "muistan",
@@ -1500,6 +1569,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "opiskella",
+    "translation": "to study",
     "present": {
       "singular": {
         "first": "opiskelen",
@@ -1519,6 +1589,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "oppia",
+    "translation": "to learn",
     "present": {
       "singular": {
         "first": "opin",
@@ -1538,6 +1609,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "vastata",
+    "translation": "to answer, respond",
     "present": {
       "singular": {
         "first": "vastaan",
@@ -1556,6 +1628,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "herätä",
+    "translation": "to wake up",
     "present": {
       "singular": {
         "first": "herään",
@@ -1575,6 +1648,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "saada",
+    "translation": "to get, receive",
     "present": {
       "singular": {
         "first": "saan",
@@ -1594,6 +1668,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "tehdä",
+    "translation": "to do, make",
     "present": {
       "singular": {
         "first": "teen",
@@ -1613,6 +1688,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kertoa",
+    "translation": "to tell",
     "present": {
       "singular": {
         "first": "kerron",
@@ -1632,6 +1708,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "haluta",
+    "translation": "to want, desire",
     "present": {
       "singular": {
         "first": "haluan",
@@ -1651,6 +1728,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "alkaa",
+    "translation": "to begin, start",
     "present": {
       "singular": {
         "first": "alan",
@@ -1670,6 +1748,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "käydä",
+    "translation": "to go (to), visit",
     "present": {
       "singular": {
         "first": "käyn",
@@ -1689,6 +1768,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "toimia",
+    "translation": "to act, work, function",
     "present": {
       "singular": {
         "first": "toimin",
@@ -1708,6 +1788,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "mennä",
+    "translation": "to go",
     "present": {
       "singular": {
         "first": "menen",
@@ -1727,6 +1808,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "käyttää",
+    "translation": "to use",
     "present": {
       "singular": {
         "first": "käytän",
@@ -1746,6 +1828,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "nuolla",
+    "translation": "to lick",
     "present": {
       "singular": {
         "first": "nuolen",
@@ -1772,26 +1855,8 @@ const finnishVerbs = [
     }
   },
   {
-    "infinitive": "käyttää",
-    "present": {
-      "singular": {
-        "first": "käytän",
-        "second": "käytät",
-        "third": "käyttää"
-      },
-      "plural": {
-        "first": "käytämme",
-        "second": "käytätte",
-        "third": "käyttävät"
-      }
-    },
-    "past": {
-      "singular": {},
-      "plural": {}
-    }
-  },
-  {
-    "infinitive": "siivoa",
+    "infinitive": "siivota",
+    "translation": "to clean, tidy up",
     "present": {
       "singular": {
         "first": "siivoan",
@@ -1819,6 +1884,7 @@ const finnishVerbs = [
   },
   {
     "infinitive": "kompastua",
+    "translation": "to stumble",
     "present": {
       "singular": {
         "first": "kompastun",
@@ -1842,7 +1908,6 @@ const finnishVerbs = [
         "second": "kompastuitte",
         "third": "kompastuivat"
       }
-    },
-    "translation": "to stumble"
+    }
   },
 ];
