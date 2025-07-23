@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glossolalia</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f9f9f9;
+      color: #111;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.2em;
+      margin: 0.2em 0;
+    }
+
+    /* Connector line for items with siblings */
+    li::before {
+      content: "├";
+      position: absolute;
+      left: 0;
+      color: #888;
+    }
+
+    /* Extend vertical connector above items that are not the last sibling */
+    li::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.2em;
+      bottom: -0.2em;
+      width: 1px;
+      background: #888;
+    }
+
+    li:last-child::before {
+      content: "└";
+    }
+
+    /* Stop vertical connector for the last item */
+    li:last-child::after {
+      content: none;
+    }
+
+    /* Hide connector for root-level items */
+    ul > li::after {
+      content: none;
+    }
+
+    ul > li::before {
+      content: "";
+    }
+
+    a {
+      color: #005f99;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Glossolalia!</h1>
+  <p>Glossolalia is a free, open-source language exercise app built with <a href="https://www.jspsych.org">jsPsych</a>. No frills, no fees, no fucking ads; just the most barebones language practice you can think of!</p>
+  <p><em>Please note that this project is a labour of love, so updates are likely to be irregular and the offering of languages will, of course, be small to start off.</em></p>
+  <p>Click on a link below to get started. All links redirect to a new page:</p>
+  <h2>Available Exercises</h2>
+  <ul>
+    <li><strong>Finnish</strong>
+      <ul>
+        <li><u>Verb Conjugation</u>
+          <ul>
+            <li><a href="finnishPresent.html">Present</a> (85)</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <!-- Add more languages here -->
+  </ul>
+
+  <footer>
+    maintained with 💜 + <code>jsPsych</code> by <a href="https://www.branpap.com">Bran[don] Papineau</a> · <a href="https://www.jspsych.org">jspsych.org</a>
+  </footer>
+
+</body>
+</html>
