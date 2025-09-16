@@ -6,6 +6,7 @@ const jsPsych = initJsPsych({
   auto_update_progress_bar: false,
   on_finish: function () {
     console.log("Experiment finished");
+    
   }
 });
 
