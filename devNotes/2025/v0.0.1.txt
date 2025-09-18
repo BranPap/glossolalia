@@ -1,0 +1,9 @@
+<li><u>Done</u></li>
+<li>Added a new word (<em>bird</em>) to animals exercises</li>
+<li>Fixed plugin code to allow stimli with no accompanying image</li>
+<li>Fixed a bug where english translations were not being seen during the final round of testing</li>
+<li>Images for the next six animals (including <em>bird</em>) have been commissioned! </li>
+<li><u>Goals</u></li>
+<li>Finish adding new animals (6 new for a total of 10)</li>
+<li>Implement images for new animals</li>
+<li>Fix images for old animals</li>
