@@ -7,7 +7,7 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
         stimulus: {
           type: jspsych.ParameterType.STRING,
           pretty_name: 'Stimulus',
-          default: undefined,
+          default: null,
           description: 'The path to the image file.'
         },
         prompt: {
@@ -50,9 +50,13 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
         if (trial.prompt) {
           html += trial.prompt+"<br>";
         }
-  
+
         // the image
-        html += `<div><img src="${trial.stimulus}" style="max-width: 400px;"></div><br>`;
+        if (trial.stimulus) {
+          html += `<div><img src="${trial.stimulus}" style="max-width: 400px;"></div><br>`;
+        }
+        
+        
   
         // buttons
         html += `<div id="jspsych-simple-btn-group">`;

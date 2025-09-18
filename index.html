@@ -41,6 +41,7 @@
       border-bottom: 2px dashed #ccc;
       padding-bottom: 0.2rem;
       margin-top: 2rem;
+      color: #ffffff;
     }
 
     p {
@@ -58,7 +59,7 @@
     }
 
     li::before {
-      content: "•";
+      content: "";
       position: absolute;
       left: -1em;
       color: #8D6A9F;
@@ -107,13 +108,12 @@
 
   <header>
     <h1>Glossolalia</h1>
-    <p>A free little language tool for language lovers</p>
+    <h2>Speak in new tongues!</h2>
+    <p style="text-align: center;""><a style="color: white;" href="https://glossolalia.app">Home</a> | <a style="color: white;"href="development.html">Development Notes</a></p>
   </header>
 
   <main>
-    <p><strong>Glossolalia</strong> is a free, open-source language exercise app built with <a href="https://www.jspsych.org">jsPsych</a> by <a href="https://www.branpap.com">Bran[don] Papineau</a>. No frills, no fees, no ads; just the most barebones language practice you can imagine. Each exercise simply drills the relevant forms or vocabulary.</p>
-
-    <p><em>This is a labor of love. I aim to grow this slowly, but please do feel free to reach out to me if you find any issues in the meantime.</em></p>
+    <p><strong>Glossolalia</strong> is a free, open-source language exercise app built with <a href="https://www.jspsych.org">jsPsych</a> by <a href="https://www.branpap.com">Bran[don] Papineau</a>. No frills, no fees, no ads; just the most barebones language practice you can imagine. Each exercise simply drills the relevant forms or vocabulary. <br><br> While this won't get you fluent, I believe that language learning should be freely available to all, and if you find that this helps you learn some new words or nail some conjugations, that's all I want.</em></p>
 
     <p>Click on a link below to get started. Numbers in parentheses = number of unique entries available in that exercise:</p>
 
@@ -123,46 +123,72 @@
 
     <div class="card">
       <ul>
-        <li><strong>Finnish</strong>
-          <ul>
-            <li><u>Verb Conjugation</u>
-              <ul>
-                <li><a href="finnishPresent.html">Present</a> (84)</li>
-              </ul>
-            </li>
-            <li><u>Vocabulary</u>
+        <li>
+          <details>
+            <summary><strong>Cornish</strong></summary>
             <ul>
-              <li><a href="vocabLearn.html?lang=Finnish&topic=animals">Animals</a> (4)</li>
+              <li><u>Vocabulary</u>
+                <ul>
+                  <li><a href="vocabLearn.html?lang=Cornish&topic=animals">Animals</a> (4)</li>
+                </ul>
+              </li>
             </ul>
-            </li>
-          </ul>
+          </details>
         </li>
-        <li><strong>Spanish</strong>
-          <ul>
-            <li><u>Vocabulary</u>
-              <ul>
-                <li><a href="vocabLearn.html?lang=Spanish&topic=animals">Animals</a> (4)
-              </ul>
-            </li>
-          </ul>
+    
+        <li>
+          <details>
+            <summary><strong>Finnish</strong></summary>
+            <ul>
+              <li><u>Verb Conjugation</u>
+                <ul>
+                  <li><a href="finnishPresent.html">Present</a> (84)</li>
+                </ul>
+              </li>
+              <li><u>Vocabulary</u>
+                <ul>
+                  <li><a href="vocabLearn.html?lang=Finnish&topic=animals">Animals</a> (4)</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+        </li>
+    
+        <li>
+          <details>
+            <summary><strong>Spanish</strong></summary>
+            <ul>
+              <li><u>Vocabulary</u>
+                <ul>
+                  <li><a href="vocabLearn.html?lang=Spanish&topic=animals">Animals</a> (4)</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
         </li>
       </ul>
     </div>
+    
 
     <h3>By Topic</h3>
 
     <div class="card">
       <ul>
-        <li><strong>Vocabulary</strong></li>
-        <ul>
-          <li><u>Animals</u>
-            <ul>
-              <li><a href="vocabLearn.html?lang=Finnish&topic=animals">Finnish</a> (4)</li>
-              <li><a href="vocabLearn.html?lang=Spanish&topic=animals">Spanish</a> (4)</li>
-            </ul>
-          </li>
-        </ul>
-        <li><strong>Verb Conjugation</strong></li>
+        <details>
+          <summary><strong>Vocabulary</strong></summary>
+          <ul>
+            <li><u>Animals</u>
+              <ul>
+                <li><a href="vocabLearn.html?lang=Cornish&topic=animals">Cornish</a> (4) | <a href="vocabLearn.html?lang=Finnish&topic=animals">Finnish</a> (4 | <a href="vocabLearn.html?lang=Spanish&topic=animals">Spanish</a> (4)</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+        
+
+        <details>
+          <summary><strong>Verb Conjugation</strong></summary>
+        
         <ul>
           <li><u>Present Tense</u></li>
           <ul>
@@ -170,6 +196,7 @@
           </ul>
         </ul>
       </ul>
+    </details>
     </div>
 
     <footer>

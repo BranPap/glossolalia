@@ -48,7 +48,12 @@ const gameState = {
   total : 0,
   currentTerms : shuffleArray(filteredLanguage),
   firstPair : grabSlice(filteredLanguage, 0, 2),
-  secondPair : grabSlice(filteredLanguage, 2, 3)
+  secondPair : grabSlice(filteredLanguage, 2, 3),
+  termScore : {
+    0: 0,
+    1: 0,
+    2: 0
+  }
 }
 
 var welcomeSlide = {
@@ -178,6 +183,9 @@ var reviewTrials1 = {
       type: jsPsychSimpleImageButtonResponse,
       stimulus: jsPsych.timelineVariable('image'),
       correct_choice: jsPsych.timelineVariable(currentLanguage),
+      prompt: function() {
+        return `<h1>${jsPsych.timelineVariable('English')}</h1>`;
+      },
       choices: function() {
         const correctAnswer = jsPsych.timelineVariable(currentLanguage);
         const competitors = determineCompetitors(gameState.currentTerms, correctAnswer, 3);

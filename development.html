@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glossolalia</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'VT323', monospace;
+      font-size: 1.4rem;
+      background: #f0f0ff;
+      color: #111;
+    }
+
+    header {
+      background: linear-gradient(to right, #8D6A9F, #74B3CE);
+      color: white;
+      padding: 1rem 2rem;
+      text-shadow: 1px 1px 1px #444;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: white;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px dashed #ccc;
+      padding-bottom: 0.2rem;
+      margin-top: 2rem;
+      color: #ffffff;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 1em;
+    }
+
+    li {
+      margin: 0.3em 0;
+      position: relative;
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: -1em;
+      color: #8D6A9F;
+    }
+
+    a {
+      color: #005f99;
+      text-decoration: none;
+      border-bottom: 1px dotted #74B3CE;
+    }
+
+    a:hover {
+      color: #8D6A9F;
+      background: #e6ecff;
+    }
+
+    .card {
+      background: #fafaff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 1rem;
+      color: #555;
+      padding-bottom: 2rem;
+    }
+
+    code {
+      background: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+
+    em {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Glossolalia</h1>
+    <h2>Speak in new tongues!</h2>
+    <p style="text-align: center;""><a style="color: white;" href="https://glossolalia.app">Home</a> | <a style="color: white;"href="development.html">Development Notes</a></p>
+  </header>
+
+  <main>
+    <p><strong>Glossolalia</strong> is a free, open-source language exercise app built with <a href="https://www.jspsych.org">jsPsych</a> by <a href="https://www.branpap.com">Bran[don] Papineau</a>. No frills, no fees, no ads; just the most barebones language practice you can imagine. Each exercise simply drills the relevant forms or vocabulary.</em></p>
+
+    <p>If you're interested in keeping up with Glossolalia's development, I try and post update notes here:</p>
+
+    <h3>September 2026</h3>
+
+    <div class="card">
+      <ul>
+        <li>
+          <details>
+            <summary><strong>September 18th 2026</strong></summary>
+            <ul>
+              <li><u>Done</u></li>
+              <li>Added a new word (<em>bird</em>) to animals exercises</li>
+              <li>Fixed plugin code to allow stimli with no accompanying image</li>
+              <li>Fixed a bug where english translations were not being seen during the final round of testing</li>
+              <li>Images for the next six animals (including <em>bird</em>) have been commissioned! </li>
+              <li><u>Goals</u></li>
+              <li>Finish adding new animals (6 new for a total of 10)</li>
+              <li>Implement images for new animals</li>
+              <li>Fix images for old animals</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      maintained with 💜 + <code>jsPsych</code><br>
+      by <a href="https://www.branpap.com">Bran[don] Papineau</a> · <a href="https://www.jspsych.org">jspsych.org</a><p style="font-size: small;"> with images by Rachel Downs </p>
+    </footer>
+  </main>
+
+</body>
+</html>
