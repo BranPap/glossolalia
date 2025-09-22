@@ -22,7 +22,7 @@ let currentLanguage = getQueryParam("lang") || "English";
 let currentTopic = getQueryParam("topic") || "animals";
 
 let filteredLanguage = shuffleArray(nounVocab[currentTopic]).filter(item => item[currentLanguage]);
-filteredLanguage = filteredLanguage.slice(0,3)
+filteredLanguage = filteredLanguage.slice(0,4)
 
 function grabSlice(arr, n1, n2) {
   return arr.slice(n1, n2);
@@ -48,7 +48,7 @@ const gameState = {
   total : 0,
   currentTerms : shuffleArray(filteredLanguage),
   firstPair : grabSlice(filteredLanguage, 0, 2),
-  secondPair : grabSlice(filteredLanguage, 2, 3),
+  secondPair : grabSlice(filteredLanguage, 2, 4),
   termScore : {
     0: 0,
     1: 0,
@@ -56,197 +56,204 @@ const gameState = {
   }
 }
 
-var welcomeSlide = {
-    type: jsPsychHtmlButtonResponse,
-    stimulus: `<h1>Welcome to Glossolalia!</h1><br>
-               <p>You are currently learning animal names in <strong>${currentLanguage}</strong>.</p>`,
-    choices: ["Begin"]
-}
+const generateGameLoop = (language, topic, wordList) => {
+  let loopTimeline = [];
 
-timeline.push(welcomeSlide);
-console.log(gameState)
+  gameState.currentTerms = shuffleArray(wordList);
+  gameState.firstPair = grabSlice(gameState.currentTerms, 0, 2);
+  gameState.secondPair = grabSlice(gameState.currentTerms, 2, 4);
+  gameState.score = 0;
+  gameState.total = 0;
 
-var trials = {
-  timeline: [
-    {
-      type: jsPsychSimpleImageButtonResponse,
-      stimulus: jsPsych.timelineVariable('image'),
-      choices: ["Continue"],
-      prompt: function() {
-        const langWord = jsPsych.timelineVariable(currentLanguage);
-        const englishWord = jsPsych.timelineVariable('English');
-        return `<h1>${langWord}</h1>
-                <p>(${englishWord})</p>`;
-      }
-    }
-  ],
-  timeline_variables: gameState.firstPair,
-  randomize_order: true
-};
-
-timeline.push(trials);
-
-var trials2 = {
-  timeline: [
-    {
-      type: jsPsychSimpleImageButtonResponse,
-      stimulus: jsPsych.timelineVariable('image'),
-      choices: function() {
-        const correctAnswer = jsPsych.timelineVariable(currentLanguage);
-        const competitor = determineCompetitors(gameState.firstPair, correctAnswer, 1, currentLanguage)[0];
-        return shuffleArray([correctAnswer, competitor]);
-      },
-      prompt: function() {
-        return `<h1>${jsPsych.timelineVariable('English')}</h1>`;
-      },
-      correct_choice: jsPsych.timelineVariable(currentLanguage),
-      on_finish: function(data) {
-        if (data.response === this.correct_choice) {
-          data.correct = true;
-        } else {
-          data.correct = false;
-        }
-        gameState.total += 1;
-        if (data.correct) {
-          gameState.score += 1;
+  var learningBlockOne = {
+    timeline: [
+      {
+        type: jsPsychSimpleImageButtonResponse,
+        stimulus: function() {
+          return jsPsych.timelineVariable('image');
+        },
+        choices: ["Continue"],
+        prompt: function() {
+          return `<h1>${jsPsych.timelineVariable(language)}</h1>
+                  <p>(${jsPsych.timelineVariable('English')})</p>`;
         }
       }
-    }
-  ],
-  timeline_variables: gameState.firstPair,
-  randomize_order: true
-};
+    ],
+    timeline_variables: gameState.firstPair,
+    randomize_order: true
+  };
 
-timeline.push(trials2);
+  loopTimeline.push(learningBlockOne);
 
-// ------------------------
-// Second Pair
-// ------------------------
-
-secondPair = filteredLanguage.slice(2,3);
-var trials3 = {
-  timeline: [
-    {
-      type: jsPsychSimpleImageButtonResponse,
-      stimulus: jsPsych.timelineVariable('image'),
-      choices: ["Continue"],
-      prompt: function() {
-        const langWord = jsPsych.timelineVariable(currentLanguage);
-        const englishWord = jsPsych.timelineVariable('English');
-        return `<h1>${langWord}</h1>
-                <p>(${englishWord})</p>`;
-      }
-    }
-  ],
-  timeline_variables: gameState.secondPair,
-  randomize_order: true
-};
-
-timeline.push(trials3);
-
-var trials4 = {
-  timeline: [
-    {
-      type: jsPsychSimpleImageButtonResponse,
-      stimulus: jsPsych.timelineVariable('image'),
-      choices: function() {
-        const correctAnswer = jsPsych.timelineVariable(currentLanguage);
-        const competitor = determineCompetitors(gameState.currentTerms, correctAnswer, 1, currentLanguage)[0];
-        return shuffleArray([correctAnswer, competitor]);
-      },
-      prompt: function() {
-        return `<h1>${jsPsych.timelineVariable('English')}</h1>`;
-      },
-      correct_choice: jsPsych.timelineVariable(currentLanguage),
-      on_finish: function(data) {
-        if (data.response === this.correct_choice) {
-          data.correct = true;
-        } else {
-          data.correct = false;
-        }
-        gameState.total += 1;
-        if (data.correct) {
-          gameState.score += 1;
+  var afcBlockOne = {
+    timeline: [
+      {
+        type: jsPsychSimpleImageButtonResponse,
+        stimulus: function() {
+          return jsPsych.timelineVariable('image')
+        },
+        choices: function() {
+          const correctAnswer = jsPsych.timelineVariable(language);
+          const competitor = determineCompetitors(gameState.firstPair, correctAnswer, 1, language)[0];
+          return shuffleArray([correctAnswer, competitor]);
+        },
+        prompt: function() {
+          return `<h1>${jsPsych.timelineVariable('English')}</h1>`;
+        },
+        correct_choice: function() {
+          return jsPsych.timelineVariable(language)
+        },
+        on_finish: function(data) {
+          if (data.response === this.correct_choice) {
+            data.correct = true;
+          } else {
+            data.correct = false;
+          }
+          gameState.total += 1;
+          if (data.correct) {
+            gameState.score += 1;
+          }
         }
       }
-    }
-  ],
-  timeline_variables: gameState.secondPair,
-  randomize_order: true
-};
+    ],
+    timeline_variables: gameState.firstPair,
+    randomize_order: true
+  };
 
-timeline.push(trials4);
+  loopTimeline.push(afcBlockOne);
 
-var reviewTrials1 = {
-  timeline: [
-    {
-      type: jsPsychSimpleImageButtonResponse,
-      stimulus: jsPsych.timelineVariable('image'),
-      correct_choice: jsPsych.timelineVariable(currentLanguage),
-      prompt: function() {
-        return `<h1>${jsPsych.timelineVariable('English')}</h1>`;
-      },
-      choices: function() {
-        const correctAnswer = jsPsych.timelineVariable(currentLanguage);
-        const competitors = determineCompetitors(gameState.currentTerms, correctAnswer, 3);
-        const allChoices = [correctAnswer, ...competitors];
-        return shuffleArray(allChoices);
-      },
-      on_finish: function(data) {
-        if (data.response === this.correct_choice) {
-          data.correct = true;
-        } else {
-          data.correct = false;
-        }
-        gameState.total += 1;
-        if (data.correct) {
-          gameState.score += 1;
+  var learningBlockTwo = {
+    timeline: [
+      {
+        type: jsPsychSimpleImageButtonResponse,
+        stimulus: function() {
+          return jsPsych.timelineVariable('image');
+        },
+        choices: ["Continue"],
+        prompt: function() {
+          return `<h1>${jsPsych.timelineVariable(language)}</h1>
+                  <p>(${jsPsych.timelineVariable('English')})</p>`;
         }
       }
-    }
+    ],
+    timeline_variables: gameState.secondPair,
+    randomize_order: true
+  };
+
+  loopTimeline.push(learningBlockTwo);
+
+  var afcBlockTwo = {
+    timeline: [
+      {
+        type: jsPsychSimpleImageButtonResponse,
+        stimulus: function() {
+          return jsPsych.timelineVariable('image')
+        },
+        choices: function() {
+          const correctAnswer = jsPsych.timelineVariable(language);
+          const competitor = determineCompetitors(gameState.secondPair, correctAnswer, 1, language)[0];
+          return shuffleArray([correctAnswer, competitor]);
+        },
+        prompt: function() {
+          return `<h1>${jsPsych.timelineVariable('English')}</h1>`;
+        },
+        correct_choice: function() {
+          return jsPsych.timelineVariable(language)
+        },
+        on_finish: function(data) {
+          if (data.response === this.correct_choice) {
+            data.correct = true;
+          } else {
+            data.correct = false;
+          }
+          gameState.total += 1;
+          if (data.correct) {
+            gameState.score += 1;
+          }
+        }
+      }
+    ],
+    timeline_variables: gameState.secondPair,
+    randomize_order: true
+  };
+
+  loopTimeline.push(afcBlockTwo);
+
+  const morphBlock = {
+    timeline: [
+      {
+        type: jsPsychMorphBank,
+        prompt: function() {
+          return `<h1>${jsPsych.timelineVariable('English')}</h1><p>Build the word in <strong>${currentLanguage}</strong> by placing the segments in the right order.</p>`;
+        },
+        stimulus: function() {
+          return jsPsych.timelineVariable('image')
+        },
+        morphemes: function() {
+          return jsPsych.timelineVariable(`${currentLanguage}Morph`)
+        },
+        on_finish: function(data) {
+          gameState.total += 1;
+          if (data.isCorrect) {
+            gameState.score += 1;
+          }
+        }
+      }
     ],
     timeline_variables: gameState.currentTerms,
     randomize_order: true
-}
+  }
 
-timeline.push(reviewTrials1);
+  loopTimeline.push(morphBlock);
 
-// ------------------------
-// Final Screen
-// ------------------------
-var end = {
+  var end = {
     type: jsPsychHtmlButtonResponse,
     choices: ["Home", "Repeat Words", "Shuffle Words"],
     stimulus: function() {
       return `<h1>End of practice session</h1>
-               <p>Your score: ${gameState.score} out of ${gameState.total} (${((gameState.score/gameState.total)*100).toFixed(2)}%)</p>
-               <p>You can go back to the home page, repeat the same words, or shuffle and try new words.</p>`
+               <p>Your score: ${gameState.score} out of ${gameState.total} 
+               (${((gameState.score/gameState.total)*100).toFixed(2)}%)</p>
+               <p>You can go back to the home page, repeat the same words, or shuffle and try new words.</p>`;
+    },
+    on_finish: function(data) {
+      if (data.response === 0) {
+        window.location.href = "index.html";
+      } else if (data.response === 1) {
+        const newBlock = generateGameLoop(currentLanguage, currentTopic, filteredLanguage);
+        jsPsych.addNodeToEndOfTimeline({ timeline: newBlock });
+      } else if (data.response === 2) {
+        filteredLanguage = shuffleArray(nounVocab[currentTopic]).filter(item => item[currentLanguage]);
+        filteredLanguage = filteredLanguage.slice(0,4)
+        const newBlock = generateGameLoop(currentLanguage, currentTopic, filteredLanguage);
+        jsPsych.addNodeToEndOfTimeline({ timeline: newBlock });
+      }
     }
+  };
+  loopTimeline.push(end);
+
+  
+  return loopTimeline;
+
 }
 
-timeline.push(end);
+// ------------------------
+// Final Screen
+// ------------------------
 
-var loop_node = {
-  timeline: timeline,
-  loop_function: function(data) {
-    let last_response = data.values().slice(-1)[0].response;
-    if (last_response === 1) {
-      // "Repeat Words" → repeat the whole block
-      gameState.score = 0;
-      gameState.total = 0;
-      filteredLanguage = shuffleArray(filteredLanguage); 
-      return true;
-    } else if (last_response === 2) {
-      window.location.reload();
-    } else {
-      // "Home" → stop looping
-      window.location.href = "index.html";
-      return false;
-    }
-  }
+
+var welcomeSlide = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: `<h1>Welcome to Glossolalia!</h1><br>
+             <p>You are currently learning animal names in <strong>${currentLanguage}</strong>.</p>`,
+  choices: ["Begin"]
 };
+
+timeline.push(welcomeSlide);
+
+firstBlock = generateGameLoop(currentLanguage, currentTopic, filteredLanguage);
+timeline.push(...firstBlock);
 
 // ------------------------
 // Start the experiment
 // ------------------------
-jsPsych.run([loop_node]);
+jsPsych.run(timeline);

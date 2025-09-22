@@ -20,14 +20,68 @@
   button.jspsych-btn:hover {
     background-color: #8D6A9F;
   }
+
+  button.jspsych-btn-selected {
+    font-family: 'VT323', monospace;
+    background-color: whitesmoke;
+    color: grey;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.4rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button.jspsych-btn-picked {
+    font-family: 'VT323', monospace;
+    background-color: moccasin;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.4rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button.jspsych-btn-correct {
+    font-family: 'VT323', monospace;
+    background-color: rgb(178, 248, 178);
+    color: slategrey;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.4rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button.jspsych-btn-incorrect {
+    font-family: 'VT323', monospace;
+    background-color: rgb(224, 152, 152);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.4rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
   
   .correct {
-    color: green;
+    background-color: rgb(178, 248, 178);
+    color: slategrey;
     font-weight: bold;
   }
   
   .incorrect {
-    color: red;
+    background-color: rgb(224, 152, 152);
+    color: rgb(255, 255, 255);
     font-weight: bold;
   }
 

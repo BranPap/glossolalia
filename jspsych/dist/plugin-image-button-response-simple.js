@@ -95,6 +95,8 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
         
         btns.forEach((btn) => {
           btn.addEventListener('click', () => {
+            btns.forEach(b => b.disabled = true); // disable all buttons
+
             const end_time = performance.now();
             response.rt = end_time - start_time;
             response.button = btn.innerHTML;
@@ -102,21 +104,22 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
             if (trial.correct_choice !== null) {
               if (response.button === trial.correct_choice) {
                 response.correct = true;
-                btn.style.backgroundColor = 'green';
+                btn.style.backgroundColor = 'rgb(178, 248, 178)';
               } else {
                 response.correct = false;
-                btn.style.backgroundColor = 'red';
+                btn.style.backgroundColor = 'rgb(224, 152, 152)';
+                btn.style.color = 'rgb(255, 255, 255)';
         
                 // highlight the correct button
                 btns.forEach(b => {
                   if (b.innerHTML === correctButton) {
-                    b.style.backgroundColor = 'green';
-                  }
+                    b.style.backgroundColor = 'rgb(178, 248, 178)';
+                  };
                 });
               }
               setTimeout(() => { end_trial(); }, 1500);
             } else {
-              setTimeout(() => { end_trial(); }, 500);
+              setTimeout(() => { end_trial(); }, 1500);
             }
             
           });
