@@ -1,0 +1,79 @@
+ <h3>By Language</h3>
+
+    <div class="card">
+      <ul>
+        <li>
+          <details>
+            <summary><strong>Cornish</strong></summary>
+            <ul>
+              <li><u>Vocabulary</u>
+                <ul>
+                  <li><a href="vocabLearn.html?lang=Cornish&topic=animals">Animals</a> (6)</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+        </li>
+    
+        <li>
+          <details>
+            <summary><strong>Finnish</strong></summary>
+            <ul>
+              <li><u>Verb Conjugation</u>
+                <ul>
+                  <li><a href="finnishPresent.html">Present</a> (84)</li>
+                </ul>
+              </li>
+              <li><u>Vocabulary</u>
+                <ul>
+                  <li><a href="vocabLearn.html?lang=Finnish&topic=animals">Animals</a> (7)</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+        </li>
+    
+        <li>
+          <details>
+            <summary><strong>Spanish</strong></summary>
+            <ul>
+              <li><u>Vocabulary</u>
+                <ul>
+                  <li><a href="vocabLearn.html?lang=Spanish&topic=animals">Animals</a> (7)</li>
+                </ul>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+    
+
+    <h3>By Topic</h3>
+
+    <div class="card">
+      <ul>
+        <details>
+          <summary><strong>Vocabulary</strong></summary>
+          <ul>
+            <li><u>Animals</u>
+              <ul>
+                <li><a href="vocabLearn.html?lang=Cornish&topic=animals">Cornish</a> (6) | <a href="vocabLearn.html?lang=Finnish&topic=animals">Finnish</a> (7) | <a href="vocabLearn.html?lang=Spanish&topic=animals">Spanish</a> (7)</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+        
+
+        <details>
+          <summary><strong>Verb Conjugation</strong></summary>
+        
+        <ul>
+          <li><u>Present Tense</u></li>
+          <ul>
+            <li><a href="finnishPresent.html">Finnish</a> (84)</li>
+          </ul>
+        </ul>
+      </ul>
+    </details>
+    </div>

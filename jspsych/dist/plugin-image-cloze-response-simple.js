@@ -1,4 +1,4 @@
-var jsPsychSimpleImageButtonResponse = (function (jspsych) {
+var jsPsychSimpleImageClozeResponse = (function (jspsych) {
     'use strict';
   
     const info = {
@@ -16,29 +16,22 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
           default: null,
           description: 'Any content to display above the image.'
         },
-        choices: {
-          type: jspsych.ParameterType.STRING,
-          pretty_name: 'Choices',
-          array: true,
-          default: [],
-          description: 'Labels for the buttons.'
-        },
         button_html: {
           type: jspsych.ParameterType.STRING,
           pretty_name: 'Button HTML',
           default: '<button class="jspsych-btn">%choice%</button>',
           description: 'HTML for the button. %choice% will be replaced with label text.'
         },
-        correct_choice: {
+        correct_response: {
           type: jspsych.ParameterType.STRING,
-          pretty_name: 'Correct Choice',
+          pretty_name: 'Correct Response',
           default: null,
-          description: 'The correct choice for the trial.'
+          description: 'The correct response for the trial.'
         },
       }
     };
   
-    class SimpleImageButtonResponsePlugin {
+    class SimpleImageClozeResponsePlugin {
       constructor(jsPsych) {
         this.jsPsych = jsPsych;
       }
@@ -59,10 +52,9 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
         
   
         // buttons
-        html += `<div id="jspsych-simple-btn-group">`;
-        trial.choices.forEach((choice, i) => {
-          html += trial.button_html.replace(/%choice%/g, choice);
-        });
+        html += `<div id="jspsych-cloze-response">`;
+        html += `<input type="text" id="jspsych-cloze-response-input" autocomplete="off"><br><br>`;
+        html += `<button class="jspsych-btn" id="jspsych-cloze-response-submit" style="font-size: 24px; padding: 10px; width: 150px;">Submit</button>`;
         html += `</div>`;
   
         display_element.innerHTML = html;
@@ -80,7 +72,7 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
           const trial_data = {
             rt: response.rt,
             stimulus: trial.stimulus,
-            response: response.button,
+            response: response.text,
           };
   
           display_element.innerHTML = "";
@@ -91,35 +83,44 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
         // add listeners
         const start_time = performance.now();
         const btns = display_element.querySelectorAll('button');
-        const correctButton = trial.correct_choice;
+        const correctResponse = trial.correct_response;
         
         btns.forEach((btn) => {
           btn.addEventListener('click', () => {
+
+            let inputField = document.getElementById('jspsych-cloze-response-input')
+            if (inputField.value.trim() === "") {
+              alert("Please enter a response before submitting.");
+              return;
+            };
+
+            inputField.disabled = true; // disable input field
+
             btns.forEach(b => b.disabled = true); // disable all buttons
 
             const end_time = performance.now();
             response.rt = end_time - start_time;
-            response.button = btn.innerHTML;
-        
+            response.text = document.getElementById('jspsych-cloze-response-input').value;
+            response.trimmed = response.text.trim().toLowerCase();
+            let responseText = document.getElementById('jspsych-cloze-response-input')
+
             if (trial.correct_choice !== null) {
-              if (response.button === trial.correct_choice) {
+              if (response.trimmed === trial.correct_response.toLowerCase()) {
                 response.correct = true;
-                btn.style.backgroundColor = 'rgb(99, 196, 99)';
-                btn.style.color = 'rgb(255, 255, 255)';
+                responseText.style.color = 'rgb(99, 196, 99)';
               } else {
                 response.correct = false;
-                btn.style.backgroundColor = 'rgb(225, 119, 119)';
-                btn.style.color = 'rgb(255, 255, 255)';
-        
-                // highlight the correct button
-                btns.forEach(b => {
-                  if (b.innerHTML === correctButton) {
-                    b.style.backgroundColor = 'rgb(99, 196, 99)';
-                    b.style.color = 'rgb(255, 255, 255)';
-                  };
-                });
+                setTimeout(() => {
+                  responseText.value = trial.correct_response;
+                  responseText.style.color = 'rgb(99, 196, 99)';
+                }, 1500);
+                responseText.style.color = 'rgb(225, 119, 119)';
               }
-              setTimeout(() => { end_trial(); }, 1500);
+              if (response.correct) {
+                setTimeout(() => { end_trial(); }, 1500);
+              } else if (!response.correct) {
+                setTimeout(() => { end_trial(); }, 4500);
+              }
             } else {
               setTimeout(() => { end_trial(); }, 1500);
             }
@@ -129,8 +130,8 @@ var jsPsychSimpleImageButtonResponse = (function (jspsych) {
       }
     }
   
-    SimpleImageButtonResponsePlugin.info = info;
-    return SimpleImageButtonResponsePlugin;
+    SimpleImageClozeResponsePlugin.info = info;
+    return SimpleImageClozeResponsePlugin;
   
   })(jsPsychModule);
   

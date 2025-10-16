@@ -4,206 +4,105 @@
   <meta charset="UTF-8">
   <title>Glossolalia</title>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'VT323', monospace;
-      font-size: 1.4rem;
-      background: #f0f0ff;
-      color: #111;
-    }
-
-    header {
-      background: linear-gradient(to right, #8D6A9F, #74B3CE);
-      color: white;
-      padding: 1rem 2rem;
-      text-shadow: 1px 1px 1px #444;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    main {
-      max-width: 700px;
-      margin: 2rem auto;
-      background: white;
-      border: 2px solid #ddd;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      border-bottom: 2px dashed #ccc;
-      padding-bottom: 0.2rem;
-      margin-top: 2rem;
-      color: #ffffff;
-    }
-
-    p {
-      line-height: 1.5;
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 1em;
-    }
-
-    li {
-      margin: 0.3em 0;
-      position: relative;
-    }
-
-    li::before {
-      content: "";
-      position: absolute;
-      left: -1em;
-      color: #8D6A9F;
-    }
-
-    a {
-      color: #005f99;
-      text-decoration: none;
-      border-bottom: 1px dotted #74B3CE;
-    }
-
-    a:hover {
-      color: #8D6A9F;
-      background: #e6ecff;
-    }
-
-    .card {
-      background: #fafaff;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 1rem;
-      color: #555;
-      padding-bottom: 2rem;
-    }
-
-    code {
-      background: #eee;
-      padding: 0.2em 0.4em;
-      border-radius: 4px;
-    }
-
-    em {
-      color: #555;
-    }
-  </style>
+  <script src="devTesting/vocabNew.js"></script>
+  <link href="experiment.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+
+<body class="homepage">
 
   <header>
     <h1>Glossolalia</h1>
     <h2>Speak in new tongues!</h2>
-    <p style="text-align: center;""><a style="color: white;" href="https://glossolalia.app">Home</a> | <a style="color: white;"href="development.html">Development Notes</a></p>
+    <nav>
+      <a href="https://glossolalia.app">Home</a> |
+      <a href="development.html">Development Notes</a>
+    </nav>
   </header>
 
-  <main>
-    <p><strong>Glossolalia</strong> is a free, open-source language exercise app built with <a href="https://www.jspsych.org">jsPsych</a> by <a href="https://www.branpap.com">Bran[don] Papineau</a>. No frills, no fees, no ads; just the most barebones language practice you can imagine. Each exercise simply drills the relevant forms or vocabulary. <br><br> While this won't get you fluent, I believe that language learning should be freely available to all, and if you find that this helps you learn some new words or nail some conjugations, that's all I want.</em></p>
+  <main class="homepage">
+    <p><strong>Glossolalia</strong> is a free, open-source language exercise app built with <a href="https://www.jspsych.org">jsPsych</a> by <a href="https://www.branpap.com">Bran[don] Papineau</a>.<br></p>
 
-    <p>Click on a link below to get started. Numbers in parentheses = number of unique entries available in that exercise:</p>
+    <p>Select your settings below and start a session:</p>
 
-    <h2>Available Exercises</h2>
-
-    <h3>By Language</h3>
-
-    <div class="card">
-      <ul>
-        <li>
-          <details>
-            <summary><strong>Cornish</strong></summary>
-            <ul>
-              <li><u>Vocabulary</u>
-                <ul>
-                  <li><a href="vocabLearn.html?lang=Cornish&topic=animals">Animals</a> (6)</li>
-                </ul>
-              </li>
-            </ul>
-          </details>
-        </li>
-    
-        <li>
-          <details>
-            <summary><strong>Finnish</strong></summary>
-            <ul>
-              <li><u>Verb Conjugation</u>
-                <ul>
-                  <li><a href="finnishPresent.html">Present</a> (84)</li>
-                </ul>
-              </li>
-              <li><u>Vocabulary</u>
-                <ul>
-                  <li><a href="vocabLearn.html?lang=Finnish&topic=animals">Animals</a> (7)</li>
-                </ul>
-              </li>
-            </ul>
-          </details>
-        </li>
-    
-        <li>
-          <details>
-            <summary><strong>Spanish</strong></summary>
-            <ul>
-              <li><u>Vocabulary</u>
-                <ul>
-                  <li><a href="vocabLearn.html?lang=Spanish&topic=animals">Animals</a> (7)</li>
-                </ul>
-              </li>
-            </ul>
-          </details>
-        </li>
-      </ul>
+    <div>
+      <label for="currentTopic">Topic:</label>
+      <select id="currentTopic">
+        <option value="animals">Animals</option>
+      </select>
     </div>
-    
 
-    <h3>By Topic</h3>
-
-    <div class="card">
-      <ul>
-        <details>
-          <summary><strong>Vocabulary</strong></summary>
-          <ul>
-            <li><u>Animals</u>
-              <ul>
-                <li><a href="vocabLearn.html?lang=Cornish&topic=animals">Cornish</a> (6) | <a href="vocabLearn.html?lang=Finnish&topic=animals">Finnish</a> (7) | <a href="vocabLearn.html?lang=Spanish&topic=animals">Spanish</a> (7)</li>
-              </ul>
-            </li>
-          </ul>
-        </details>
-        
-
-        <details>
-          <summary><strong>Verb Conjugation</strong></summary>
-        
-        <ul>
-          <li><u>Present Tense</u></li>
-          <ul>
-            <li><a href="finnishPresent.html">Finnish</a> (84)</li>
-          </ul>
-        </ul>
-      </ul>
-    </details>
+    <div>
+      <label for="baseLang">Source (Native):</label>
+      <select id="baseLang">
+        <option value="English">English</option>
+        <option value="Cornish">Cornish</option>
+        <option value="Finnish">Finnish</option>
+        <option value="Polish">Polish</option>
+        <option value="Spanish">Spanish</option>
+      </select>
     </div>
+
+    <div>
+      <label for="targetLang">Target:</label>
+      <select id="targetLang">
+        <option value="Cornish">Cornish</option>
+        <option value="Finnish">Finnish</option>
+        <option value="Polish">Polish</option>
+        <option value="Spanish">Spanish</option>
+        <option value="English">English</option>
+      </select>
+    </div>
+
+    <p id="countDisplay">Available items: 0</p>
+
+    <button id="startExercise" class="jspsych-btn">Start Exercise</button>
+
+    <hr>
 
     <footer>
       maintained with 💜 + <code>jsPsych</code><br>
-      by <a href="https://www.branpap.com">Bran[don] Papineau</a> · <a href="https://www.jspsych.org">jspsych.org</a><p style="font-size: small;"> with images by Rachel Downs </p>
+      by <a href="https://www.branpap.com">Bran[don] Papineau</a> · <a href="https://www.jspsych.org">jspsych.org</a>
+      <p style="font-size: small; margin-top: 0.5rem;">with images by Rachel Downs</p>
     </footer>
   </main>
+
+  <script>
+    // Start exercise
+    document.getElementById("startExercise").onclick = function() {
+      const baseLang = document.getElementById("baseLang").value;
+      const targetLang = document.getElementById("targetLang").value;
+      const topic = document.getElementById("currentTopic").value;
+      const url = `devTesting/vocabLearnDev.html?lang=${baseLang}&target=${targetLang}&topic=${topic}`;
+
+      if (baseLang === targetLang) {
+        alert("Please select different languages for source and target.");
+        return;
+      }
+
+      window.location.href = url;
+    };
+
+    // Update available count
+    const baseSelect = document.getElementById("baseLang");
+    const targetSelect = document.getElementById("targetLang");
+    const topicSelect = document.getElementById("currentTopic");
+    const countDisplay = document.getElementById("countDisplay");
+
+    function updateCount() {
+      const baseLanguage = baseSelect.value;
+      const targetLanguage = targetSelect.value;
+      const currentTopic = topicSelect.value;
+      const filteredData = nounVocav[currentTopic].filter(
+        item => item.data[targetLanguage] && item.data[baseLanguage]
+      );
+      countDisplay.textContent = `Available items: ${filteredData.length}`;
+    }
+
+    baseSelect.addEventListener("change", updateCount);
+    targetSelect.addEventListener("change", updateCount);
+    topicSelect.addEventListener("change", updateCount);
+    updateCount();
+  </script>
 
 </body>
 </html>

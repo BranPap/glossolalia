@@ -62,13 +62,13 @@ var jsPsychMorphBank = (function (jspsych) {
                 html += '<div id="jspsych-morph-bank-prompt">' + trial.prompt + '</div>';
             };
 
-            // divider to hold sentence as it is constructed
-            html += '<div id="jspsych-morph-bank-divider"></div>';
-
             // show stimulus
             if (trial.stimulus !== undefined) {
-                html += '<div id="jspsych-morph-bank-stimulus"><img src="' + trial.stimulus + '" style="max-width: 400px;"></div>';
+                html += '<div id="jspsych-morph-bank-stimulus"><img src="' + trial.stimulus + '" style="max-width: 400px; max-height: 400px"></div>';
             };
+
+            // divider to hold sentence as it is constructed
+            html += '<div id="jspsych-morph-bank-divider"></div>';
 
 
             // create morpheme buttons
@@ -112,8 +112,7 @@ var jsPsychMorphBank = (function (jspsych) {
             for (let i = 0; i < buttons.length; i++) {
                 let button = buttons[i];
                 button.addEventListener('click', () => {
-                    if (button.classList.contains('jspsych-btn')) {
-                        button.classList.remove('jspsych-btn'); 
+                    if (!button.classList.contains('jspsych-btn-selected')) {
                         button.classList.add('jspsych-btn-selected');
                         let morpheme = button.innerHTML;
                         let displayMorpheme = trial.picked_button_html.replace('%morpheme%', morpheme);
@@ -126,7 +125,6 @@ var jsPsychMorphBank = (function (jspsych) {
                         response.morphemes.push(morpheme);
                     } else if (button.classList.contains('jspsych-btn-selected')) {
                         button.classList.remove('jspsych-btn-selected');
-                        button.classList.add('jspsych-btn');
                         let morpheme = button.innerHTML;
                         let divider = display_element.querySelector('#jspsych-morph-bank-divider');
                         divider.innerHTML = divider.innerHTML.replace(trial.picked_button_html.replace('%morpheme%', morpheme), '');

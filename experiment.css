@@ -1,11 +1,7 @@
-/* -- Glossolalia Retro Vibe Styles -- */  
-  h1, h2 {
-    color: #333;
-    margin-bottom: 1rem;
-  }
+
   
   button.jspsych-btn {
-    font-family: 'VT323', monospace;
+    font-family: "Open Sans", "Arial", sans-serif;
     background-color: #74B3CE;
     color: white;
     border: none;
@@ -22,9 +18,9 @@
   }
 
   button.jspsych-btn-selected {
-    font-family: 'VT323', monospace;
-    background-color: whitesmoke;
-    color: grey;
+    font-family: "Open Sans", "Arial", sans-serif;
+    background-color: rgb(217, 217, 217);
+    color: rgb(208, 241, 245);
     border: none;
     border-radius: 8px;
     padding: 0.6rem 1.2rem;
@@ -35,12 +31,12 @@
   }
 
   button.jspsych-btn-picked {
-    font-family: 'VT323', monospace;
+    font-family: "Open Sans", "Arial", sans-serif;
     background-color: moccasin;
     color: black;
     border: none;
     border-radius: 8px;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 0.6rem;
     font-size: 1.4rem;
     margin: 0.5rem;
     cursor: pointer;
@@ -48,9 +44,9 @@
   }
 
   button.jspsych-btn-correct {
-    font-family: 'VT323', monospace;
-    background-color: rgb(178, 248, 178);
-    color: slategrey;
+    font-family: "Open Sans", "Arial", sans-serif;
+    background-color: rgb(99, 196, 99);
+    color: white;
     border: none;
     border-radius: 8px;
     padding: 0.6rem 1.2rem;
@@ -61,8 +57,8 @@
   }
 
   button.jspsych-btn-incorrect {
-    font-family: 'VT323', monospace;
-    background-color: rgb(224, 152, 152);
+    font-family: "Open Sans", "Arial", sans-serif;
+    background-color: rgb(225, 119, 119);
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 8px;
@@ -74,19 +70,19 @@
   }
   
   .correct {
-    background-color: rgb(178, 248, 178);
-    color: slategrey;
+    background-color: rgb(99, 196, 99);
+    color: white;
     font-weight: bold;
   }
   
   .incorrect {
-    background-color: rgb(224, 152, 152);
+    background-color: rgb(225, 119, 119);
     color: rgb(255, 255, 255);
     font-weight: bold;
   }
 
   body, .jspsych-display-element {
-    font-family: 'VT323', monospace;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 1.5rem;
   }
 
@@ -106,4 +102,235 @@
     transition: width 0.4s ease;
   }
   
+  #jspsych-cloze-response-input {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 1.4rem;
+    padding: 0.6rem 1rem;
+    width: 300px;
+    border: 2px solid #74B3CE;
+    border-radius: 8px;
+    outline: none;
+    margin: 0.5rem 0;
+    background-color: #fdfdfd;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
   
+  #jspsych-cloze-response-input:focus {
+    border-color: #8D6A9F;
+    box-shadow: 0 0 6px rgba(141, 106, 159, 0.5);
+  }
+  
+/* -- Glossolalia Retro Vibe: Block Complete Screen -- */
+.gloss-block-complete {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.gloss-word-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  display: inline-block;
+  text-align: left;
+}
+
+.gloss-word-item {
+  background-color: #f0f5f7;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin: 0.4rem 0;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  
+  /* Added for inline alignment with right-aligned stars */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.gloss-word-item:hover {
+  background-color: #e0edf2;
+  transform: translateX(4px);
+}
+
+.gloss-word-foreign {
+  color: #8D6A9F;
+}
+
+.gloss-word-native {
+  color: #555;
+}
+
+.gloss-word-percent {
+  color: #74B3CE;
+  font-weight: bold;
+}
+
+.gloss-stars {
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+  color: gold;
+  text-align: right;
+  margin-left: auto; /* ensures right alignment in flex layout */
+}
+
+.gloss-next {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.gloss-note {
+  font-size: 1rem;
+  color: #666;
+}
+
+#jspsych-morph-bank-divider {
+  min-height: 4rem;                 /* keeps height stable even when empty */
+  max-height: 6rem;                 /* allows slight expansion if needed */
+  overflow-y: auto;                 /* adds scroll if it grows too tall */
+  display: flex;                    /* inline layout for morphemes */
+  flex-wrap: wrap;                  /* wrap if too long */
+  align-items: center;              /* vertical centering */
+  justify-content: center;          /* horizontal centering */
+  gap: 0.4rem;                      /* space between morphemes */
+  padding: 0.2rem 1rem;            /* breathing room */
+  margin: 0.5rem auto;                /* spacing from other elements */
+  border: 2px dashed #ccc;          /* “construction area” visual */
+  border-radius: 8px;               /* soft corners */
+  background-color: #f9f9f9;        /* subtle contrast */
+  transition: all 0.2s ease;        /* smooth content changes */
+  width: fit-content;               /* keeps the area compact horizontally */
+  max-width: 90%;                   /* prevents overflow on smaller screens */
+}
+
+#jspsych-morph-bank-divider .jspsych-btn-picked {
+  margin: 0.2rem;
+}
+
+/* --- Glossolalia Homepage Styles --- */
+
+/* Body & page layout */
+body.homepage {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  background: #fdfdfd;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main.homepage {
+  max-width: 800px;
+  width: 90%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main.homepage:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Headers */
+h1{
+  color: #333;
+  margin: 0.3rem 0 0.3rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #2e6b86;
+}
+
+/* Navigation links */
+nav a {
+  color: #74B3CE;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 0.5rem;
+}
+
+nav a:hover {
+  color: #8D6A9F;
+  text-decoration: underline;
+}
+
+/* Paragraphs */
+p {
+  color: #555;
+}
+
+p strong {
+  color: #8D6A9F;
+}
+
+/* Form & selects */
+select {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 1.3rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  border: 2px solid #74B3CE;
+  margin: 0.2rem 0.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+select:focus {
+  border-color: #8D6A9F;
+  outline: none;
+  box-shadow: 0 0 6px rgba(141, 106, 159, 0.4);
+}
+
+/* Count display */
+#countDisplay {
+  font-weight: bold;
+  color: #74B3CE;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+footer a {
+  color: #74B3CE;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* HR styling */
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, #8D6A9F, #74B3CE);
+  margin: 2rem 0;
+}
+
+/* Header layout spacing */
+header {
+  margin-left: 2rem
+}
+
