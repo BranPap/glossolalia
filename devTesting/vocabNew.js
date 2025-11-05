@@ -203,6 +203,58 @@ const nounVocav = {
         }
     },
       image: "../images/vectorCowF.png"
+  },
+  {
+    entry: "dog",
+    data: {
+      English: {
+        translation: "dog",
+        morph: ["do", "g"]
+      },
+      Finnish: {
+        translation: "koira",
+        morph: ["koi", "ra"]
+      },
+      Spanish: {
+        translation: "perro",
+        morph: ["pe", "rro"]
+      },
+      Cornish: {
+        translation: "ki",
+        morph: ["k", "i"]
+      },
+      Polish: {
+        translation: "pies",
+        morph: ["pi", "es"]
+      }
+    },
+    image: "../images/vectorDog.png"
+  },
+  {
+    entry: "snake",
+    data: {
+      English: {
+        translation: "snake",
+        morph: ["sna", "ke"]
+      },
+      Finnish: {
+        translation: "käärme",
+        morph: ["käär", "me"]
+  },
+      Spanish: {
+        translation: "serpiente",
+        morph: ["ser", "pien", "te"]
+      },
+      Cornish: {
+        translation: "sarf",
+        morph: ["sa", "rf"]
+      },
+      Polish: {
+        translation: "wąż",
+        morph: ["wą", "ż"]
+      }
+    },
+    image: "../images/vectorSnake.png"
   }
 ]
 }

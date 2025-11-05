@@ -20,7 +20,7 @@
   </header>
 
   <main class="homepage">
-    <p><strong>Glossolalia</strong> is a free, open-source language exercise app built with <a href="https://www.jspsych.org">jsPsych</a> by <a href="https://www.branpap.com">Bran[don] Papineau</a>.<br></p>
+    <p><strong>Glossolalia</strong> is a repository of free, open-source language learning exercises built with <a href="https://www.jspsych.org">jsPsych</a> by <a href="https://www.branpap.com">Bran[don] Papineau</a>.<br></p>
 
     <p>Select your settings below and start a session:</p>
 
@@ -55,7 +55,8 @@
 
     <p id="countDisplay">Available items: 0</p>
 
-    <button id="startExercise" class="jspsych-btn">Start Exercise</button>
+    <button id="startExercise" class="jspsych-btn">Learn</button>
+    <button id="startMemoryGame" class="jspsych-btn" onclick="window.location.href='devTesting/memoryCard.html'">Memory Game</button>
 
     <hr>
 
@@ -73,6 +74,20 @@
       const targetLang = document.getElementById("targetLang").value;
       const topic = document.getElementById("currentTopic").value;
       const url = `devTesting/vocabLearnDev.html?lang=${baseLang}&target=${targetLang}&topic=${topic}`;
+
+      if (baseLang === targetLang) {
+        alert("Please select different languages for source and target.");
+        return;
+      }
+
+      window.location.href = url;
+    };
+
+    document.getElementById("startMemoryGame").onclick = function() {
+      const baseLang = document.getElementById("baseLang").value;
+      const targetLang = document.getElementById("targetLang").value;
+      const topic = document.getElementById("currentTopic").value;
+      const url = `devTesting/memoryCard.html?lang=${baseLang}&target=${targetLang}&topic=${topic}`;
 
       if (baseLang === targetLang) {
         alert("Please select different languages for source and target.");
