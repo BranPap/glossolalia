@@ -10,7 +10,7 @@ let currentTopic = getQueryParam("topic") || "animals";
 // Take 6 items randomly
 let filteredData = shuffleArray(
     nounVocav[currentTopic].filter(item => item.data[targetLanguage] && item.data[baseLanguage])
-).slice(0, 4);
+).slice(0, 6);
 
 // ------------------------
 // Generate a single memory card trial
@@ -26,14 +26,14 @@ function generateGame(vocabData) {
             translation: item.data[targetLanguage].translation
         })),
         n_cols: 4,
-        n_rows: 2,
+        n_rows: 3,
         on_finish: function(data) {
             const response = data.response;
 
             if (response === 'Play Again') {
                 console.log("Play Again clicked, restarting game...");
                 // Add a NEW trial at the end
-                var newData = jsPsych.randomization.shuffle(nounVocav[currentTopic].filter(item => item.data[targetLanguage] && item.data[baseLanguage])).slice(0, 4);
+                var newData = jsPsych.randomization.shuffle(nounVocav[currentTopic].filter(item => item.data[targetLanguage] && item.data[baseLanguage])).slice(0, 6);
                 var newGameTrial = generateGame(newData);
                 jsPsych.addNodeToEndOfTimeline({ timeline: newGameTrial });
             } else if (response === 'Home') {

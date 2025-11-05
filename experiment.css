@@ -419,3 +419,41 @@ header {
   }
   
   
+  /* --- Custom Progress Bar Styling --- */
+#jspsych-progressbar-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto 2rem auto;
+  text-align: center;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 1.2rem;
+  color: none;
+  background-color: white;
+  border-bottom: none;
+}
+
+#jspsych-progressbar-container span {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #74B3CE;
+  display: none;
+}
+
+/* Outer bar */
+#jspsych-progressbar-outer {
+  width: 100%;
+  background-color: #ffffff;
+  height: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Inner fill */
+#jspsych-progressbar-inner {
+  height: 100%;
+  background: linear-gradient(to right, #8D6A9F, #74B3CE);
+  transition: width 0.4s ease;
+  border-radius: 8px 0 0 8px;
+}

@@ -307,7 +307,7 @@ function makeEndScreen(baseLang, targetLang, topic, wordList) {
     },
     on_finish: (data) => {
       if (data.response === 0) {
-        window.location.href = "index.html";
+        window.location.href = "https://glossolalia.app";
       } else if (data.response === 1) {
         jsPsych.addNodeToEndOfTimeline({ timeline: generateGameLoop(baseLang, targetLang, topic, filteredData) });
       } else if (data.response === 2) {
